@@ -17,9 +17,10 @@ Har deal ka client auto-classify hota hai:
 ## 📊 Dashboard sections
 - **🏦 FII vs DII** — aaj ka net investment + pichhle 15 sessions ki history (auto-jamti hai)
 - **🔥 INSTITUTIONAL ACCUMULATION (7D)** — kis stock me institutions net buying/distribution kar rahe hain (net ₹Cr leaderboard, bulk/block deals se)
-- **🚀 WEEKLY TOP 5 — Buying % Change (Nifty 500)** — delivery volume me sabse badi weekly % jump (7 din pehle ke trading din se compare). **Har Friday night final**, baaki din daily refresh. Saare 500 stocks scan hote hain.
-- **🗓️ FORTNIGHTLY TOP 5 — Buying % Change (Nifty 500)** — delivery volume me sabse badi 15-din (fortnight) % jump (15 din pehle ke trading din se compare). **Har month ki 16th ko final** (16th holiday ho to agla trading din), baaki din daily refresh. Saare 500 stocks scan hote hain.
-- **📅 MONTHLY TOP 5 — Buying % Change (Nifty 500)** — delivery volume me sabse badi monthly % jump (pichhle month-end se compare). **Har month-end final**, baaki din daily refresh. Saare 500 stocks scan hote hain.
+- **🚀 WEEKLY TOP 5 — Buying/Selling % Difference (Nifty 500)** — institutional buying ka % difference: (is 7 din ki buy − pichhle 7 din ki buy) ÷ pichhle 7 din ki buy × 100. BUY% AUR SELL% dono columns. **Har Friday night final**, baaki din daily refresh. Saare 500 stocks scan hote hain.
+- **🗓️ FORTNIGHTLY TOP 5 — Buying/Selling % Difference (Nifty 500)** — 15 din vs usse pehle 15 din ka % difference. **Har month ki 16th ko final**, baaki din daily refresh.
+- **📅 MONTHLY TOP 5 — Buying/Selling % Difference (Nifty 500)** — is month-to-date vs pichhla poora month ka % difference. **Har month-end final**, baaki din daily refresh.
+- **🌟 TRIPLE POSITIVE** — wale stocks jinke **teeno periods me buying % positive** hai (weekly + fortnightly + monthly) = consistent accumulation. Combined score (W+F+M) se ranked.
 - **📋 BULK & BLOCK DEALS** — full detail table (date-wise history, class/side/type/symbol/min-value filters)
 - **🗂 SECTOR FLOW (7D)** — kis sector me institutional paisa aa raha hai / nikal raha hai
 

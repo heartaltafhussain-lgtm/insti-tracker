@@ -1,6 +1,6 @@
-Rank,Symbol,Company,Sector,DelivQtyNow,DelivQtyRef,BuyPctChg,DelivPerNow,DelivPerRef,DelivPerChg,CloseNow,InstiNetCr,InstiDeals,RefDate,Status
-1,BALRAMCHIN,Balrampur Chini Mills Limited,Fast Moving Consumer Goods,4426907,113727,3792.6,13.2,34.3,-21.1,767.1,1.12,8,2026-08-13,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-2,ASTERDM,Aster DM Quality Care Limited,Healthcare,4643365,128068,3525.7,47.0,39.2,7.8,765.65,0.0,0,2026-08-13,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-3,MMTC,MMTC Limited,Services,3747141,299677,1150.4,8.8,41.7,-32.9,66.27,0.0,0,2026-08-13,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-4,ACMESOLAR,Acme Solar Holdings Limited,Power,3360466,353255,851.3,35.5,52.0,-16.5,397.4,0.0,0,2026-08-13,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-5,BRIGADE,Brigade Enterprises Limited,Realty,528373,77096,585.3,34.9,41.7,-6.8,625.75,0.0,0,2026-08-13,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
+1,ASTERDM,Aster DM Quality Care Limited,Healthcare,68331027,2187685,3023.4,17904880,1978195,805.1,79.2,52.5,765.65,0.0,0,2026-08-13,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+2,GLAXO,GlaxoSmithKline Pharmaceuticals Limited,Healthcare,1006402,130485,671.3,1329473,91920,1346.3,43.1,58.7,2999.7,0.0,0,2026-08-13,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+3,LGEINDIA,LG Electronics India Limited,Consumer Durables,6501520,948746,585.3,8142423,501826,1522.6,44.4,65.4,1632.8,0.0,0,2026-08-13,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+4,WELSPUNLIV,Welspun Living Limited,Textiles,22587910,4316803,423.3,148849600,8564099,1638.1,13.2,33.5,188.69,0.0,0,2026-08-13,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+5,ELGIEQUIP,Elgi Equipments Limited,Capital Goods,2864625,576212,397.1,7663267,1170825,554.5,27.2,33.0,632.45,0.0,0,2026-08-13,"WEEK IN PROGRESS — daily refresh, Friday ko final"

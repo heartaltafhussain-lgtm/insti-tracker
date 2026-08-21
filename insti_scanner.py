@@ -18,9 +18,10 @@ Output:
   history/delivery.json  — date-wise NSE bhavcopy delivery data (% change compute ke liye)
   INSTI_Deals.csv        — aaj ke saare deals
   INSTI_Accumulation.csv — 7D institutional accumulation leaderboard
-  INSTI_WeeklyTop5.csv     — Nifty 500 delivery buying % change (Friday final, daily refresh)
-  INSTI_FortnightlyTop5.csv— Nifty 500 delivery buying % change (16th of month final, daily refresh)
-  INSTI_MonthlyTop5.csv    — Nifty 500 delivery buying % change (month-end final, daily refresh)
+  INSTI_WeeklyTop5.csv     — buy/sell % change 7d vs 7d (Friday final, daily refresh)
+  INSTI_FortnightlyTop5.csv— buy/sell % change 15d vs 15d (16th of month final, daily refresh)
+  INSTI_MonthlyTop5.csv    — buy/sell % change MTD vs prev month (month-end final, daily refresh)
+  INSTI_TriplePositive.csv — teeno periods me buying positive wale stocks
 
 GitHub Actions: Mon-Fri 18:30 IST (NSE deals evening me update hote hain)
 Password ref: 7004602
@@ -301,24 +302,29 @@ def log(msg):
     print(f"[{dt.datetime.now().strftime('%H:%M:%S')}] {msg}")
 
 
-# ================= DELIVERY-BASED BUYING MOMENTUM (NSE bhavcopy) =================
-# Institutional buying ka sabse solid daily public proxy = DELIVERY data
-# (NSE sec_bhavdata_full CSV me har symbol ka DELIV_QTY + DELIV_PER hota hai).
-# Weekly top5     = 7 din pehle ke trading din se delivery qty ka % change (Fri final)
-# Fortnightly top5= 15 din pehle ke trading din se % change (har month ki 16th ko final)
-# Monthly top5    = pichhle month-end anchor se % change (month-end final)
-# Teeno daily recompute hote hain, universe = Nifty 500 (500 stocks).
+# ================= DELIVERY-BASED INSTITUTIONAL BUY/SELL % CHANGE =================
+# Institutional buying/selling ka daily public proxy = NSE bhavcopy:
+#   BUY  proxy = DELIV_QTY (institutions delivery-based buying karte hain)
+#   SELL proxy = TTL_TRD_QNTY - DELIV_QTY (intraday churn = selling pressure)
+# Periods (user spec):
+#   WEEKLY      = pichhle 7 calendar din (cur) vs usse pehle 7 din (prev)  — Friday final
+#   FORTNIGHTLY = pichhle 15 din vs usse pehle 15 din                       — 16th of month final
+#   MONTHLY     = is month-to-date vs pichhla poora calendar month          — month-end final
+# Formula: % diff = (curBuy - prevBuy) / prevBuy * 100  (buying AUR selling dono ka)
+# Universe = Nifty 500. Teeno daily recompute hote hain. + TRIPLE POSITIVE list
+# (teeno periods me buying % positive wale stocks).
 
 BHAVDATA_URL = "https://archives.nseindia.com/products/content/sec_bhavdata_full_{}.csv"
 DELIVERY_FILE = os.path.join(HERE, "history", "delivery.json")
 KEEP_DELIVERY_DAYS = 75      # history me kitne din ka delivery data rakhen
-MIN_DELIV_QTY = 50000        # ref din pe minimum delivery qty (noise filter)
-MIN_DELIV_PER = 5.0          # ref din pe minimum delivery %
-BOOTSTRAP_DAYS = 24          # pehli baar kitne calendar din pichhe jakar data bharo (>=15 din ka fortnightly ref mile)
+MIN_PREV_QTY = 50000         # prev period ki minimum buy/sell qty (noise filter)
+MIN_CUR_DAYS = 3             # current period me minimum trading din
+BOOTSTRAP_DAYS = 55          # pehli baar 55 calendar din pichhe (pichhla poora month mile)
+TRIPLE_CAP = 60              # triple positive list ki max rows
 
 
 def fetch_bhav(d):
-    """Ek din ka bhavcopy fetch karo -> {SYM: [deliv_qty, deliv_per, close]} (sirf EQ)."""
+    """Ek din ka bhavcopy fetch karo -> {SYM: [delivQty, delivPer, close, tradedQty]} (sirf EQ)."""
     ddmmyyyy = d.strftime("%d%m%Y")
     text = fetch_text(BHAVDATA_URL.format(ddmmyyyy))
     if not text:
@@ -333,12 +339,13 @@ def fetch_bhav(d):
         i_dq = header.index("DELIV_QTY")
         i_dp = header.index("DELIV_PER")
         i_cl = header.index("CLOSE_PRICE")
+        i_tq = header.index("TTL_TRD_QNTY")
     except ValueError:
         return None
     out = {}
     for ln in lines[1:]:
         parts = ln.split(",")
-        if len(parts) <= max(i_sym, i_ser, i_dq, i_dp, i_cl):
+        if len(parts) <= max(i_sym, i_ser, i_dq, i_dp, i_cl, i_tq):
             continue
         if parts[i_ser].strip() != "EQ":
             continue
@@ -346,20 +353,29 @@ def fetch_bhav(d):
             dq = float(parts[i_dq].strip())
             dp = float(parts[i_dp].strip())
             cl = float(parts[i_cl].strip())
+            tq = float(parts[i_tq].strip())
         except ValueError:
             continue
-        out[parts[i_sym].strip()] = [dq, dp, cl]
+        out[parts[i_sym].strip()] = [dq, dp, cl, tq]
     return out or None
 
 
 def load_delivery():
+    dv = {"updated": "", "days": {}}
     if os.path.exists(DELIVERY_FILE):
         try:
             with open(DELIVERY_FILE, encoding="utf-8") as fh:
-                return json.load(fh)
+                dv = json.load(fh)
+            # v1 format ([dq, dp, cl]) hai to wipe karo — v2 ([dq, dp, cl, tq]) chahiye
+            if dv.get("days"):
+                first_day = next(iter(dv["days"].values()))
+                sample = next(iter(first_day.values())) if first_day else None
+                if sample and len(sample) < 4:
+                    log("  [MIGRATE] purana delivery format mila — re-bootstrap")
+                    dv = {"updated": "", "days": {}}
         except Exception:
-            pass
-    return {"updated": "", "days": {}}
+            dv = {"updated": "", "days": {}}
+    return dv
 
 
 def save_delivery(dv):
@@ -369,10 +385,9 @@ def save_delivery(dv):
 
 
 def bootstrap_delivery(dv):
-    """Pehli baar pichhle ~2 hafte + pichhle month-end ka delivery data bharo."""
+    """Pehli baar pichhle BOOTSTRAP_DAYS calendar din ka delivery data bharo."""
     today = dt.date.today()
     got = 0
-    # 1) pichhle BOOTSTRAP_DAYS calendar din (Mon-Fri)
     for back in range(0, BOOTSTRAP_DAYS):
         d = today - dt.timedelta(days=back)
         if d.weekday() >= 5:
@@ -384,27 +399,7 @@ def bootstrap_delivery(dv):
         if data:
             dv["days"][key] = data
             got += 1
-            log(f"    delivery {key}: {len(data)} EQ rows")
-        else:
-            log(f"    delivery {key}: NA (holiday/future)")
         time.sleep(0.4)
-    # 2) pichhle 2 month-end anchors (monthly % change ke liye)
-    for m_off in (1, 2):
-        first = today.replace(day=1)
-        anchor = (first - dt.timedelta(days=1)) if m_off == 1 else (
-            first.replace(day=1) - dt.timedelta(days=1)).replace(day=1) - dt.timedelta(days=1)
-        while anchor.weekday() >= 5:
-            anchor -= dt.timedelta(days=1)
-        key = anchor.isoformat()
-        if key in dv["days"]:
-            continue
-        data = fetch_bhav(anchor)
-        if data:
-            dv["days"][key] = data
-            got += 1
-            log(f"    delivery {key} (month anchor): {len(data)} EQ rows")
-        time.sleep(0.4)
-    # 3) trim
     keys = sorted(dv["days"].keys())
     if len(keys) > KEEP_DELIVERY_DAYS:
         for k in keys[:-KEEP_DELIVERY_DAYS]:
@@ -440,38 +435,26 @@ def _insti_net_range(deals_by_date, ref_iso, cur_iso):
     return net
 
 
-def build_delivery_top5(cur, cur_map, ref, ref_map, universe, name_map, sector_map, insti_net):
-    rows = []
-    if not ref or not ref_map:
-        return rows, 0
-    matched = 0
-    for sym in universe:
-        c = cur_map.get(sym)
-        r = ref_map.get(sym)
-        if not c or not r:
-            continue
-        dqc, dpc, clc = c
-        dqr, dpr, _ = r
-        if dqr < MIN_DELIV_QTY or dpr < MIN_DELIV_PER or dqc <= 0:
-            continue
-        matched += 1
-        buy_pct = (dqc - dqr) / dqr * 100.0
-        dp_chg = dpc - dpr
-        ov = insti_net.get(sym) or {}
-        rows.append({
-            "sym": sym,
-            "name": name_map.get(sym) or "",
-            "sector": sector_map.get(sym) or "",
-            "dqCur": int(round(dqc)), "dqRef": int(round(dqr)),
-            "dpCur": round(dpc, 1), "dpRef": round(dpr, 1),
-            "buyPct": round(buy_pct, 1),
-            "dpChg": round(dp_chg, 1),
-            "close": round(clc, 2),
-            "instiNetCr": ov.get("netCr", 0.0),
-            "instiDeals": ov.get("deals", 0),
-        })
-    rows.sort(key=lambda r: -r["buyPct"])
-    return rows[:5], matched
+def _period_sums(dv, sym, day_list):
+    """Period ke days me sym ki total BUY qty (delivery) aur SELL qty (traded-delivery)."""
+    buy = sell = 0.0
+    for d in day_list:
+        row = (dv["days"].get(d) or {}).get(sym)
+        if row:
+            dq, _dp, _cl, tq = row
+            buy += dq
+            sell += max(tq - dq, 0.0)
+    return buy, sell
+
+
+def _pct(cur_sum, prev_sum):
+    if prev_sum < MIN_PREV_QTY:
+        return None
+    return round((cur_sum - prev_sum) / prev_sum * 100.0, 1)
+
+
+def _dlist(dates, lo_excl, hi_incl):
+    return [d for d in dates if lo_excl < d <= hi_incl]
 
 
 def _is_friday(d):
@@ -480,8 +463,7 @@ def _is_friday(d):
 
 def _is_month_end(d):
     dd = dt.date.fromisoformat(d)
-    nxt = dd + dt.timedelta(days=4)
-    return nxt.month != dd.month
+    return (dd + dt.timedelta(days=4)).month != dd.month
 
 
 def _is_fortnight_final(dates):
@@ -494,70 +476,125 @@ def _is_fortnight_final(dates):
     if len(dates) < 2:
         return True
     prev = dt.date.fromisoformat(dates[-2])
-    # 16th pehla trading din hai (prev 16th se pehle) ya month ka pehla scan hi 16th+ hai
     return prev.day < 16 or prev.month != cur.month
+
+
+def _period_row(sym, name, sector, buyPct, sellPct, curBuy, prevBuy, curSell, prevSell,
+                curDays, close, ov):
+    curT = curBuy + curSell
+    prevT = prevBuy + prevSell
+    return {
+        "sym": sym, "name": name, "sector": sector,
+        "buyPct": buyPct, "sellPct": sellPct,
+        "curBuy": int(round(curBuy)), "prevBuy": int(round(prevBuy)),
+        "curSell": int(round(curSell)), "prevSell": int(round(prevSell)),
+        "dpCur": round(curBuy / curT * 100, 1) if curT > 0 else 0.0,
+        "dpPrev": round(prevBuy / prevT * 100, 1) if prevT > 0 else 0.0,
+        "curDays": curDays, "close": round(close, 2),
+        "instiNetCr": ov.get("netCr", 0.0), "instiDeals": ov.get("deals", 0),
+    }
 
 
 def compute_delivery_sections(dv, universe, name_map, sector_map, deals_by_date):
     dates = sorted(dv["days"].keys())
     if not dates:
-        return None, None, None
+        return None, None, None, None
     cur = dates[-1]
     cur_d = dt.date.fromisoformat(cur)
-    cur_map = dv["days"][cur]
+    iso = lambda d: d.isoformat()  # noqa: E731
 
-    ref_w = None
-    for d in reversed(dates):
-        if (cur_d - dt.date.fromisoformat(d)).days >= 7:
-            ref_w = d
-            break
-    ref_f = None
-    for d in reversed(dates):
-        if (cur_d - dt.date.fromisoformat(d)).days >= 15:
-            ref_f = d
-            break
-    ref_m = None
-    for d in reversed(dates):
-        dd = dt.date.fromisoformat(d)
-        if dd.year != cur_d.year or dd.month != cur_d.month:
-            ref_m = d
-            break
+    # ---- period windows (calendar-day based) ----
+    w_cur = _dlist(dates, iso(cur_d - dt.timedelta(days=7)), cur)
+    w_prev = _dlist(dates, iso(cur_d - dt.timedelta(days=14)), iso(cur_d - dt.timedelta(days=7)))
+    f_cur = _dlist(dates, iso(cur_d - dt.timedelta(days=15)), cur)
+    f_prev = _dlist(dates, iso(cur_d - dt.timedelta(days=30)), iso(cur_d - dt.timedelta(days=15)))
+    m_cur = [d for d in dates if dt.date.fromisoformat(d).year == cur_d.year
+             and dt.date.fromisoformat(d).month == cur_d.month]
+    pm = (cur_d.replace(day=1) - dt.timedelta(days=1))
+    m_prev = [d for d in dates if dt.date.fromisoformat(d).year == pm.year
+              and dt.date.fromisoformat(d).month == pm.month]
 
-    inet_w = _insti_net_range(deals_by_date, ref_w or cur, cur)
-    inet_f = _insti_net_range(deals_by_date, ref_f or cur, cur)
-    inet_m = _insti_net_range(deals_by_date, ref_m or cur, cur)
+    # ---- insti deals overlay per period ----
+    ov_w = _insti_net_range(deals_by_date, w_prev[-1] if w_prev else cur, cur)
+    ov_f = _insti_net_range(deals_by_date, f_prev[-1] if f_prev else cur, cur)
+    ov_m = _insti_net_range(deals_by_date, m_prev[-1] if m_prev else cur, cur)
 
-    w_rows, w_match = build_delivery_top5(cur, cur_map, ref_w, dv["days"].get(ref_w or ""),
-                                          universe, name_map, sector_map, inet_w)
-    f_rows, f_match = build_delivery_top5(cur, cur_map, ref_f, dv["days"].get(ref_f or ""),
-                                          universe, name_map, sector_map, inet_f)
-    m_rows, m_match = build_delivery_top5(cur, cur_map, ref_m, dv["days"].get(ref_m or ""),
-                                          universe, name_map, sector_map, inet_m)
+    w_rows, f_rows, m_rows = [], [], []
+    triple = []
+    nw = nf = nm = 0
+    for sym in universe:
+        wb, ws = _period_sums(dv, sym, w_cur)
+        wbp, wsp = _period_sums(dv, sym, w_prev)
+        fb, fs = _period_sums(dv, sym, f_cur)
+        fbp, fsp = _period_sums(dv, sym, f_prev)
+        mb, ms = _period_sums(dv, sym, m_cur)
+        mbp, msp = _period_sums(dv, sym, m_prev)
+        close = 0.0
+        lastrow = (dv["days"].get(cur) or {}).get(sym)
+        if lastrow:
+            close = lastrow[2]
+        name = name_map.get(sym) or ""
+        sector = sector_map.get(sym) or ""
+
+        wBuyPct = _pct(wb, wbp) if len(w_cur) >= MIN_CUR_DAYS and len(w_prev) >= MIN_CUR_DAYS else None
+        fBuyPct = _pct(fb, fbp) if len(f_cur) >= MIN_CUR_DAYS and len(f_prev) >= MIN_CUR_DAYS else None
+        mBuyPct = _pct(mb, mbp) if len(m_cur) >= MIN_CUR_DAYS and len(m_prev) >= MIN_CUR_DAYS else None
+        wSellPct = _pct(ws, wsp) if wBuyPct is not None else None
+        fSellPct = _pct(fs, fsp) if fBuyPct is not None else None
+        mSellPct = _pct(ms, msp) if mBuyPct is not None else None
+
+        if wBuyPct is not None:
+            nw += 1
+            w_rows.append(_period_row(sym, name, sector, wBuyPct, wSellPct, wb, wbp, ws, wsp,
+                                      len(w_cur), close, ov_w.get(sym) or {}))
+        if fBuyPct is not None:
+            nf += 1
+            f_rows.append(_period_row(sym, name, sector, fBuyPct, fSellPct, fb, fbp, fs, fsp,
+                                      len(f_cur), close, ov_f.get(sym) or {}))
+        if mBuyPct is not None:
+            nm += 1
+            m_rows.append(_period_row(sym, name, sector, mBuyPct, mSellPct, mb, mbp, ms, msp,
+                                      len(m_cur), close, ov_m.get(sym) or {}))
+        # ---- TRIPLE POSITIVE: teeno periods me buying % positive ----
+        if (wBuyPct is not None and fBuyPct is not None and mBuyPct is not None
+                and wBuyPct > 0 and fBuyPct > 0 and mBuyPct > 0):
+            triple.append({
+                "sym": sym, "name": name, "sector": sector,
+                "wBuyPct": wBuyPct, "fBuyPct": fBuyPct, "mBuyPct": mBuyPct,
+                "score": round(wBuyPct + fBuyPct + mBuyPct, 1),
+                "close": round(close, 2),
+                "instiNetCr": ov_m.get(sym, {}).get("netCr", 0.0),
+                "instiDeals": ov_m.get(sym, {}).get("deals", 0),
+            })
+
+    w_rows.sort(key=lambda r: -r["buyPct"])
+    f_rows.sort(key=lambda r: -r["buyPct"])
+    m_rows.sort(key=lambda r: -r["buyPct"])
+    triple.sort(key=lambda r: -r["score"])
 
     weekly = {
-        "curDate": cur, "refDate": ref_w,
+        "curDate": cur, "refDate": w_prev[-1] if w_prev else None,
         "final": _is_friday(cur),
         "status": "FINAL WEEKLY ✅ (Friday close)" if _is_friday(cur) else "WEEK IN PROGRESS — daily refresh, Friday ko final",
-        "coverage": w_match,
-        "rows": w_rows,
+        "coverage": nw, "rows": w_rows[:5],
     }
     fortnightly = {
-        "curDate": cur, "refDate": ref_f,
+        "curDate": cur, "refDate": f_prev[-1] if f_prev else None,
         "final": _is_fortnight_final(dates),
         "status": "FINAL FORTNIGHTLY ✅ (16th of month)" if _is_fortnight_final(dates) else "FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final",
-        "coverage": f_match,
-        "rows": f_rows,
+        "coverage": nf, "rows": f_rows[:5],
     }
     monthly = {
-        "curDate": cur, "anchorDate": ref_m,
+        "curDate": cur, "anchorDate": m_prev[-1] if m_prev else None,
         "final": _is_month_end(cur),
         "status": "FINAL MONTHLY ✅ (month-end close)" if _is_month_end(cur) else "MONTH IN PROGRESS — daily refresh, month-end ko final",
-        "coverage": m_match,
-        "rows": m_rows,
+        "coverage": nm, "rows": m_rows[:5],
     }
-    return weekly, fortnightly, monthly
-
-
+    triple_sec = {
+        "count": len(triple), "curDate": cur,
+        "rows": triple[:TRIPLE_CAP],
+    }
+    return weekly, fortnightly, monthly, triple_sec
 # ---------------- MAIN ----------------
 def scan():
     log("=" * 72)
@@ -610,8 +647,9 @@ def scan():
     dv = load_delivery()
     got = bootstrap_delivery(dv)
     log(f"  delivery history: {len(dv['days'])} din ({got} naye fetch)")
-    weekly, fortnightly, monthly = compute_delivery_sections(dv, universe, name_map, sector_map,
-                                                             {d: (hist["scans"][d].get("deals") or []) for d in hist["dates"]})
+    weekly, fortnightly, monthly, triple = compute_delivery_sections(
+        dv, universe, name_map, sector_map,
+        {d: (hist["scans"][d].get("deals") or []) for d in hist["dates"]})
 
     # FII/DII series (accumulated)
     fii_series = []
@@ -654,6 +692,7 @@ def scan():
         "weeklyTop5": weekly,
         "fortnightlyTop5": fortnightly,
         "monthlyTop5": monthly,
+        "triplePositive": triple,
         "dates": hist["dates"],
     }
 
@@ -678,21 +717,31 @@ def scan():
                         a["buys"], a["sells"], a["nInsti"], a["nDays"], a["status"]])
     log("  wrote INSTI_Deals.csv + INSTI_Accumulation.csv")
 
-    # Weekly + Fortnightly + Monthly delivery momentum CSVs
+    # Weekly + Fortnightly + Monthly % change CSVs + Triple Positive CSV
     for name, sec, refkey in (("INSTI_WeeklyTop5.csv", weekly, "refDate"),
                               ("INSTI_FortnightlyTop5.csv", fortnightly, "refDate"),
                               ("INSTI_MonthlyTop5.csv", monthly, "anchorDate")):
         with open(os.path.join(HERE, name), "w", newline="", encoding="utf-8") as fh:
             w = csv.writer(fh)
-            w.writerow(["Rank", "Symbol", "Company", "Sector", "DelivQtyNow", "DelivQtyRef",
-                        "BuyPctChg", "DelivPerNow", "DelivPerRef", "DelivPerChg",
-                        "CloseNow", "InstiNetCr", "InstiDeals", "RefDate", "Status"])
+            w.writerow(["Rank", "Symbol", "Company", "Sector", "BuyQtyCur", "BuyQtyPrev",
+                        "BuyPctChg", "SellQtyCur", "SellQtyPrev", "SellPctChg",
+                        "DelivPerCur", "DelivPerPrev", "Close", "InstiNetCr", "InstiDeals",
+                        "RefDate", "Status"])
             if sec:
                 for i, r in enumerate(sec.get("rows") or [], 1):
-                    w.writerow([i, r["sym"], r["name"], r["sector"], r["dqCur"], r["dqRef"],
-                                r["buyPct"], r["dpCur"], r["dpRef"], r["dpChg"], r["close"],
+                    w.writerow([i, r["sym"], r["name"], r["sector"], r["curBuy"], r["prevBuy"],
+                                r["buyPct"], r["curSell"], r["prevSell"], r["sellPct"],
+                                r["dpCur"], r["dpPrev"], r["close"],
                                 r["instiNetCr"], r["instiDeals"], sec.get(refkey), sec.get("status")])
-    log("  wrote INSTI_WeeklyTop5.csv + INSTI_FortnightlyTop5.csv + INSTI_MonthlyTop5.csv")
+    with open(os.path.join(HERE, "INSTI_TriplePositive.csv"), "w", newline="", encoding="utf-8") as fh:
+        w = csv.writer(fh)
+        w.writerow(["Rank", "Symbol", "Company", "Sector", "WeeklyBuyPct", "FortnightlyBuyPct",
+                    "MonthlyBuyPct", "CombinedScore", "Close", "InstiNetCr", "InstiDeals"])
+        if triple:
+            for i, r in enumerate(triple.get("rows") or [], 1):
+                w.writerow([i, r["sym"], r["name"], r["sector"], r["wBuyPct"], r["fBuyPct"],
+                            r["mBuyPct"], r["score"], r["close"], r["instiNetCr"], r["instiDeals"]])
+    log("  wrote INSTI_WeeklyTop5.csv + INSTI_FortnightlyTop5.csv + INSTI_MonthlyTop5.csv + INSTI_TriplePositive.csv")
 
     # summary log
     log("-" * 72)
@@ -703,25 +752,31 @@ def scan():
             f"deals {a['buys'] + a['sells']:>2}  insti {a['nInsti']}  days {a['nDays']}  [{a['status']}]")
     if weekly:
         log("-" * 72)
-        log(f"  WEEKLY TOP5 (delivery buying % change | {weekly['curDate']} vs {weekly['refDate']} | "
+        log(f"  WEEKLY TOP5 (buy% = (cur7d buy - prev7d buy)/prev7d buy | {weekly['curDate']} vs {weekly['refDate']} | "
             f"coverage {weekly['coverage']}/500) [{weekly['status']}]")
         for i, r in enumerate(weekly["rows"], 1):
-            log(f"    {i}. {r['sym']:<12} buy +{r['buyPct']:>7.1f}%  deliv% {r['dpRef']}->{r['dpCur']}  "
+            log(f"    {i}. {r['sym']:<12} BUY {r['buyPct']:>+8.1f}%  SELL {r['sellPct']:>+8.1f}%  "
                 f"instiNet ₹{r['instiNetCr']}Cr  close ₹{r['close']}")
     if fortnightly:
         log("-" * 72)
-        log(f"  FORTNIGHTLY TOP5 (delivery buying % change | {fortnightly['curDate']} vs {fortnightly['refDate']} | "
+        log(f"  FORTNIGHTLY TOP5 (buy% = (cur15d buy - prev15d buy)/prev15d buy | {fortnightly['curDate']} vs {fortnightly['refDate']} | "
             f"coverage {fortnightly['coverage']}/500) [{fortnightly['status']}]")
         for i, r in enumerate(fortnightly["rows"], 1):
-            log(f"    {i}. {r['sym']:<12} buy +{r['buyPct']:>7.1f}%  deliv% {r['dpRef']}->{r['dpCur']}  "
+            log(f"    {i}. {r['sym']:<12} BUY {r['buyPct']:>+8.1f}%  SELL {r['sellPct']:>+8.1f}%  "
                 f"instiNet ₹{r['instiNetCr']}Cr  close ₹{r['close']}")
     if monthly:
         log("-" * 72)
-        log(f"  MONTHLY TOP5 (delivery buying % change | {monthly['curDate']} vs {monthly['anchorDate']} | "
+        log(f"  MONTHLY TOP5 (buy% = (MTD buy - prev month buy)/prev month buy | {monthly['curDate']} vs {monthly['anchorDate']} | "
             f"coverage {monthly['coverage']}/500) [{monthly['status']}]")
         for i, r in enumerate(monthly["rows"], 1):
-            log(f"    {i}. {r['sym']:<12} buy +{r['buyPct']:>7.1f}%  deliv% {r['dpRef']}->{r['dpCur']}  "
+            log(f"    {i}. {r['sym']:<12} BUY {r['buyPct']:>+8.1f}%  SELL {r['sellPct']:>+8.1f}%  "
                 f"instiNet ₹{r['instiNetCr']}Cr  close ₹{r['close']}")
+    if triple:
+        log("-" * 72)
+        log(f"  🌟 TRIPLE POSITIVE (weekly+fortnightly+monthly teeno buying % > 0): {triple['count']} stocks")
+        for i, r in enumerate(triple["rows"][:10], 1):
+            log(f"    {i}. {r['sym']:<12} W +{r['wBuyPct']}%  F +{r['fBuyPct']}%  M +{r['mBuyPct']}%  "
+                f"score {r['score']}  close ₹{r['close']}")
     log("=" * 72)
     return payload
 

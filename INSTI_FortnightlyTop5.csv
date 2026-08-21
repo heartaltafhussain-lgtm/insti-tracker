@@ -1,6 +1,6 @@
-Rank,Symbol,Company,Sector,DelivQtyNow,DelivQtyRef,BuyPctChg,DelivPerNow,DelivPerRef,DelivPerChg,CloseNow,InstiNetCr,InstiDeals,RefDate,Status
-1,WELSPUNLIV,Welspun Living Limited,Textiles,4762037,306862,1451.8,21.9,33.2,-11.3,188.69,0.0,0,2026-08-05,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
-2,BALRAMCHIN,Balrampur Chini Mills Limited,Fast Moving Consumer Goods,4426907,302888,1361.6,13.2,40.9,-27.7,767.1,1.12,8,2026-08-05,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
-3,MMTC,MMTC Limited,Services,3747141,420707,790.7,8.8,38.2,-29.3,66.27,0.0,0,2026-08-05,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
-4,HSCL,Himadri Speciality Chemical Limited,Chemicals,4504992,587624,666.6,36.1,27.6,8.5,704.2,0.0,0,2026-08-05,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
-5,ASTERDM,Aster DM Quality Care Limited,Healthcare,4643365,633306,633.2,47.0,53.4,-6.4,765.65,0.0,0,2026-08-05,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
+1,ASTERDM,Aster DM Quality Care Limited,Healthcare,71452238,3898309,1732.9,21388345,2759798,675.0,77.0,58.5,765.65,0.0,0,2026-08-05,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+2,TENNIND,Tenneco Clean Air India Limited,Automobile and Auto Components,46239992,5357135,763.1,31209634,3347501,832.3,59.7,61.5,568.6,0.0,0,2026-08-05,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+3,GODREJCP,Godrej Consumer Products Limited,Fast Moving Consumer Goods,22317842,3502160,537.3,20281902,2845405,612.8,52.4,55.2,947.0,0.0,0,2026-08-05,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+4,TRAVELFOOD,Travel Food Services Limited,Consumer Services,717954,122556,485.8,1347496,93681,1338.4,34.8,56.7,1316.2,0.0,0,2026-08-05,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+5,FINCABLES,Finolex Cables Limited,Capital Goods,6220442,1157639,437.3,31493858,1252487,2414.5,16.5,48.0,1291.2,0.0,0,2026-08-05,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
