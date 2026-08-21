@@ -1,24 +1,28 @@
 Rank,Symbol,Company,Sector,WeeklyBuyPct,FortnightlyBuyPct,MonthlyBuyPct,CombinedScore,Close,InstiNetCr,InstiDeals
-1,ASTERDM,Aster DM Quality Care Limited,Healthcare,3023.4,1732.9,1104.9,5861.2,765.65,0.0,0
-2,LGEINDIA,LG Electronics India Limited,Consumer Durables,585.3,336.3,70.9,992.5,1632.8,0.0,0
-3,GLAXO,GlaxoSmithKline Pharmaceuticals Limited,Healthcare,671.3,139.8,41.1,852.2,2999.7,0.0,0
-4,WELSPUNLIV,Welspun Living Limited,Textiles,423.3,308.0,54.4,785.7,188.69,0.0,0
-5,ELGIEQUIP,Elgi Equipments Limited,Capital Goods,397.1,156.2,33.6,586.9,632.45,0.0,0
-6,PFIZER,Pfizer Limited,Healthcare,283.4,204.5,87.4,575.3,4920.0,0.0,0
-7,BALRAMCHIN,Balrampur Chini Mills Limited,Fast Moving Consumer Goods,335.1,156.7,75.9,567.7,767.1,1.12,8
-8,IPCALAB,IPCA Laboratories Limited,Healthcare,227.1,199.8,3.0,429.9,1900.1,0.0,0
-9,BDL,Bharat Dynamics Limited,Capital Goods,46.2,274.7,41.8,362.7,1317.0,0.0,0
-10,ASAHIINDIA,Asahi India Glass Limited,Automobile and Auto Components,226.2,71.7,30.7,328.6,951.55,0.0,0
-11,JUBLPHARMA,Jubilant Pharmova Limited,Healthcare,24.6,222.7,63.5,310.8,871.05,0.0,0
-12,HONASA,Honasa Consumer Limited,Fast Moving Consumer Goods,144.1,147.8,7.6,299.5,483.8,0.0,0
-13,THELEELA,Leela Palaces Hotels & Resorts Limited,Consumer Services,177.4,20.8,73.1,271.3,539.7,0.0,0
-14,AIIL,Authum Investment & Infrastructure Limited,Financial Services,110.0,127.1,2.3,239.4,532.3,0.0,0
-15,NSLNISP,NMDC Steel Limited,Metals & Mining,117.1,99.7,20.9,237.7,39.52,0.0,0
-16,MINDACORP,Minda Corporation Limited,Automobile and Auto Components,40.2,142.8,31.0,214.0,743.3,0.0,0
-17,URBANCO,Urban Company Limited,Consumer Services,25.0,32.1,148.1,205.2,145.49,0.0,0
-18,HAL,Hindustan Aeronautics Limited,Capital Goods,31.0,135.8,34.1,200.9,4998.0,0.0,0
-19,BATAINDIA,Bata India Limited,Consumer Durables,18.1,55.5,113.0,186.6,711.2,0.0,0
-20,CARBORUNIV,Carborundum Universal Limited,Capital Goods,12.2,159.0,5.1,176.3,1137.6,0.0,0
-21,TEGA,Tega Industries Limited,Capital Goods,37.0,24.4,44.2,105.6,1776.5,0.0,0
-22,BSE,BSE Limited,Financial Services,8.9,74.6,15.5,99.0,3291.1,0.0,0
-23,NETWEB,Netweb Technologies India Limited,Information Technology,32.3,19.7,9.5,61.5,5419.8,0.0,0
+1,ASTERDM,Aster DM Quality Care Limited,Healthcare,3440.2,1469.7,1133.2,6043.1,761.55,0.0,0
+2,BALRAMCHIN,Balrampur Chini Mills Limited,Fast Moving Consumer Goods,516.6,219.2,115.7,851.5,729.35,1.12,8
+3,GLAXO,GlaxoSmithKline Pharmaceuticals Limited,Healthcare,437.4,158.3,45.0,640.7,2902.2,0.0,0
+4,PFIZER,Pfizer Limited,Healthcare,288.3,213.8,94.9,597.0,4978.2,0.0,0
+5,WELSPUNLIV,Welspun Living Limited,Textiles,95.0,353.7,61.2,509.9,189.22,0.0,0
+6,THELEELA,Leela Palaces Hotels & Resorts Limited,Consumer Services,271.1,19.2,90.6,380.9,561.7,0.0,0
+7,IPCALAB,IPCA Laboratories Limited,Healthcare,158.8,205.4,6.0,370.2,1911.2,0.0,0
+8,JUBLPHARMA,Jubilant Pharmova Limited,Healthcare,19.9,203.1,71.9,294.9,880.35,0.0,0
+9,GRASIM,Grasim Industries Limited,Construction Materials,18.5,237.4,37.9,293.8,3308.0,0.0,0
+10,CARBORUNIV,Carborundum Universal Limited,Capital Goods,54.8,205.6,26.9,287.3,1169.8,0.0,0
+11,URBANCO,Urban Company Limited,Consumer Services,31.5,54.8,184.3,270.6,158.6,0.0,0
+12,JYOTICNC,Jyoti CNC Automation Limited,Capital Goods,66.5,151.6,37.4,255.5,988.8,0.0,0
+13,AIIL,Authum Investment & Infrastructure Limited,Financial Services,215.7,23.1,10.8,249.6,552.25,0.0,0
+14,ELGIEQUIP,Elgi Equipments Limited,Capital Goods,30.0,175.4,43.3,248.7,634.35,0.0,0
+15,COHANCE,Cohance Lifesciences Limited,Healthcare,39.8,120.9,70.5,231.2,463.0,0.0,0
+16,HINDCOPPER,Hindustan Copper Limited,Metals & Mining,5.0,77.1,126.7,208.8,572.7,0.0,0
+17,ASAHIINDIA,Asahi India Glass Limited,Automobile and Auto Components,106.2,34.7,41.6,182.5,965.75,0.0,0
+18,NSLNISP,NMDC Steel Limited,Metals & Mining,48.6,87.7,26.8,163.1,39.79,0.0,0
+19,BSE,BSE Limited,Financial Services,37.5,73.2,31.7,142.4,3241.0,0.0,0
+20,KEC,KEC International Limited,Construction,26.9,74.0,8.5,109.4,435.95,0.0,0
+21,LICHSGFIN,LIC Housing Finance Limited,Financial Services,59.3,37.4,2.9,99.6,497.0,0.0,0
+22,TEGA,Tega Industries Limited,Capital Goods,5.1,36.0,52.1,93.2,1743.2,0.0,0
+23,NETWEB,Netweb Technologies India Limited,Information Technology,28.9,20.6,18.1,67.6,5601.0,0.0,0
+24,AMBUJACEM,Ambuja Cements Limited,Construction Materials,37.8,20.4,6.6,64.8,414.5,0.0,0
+25,CONCORDBIO,Concord Biotech Limited,Healthcare,51.8,6.2,2.0,60.0,1571.3,0.0,0
+26,HINDZINC,Hindustan Zinc Limited,Metals & Mining,6.5,9.2,15.4,31.1,594.9,0.0,0
+27,BBTC,The Bombay Burmah Trading Corporation Limited,Fast Moving Consumer Goods,13.8,4.3,2.6,20.7,1427.4,0.0,0

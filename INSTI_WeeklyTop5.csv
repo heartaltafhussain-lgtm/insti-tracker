@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,ASTERDM,Aster DM Quality Care Limited,Healthcare,68331027,2187685,3023.4,17904880,1978195,805.1,79.2,52.5,765.65,0.0,0,2026-08-13,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-2,GLAXO,GlaxoSmithKline Pharmaceuticals Limited,Healthcare,1006402,130485,671.3,1329473,91920,1346.3,43.1,58.7,2999.7,0.0,0,2026-08-13,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-3,LGEINDIA,LG Electronics India Limited,Consumer Durables,6501520,948746,585.3,8142423,501826,1522.6,44.4,65.4,1632.8,0.0,0,2026-08-13,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-4,WELSPUNLIV,Welspun Living Limited,Textiles,22587910,4316803,423.3,148849600,8564099,1638.1,13.2,33.5,188.69,0.0,0,2026-08-13,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-5,ELGIEQUIP,Elgi Equipments Limited,Capital Goods,2864625,576212,397.1,7663267,1170825,554.5,27.2,33.0,632.45,0.0,0,2026-08-13,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+1,ASTERDM,Aster DM Quality Care Limited,Healthcare,69724289,1969504,3440.2,19388536,1776198,991.6,78.2,52.6,761.55,0.0,0,2026-08-14,FINAL WEEKLY ✅ (Friday close)
+2,BALRAMCHIN,Balrampur Chini Mills Limited,Fast Moving Consumer Goods,7912555,1283355,516.6,49734292,2043147,2334.2,13.7,38.6,729.35,1.12,8,2026-08-14,FINAL WEEKLY ✅ (Friday close)
+3,GLAXO,GlaxoSmithKline Pharmaceuticals Limited,Healthcare,970784,180630,437.4,1356725,101736,1233.6,41.7,64.0,2902.2,0.0,0,2026-08-14,FINAL WEEKLY ✅ (Friday close)
+4,DALBHARAT,Dalmia Bharat Limited,Construction Materials,869514,195783,344.1,715607,300175,138.4,54.9,39.5,1880.0,0.0,0,2026-08-14,FINAL WEEKLY ✅ (Friday close)
+5,ACMESOLAR,Acme Solar Holdings Limited,Power,6987295,1596905,337.6,10768876,1402817,667.7,39.4,53.2,401.6,0.0,0,2026-08-14,FINAL WEEKLY ✅ (Friday close)
