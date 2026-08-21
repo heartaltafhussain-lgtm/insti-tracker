@@ -1,0 +1,6 @@
+Rank,Symbol,Company,Sector,DelivQtyNow,DelivQtyRef,BuyPctChg,DelivPerNow,DelivPerRef,DelivPerChg,CloseNow,InstiNetCr,InstiDeals,RefDate,Status
+1,ASTERDM,Aster DM Quality Care Limited,Healthcare,4643365,238860,1844.0,47.0,58.0,-11.1,765.65,0.0,0,2026-07-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+2,LICI,Life Insurance Corporation Of India,Financial Services,11498786,689578,1567.5,60.4,53.1,7.4,419.0,0.0,0,2026-07-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+3,BALRAMCHIN,Balrampur Chini Mills Limited,Fast Moving Consumer Goods,4426907,307686,1338.8,13.2,58.5,-45.2,767.1,1.12,8,2026-07-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+4,COHANCE,Cohance Lifesciences Limited,Healthcare,1364462,111930,1119.0,20.8,65.1,-44.3,475.55,0.0,0,2026-07-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+5,MEESHO,Meesho Limited,Consumer Services,11196472,1355501,726.0,32.9,37.1,-4.2,209.51,0.0,0,2026-07-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"

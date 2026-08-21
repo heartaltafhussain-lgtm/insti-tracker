@@ -1,0 +1,25 @@
+Symbol,Company,Sector,InstiBuyCr,InstiSellCr,NetCr,Buys,Sells,Institutions,ActiveDays,Status
+KFINTECH,Kfin Technologies Limited,Financial Services,2578.0,0.0,2578.0,18,0,12,1,ACCUMULATING
+NXT-INFRA,Nxt-Infra Trust,,179.26,0.0,179.26,2,0,1,1,ACCUMULATING
+TFCILTD,Tourism Finance Corporation of India Limited,,13.48,32.68,-19.2,1,1,1,1,DISTRIBUTING
+CREDENT,Credent Connect N Care L,,14.75,0.0,14.75,2,0,2,1,ACCUMULATING
+SHANTIGOLD,Shanti Gold International Limited,,2.37,11.16,-8.79,1,1,1,1,DISTRIBUTING
+RATNAVEER,Ratnaveer Precision Engineering Limited,,104.67,99.08,5.59,4,4,4,1,ACCUMULATING
+SANGINITA,Sanginita Chemicals Limit,,2.32,0.0,2.32,1,0,1,1,ACCUMULATING
+INDOBORAX,Indo Borax & Chemicals Limited,,51.84,49.7,2.14,4,4,4,1,ACCUMULATING
+ABINFRA,A B Infrabuild Limited,,9.35,7.98,1.37,1,1,1,1,ACCUMULATING
+BLEL,Behari Lal Engineering L,,207.21,208.5,-1.29,7,7,7,1,DISTRIBUTING
+MOREPENLAB,Morepen Laboratories Limited,,55.64,56.79,-1.15,2,2,2,1,DISTRIBUTING
+BALRAMCHIN,Balrampur Chini Mills Limited,Fast Moving Consumer Goods,349.09,347.97,1.12,4,4,4,1,ACCUMULATING
+GATECH,GACM Technologies Limited,,0.0,0.7,-0.7,0,1,1,1,DISTRIBUTING
+ZAGGLE,Zaggle Prepaid Ocean Services Limited,,97.9,97.28,0.62,4,4,4,1,ACCUMULATING
+AVADHSUGAR,Avadh Sugar & Energy Limited,,16.33,15.87,0.46,2,2,2,1,ACCUMULATING
+BLBLIMITED,BLB Limited,,0.0,0.45,-0.45,0,1,1,1,DISTRIBUTING
+DWARKESH,Dwarikesh Sugar Industries Limited,,33.39,33.61,-0.22,4,4,4,1,DISTRIBUTING
+TECHNOCRAF,Technocraft Ventures Ltd,,15.9,16.1,-0.2,2,2,2,1,DISTRIBUTING
+DHAMPURSUG,Dhampur Sugar Mills Limited,,6.36,6.42,-0.06,1,1,1,1,DISTRIBUTING
+SHIPROCKET,Shiprocket Limited,,123.89,123.94,-0.05,2,2,2,1,DISTRIBUTING
+GSMFOILS,GSM Foils Limited,,1.29,1.34,-0.05,2,2,2,1,DISTRIBUTING
+SOLARA,Solara Active Pharma Sciences Limited,,17.75,17.71,0.04,1,1,1,1,ACCUMULATING
+KRONOX,Kronox Lab Sciences Limited,,3.48,3.5,-0.02,1,1,1,1,DISTRIBUTING
+KIRIINDUS,Kiri Industries Limited,,15.71,15.72,-0.01,1,1,1,1,DISTRIBUTING

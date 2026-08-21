@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insti Tracker — NSE Institutional Flow Dashboard</title>
+<style>
+  :root {
+    --bg: #0d1117; --panel: #161b22; --panel2: #1c2129; --border: #30363d;
+    --txt: #e6edf3; --mut: #8b949e; --green: #3fb950; --red: #f85149;
+    --amber: #d29922; --blue: #58a6ff; --purple: #bc8cff;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--txt);
+    font-family: 'Segoe UI', system-ui, Arial, sans-serif; line-height: 1.5; }
+  a { color: var(--blue); text-decoration: none; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 18px 16px 70px; }
+  /* lock */
+  #lock { display: flex; flex-direction: column; align-items: center; justify-content: center;
+    min-height: 100vh; gap: 14px; }
+  #lock h1 { margin: 0; font-size: 26px; }
+  #lock input { background: var(--panel); border: 1px solid var(--border); color: var(--txt);
+    padding: 10px 14px; border-radius: 8px; font-size: 16px; width: 240px; text-align: center; }
+  #lock .btn { width: 240px; }
+  #lockerr { color: var(--red); min-height: 18px; font-size: 13px; }
+  #app { display: none; }
+  header { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 14px; }
+  header h1 { margin: 0; font-size: 22px; }
+  .sub { color: var(--mut); font-size: 12.5px; width: 100%; }
+  .btn { background: #21262d; border: 1px solid var(--border); color: var(--txt);
+    padding: 7px 13px; border-radius: 8px; cursor: pointer; font-size: 13px; }
+  .btn:hover { border-color: var(--blue); }
+  section { margin-top: 20px; }
+  h2 { font-size: 17px; margin: 0 0 4px; }
+  .secsub { color: var(--mut); font-size: 12.5px; margin-bottom: 8px; }
+  .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 14px; }
+  .cards { display: flex; gap: 12px; flex-wrap: wrap; }
+  .card { flex: 1 1 240px; background: var(--panel2); border: 1px solid var(--border);
+    border-radius: 12px; padding: 14px 16px; }
+  .card .k { color: var(--mut); font-size: 12px; }
+  .card .v { font-size: 24px; font-weight: 700; }
+  .card .s { font-size: 12px; color: var(--mut); }
+  .up { color: var(--green); } .dn { color: var(--red); } .mut { color: var(--mut); }
+  .bars { margin-top: 12px; }
+  .barrow { display: flex; align-items: center; gap: 8px; font-size: 12px; margin: 3px 0; }
+  .barrow .lb { width: 78px; color: var(--mut); text-align: right; }
+  .barrow .bar { height: 10px; border-radius: 3px; min-width: 1px; }
+  .legend { font-size: 11.5px; color: var(--mut); margin-top: 8px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 600; }
+  .b-insti { background: rgba(88,166,255,.15); color: var(--blue); border: 1px solid rgba(88,166,255,.4); }
+  .b-prom { background: rgba(210,153,34,.15); color: var(--amber); border: 1px solid rgba(210,153,34,.4); }
+  .b-other { background: rgba(139,148,158,.12); color: var(--mut); border: 1px solid rgba(139,148,158,.35); }
+  .b-buy { background: rgba(63,185,80,.15); color: var(--green); border: 1px solid rgba(63,185,80,.4); }
+  .b-sell { background: rgba(248,81,73,.15); color: var(--red); border: 1px solid rgba(248,81,73,.4); }
+  .b-acc { background: rgba(63,185,80,.15); color: var(--green); border: 1px solid rgba(63,185,80,.4); }
+  .b-dist { background: rgba(248,81,73,.15); color: var(--red); border: 1px solid rgba(248,81,73,.4); }
+  .b-flat { background: rgba(139,148,158,.12); color: var(--mut); border: 1px solid rgba(139,148,158,.35); }
+  .b-bulk { background: rgba(188,140,255,.14); color: var(--purple); border: 1px solid rgba(188,140,255,.4); }
+  .b-block { background: rgba(63,185,80,.14); color: #7ee787; border: 1px solid rgba(63,185,80,.4); }
+  .strip { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 8px; }
+  .strip select, .strip input { background: var(--panel2); border: 1px solid var(--border);
+    color: var(--txt); padding: 6px 8px; border-radius: 7px; font-size: 12.5px; }
+  .kv { color: var(--mut); font-size: 12px; margin-left: auto; }
+  .tblwrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 760px; }
+  th { position: sticky; top: 0; background: #21262d; text-align: left; padding: 8px 10px;
+    font-size: 11.5px; text-transform: uppercase; letter-spacing: .4px; color: var(--mut);
+    white-space: nowrap; }
+  td { padding: 7px 10px; border-bottom: 1px solid #21262d; white-space: nowrap; }
+  tr:hover td { background: rgba(88,166,255,.05); }
+  .sym { color: var(--blue); font-weight: 600; }
+  .netbar { height: 8px; border-radius: 3px; display: inline-block; }
+  .nopicks { text-align: center; padding: 26px 10px; color: var(--mut); }
+  .nopicks h3 { margin: 0 0 6px; color: var(--amber); }
+  #toast { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%);
+    background: #21262d; border: 1px solid var(--border); padding: 9px 16px; border-radius: 9px;
+    font-size: 13px; display: none; z-index: 99; max-width: 92vw; }
+  #toast.show { display: block; }
+  footer { margin-top: 26px; color: var(--mut); font-size: 12px; border-top: 1px solid var(--border); padding-top: 12px; }
+  .small { font-size: 11.5px; color: var(--mut); }
+</style>
+</head>
+<body>
+
+<div id="lock">
+  <h1>🐘 INSTI TRACKER</h1>
+  <div class="mut" style="font-size:13px">NSE Institutional Flow — Bulk/Block Deals + FII/DII</div>
+  <input type="password" id="pw" placeholder="Password daal ke enter karo" onkeydown="if(event.key==='Enter')unlock()">
+  <button class="btn" onclick="unlock()">→ Login</button>
+  <div id="lockerr">⚠ Galat password!</div>
+</div>
+
+<div id="app" class="wrap">
+  <header>
+    <h1>🐘 INSTI TRACKER — Institutional Flow</h1>
+    <button class="btn" id="btnRefresh" onclick="loadData(true)">🔄 Refresh</button>
+    <button class="btn" onclick="lockScreen()">🔒 Lock</button>
+    <div class="sub" id="hdr-sub">NSE BULK/BLOCK DEALS + FII/DII • loading…</div>
+  </header>
+
+  <!-- ============ FII vs DII ============ -->
+  <section>
+    <h2>🏦 FII vs DII — Aaj ka Net Investment (₹ Crore)</h2>
+    <div class="secsub">Foreign (FII/FPI) vs Domestic (DII) cash market net flow — market ka mood gauge. Green = buying, Red = selling.</div>
+    <div class="panel">
+      <div class="cards" id="fiidiiCards"></div>
+      <div class="bars" id="fiidiiBars"></div>
+      <div class="legend">🟦 FII/FPI net &nbsp;•&nbsp; 🟩 DII net &nbsp;•&nbsp; pichhle 15 sessions (history roz auto-jamti hai)</div>
+    </div>
+  </section>
+
+  <!-- ============ ACCUMULATION ============ -->
+  <section>
+    <h2>🔥 INSTITUTIONAL ACCUMULATION — 7 Din ka Leaderboard</h2>
+    <div class="secsub">Institutions (MF/Insurance/Bank/FII/Securities) kis stock me <b class="up">buying</b> kar rahe hain ya <b class="dn">bech</b> rahe hain — net value ke hisaab se. <b>Tip:</b> ACCUMULATING stocks ko apne GTF zone dashboard se cross-check karo.</div>
+    <div class="panel">
+      <div class="strip">
+        <button class="btn" onclick="downloadAccumCSV()">⬇ CSV</button>
+        <span class="kv" id="accumlabel"></span>
+      </div>
+      <div class="tblwrap" id="accumarea"></div>
+    </div>
+  </section>
+
+  <!-- ============ WEEKLY TOP 5 ============ -->
+  <section>
+    <h2>🚀 WEEKLY TOP 5 — Buying % Change (Nifty 500)</h2>
+    <div class="secsub" id="weeklySub">Delivery volume (institutional accumulation proxy) me sabse zyada <b class="up">weekly % increase</b> — <b>har Friday night final</b>, baaki din daily refresh hota hai. Saare 500 stocks scan hote hain.</div>
+    <div class="panel">
+      <div class="strip">
+        <button class="btn" onclick="downloadTop5CSV('weeklyTop5')">⬇ CSV</button>
+        <span class="kv" id="weeklylabel"></span>
+      </div>
+      <div class="tblwrap" id="weeklyarea"></div>
+    </div>
+  </section>
+
+  <!-- ============ FORTNIGHTLY TOP 5 ============ -->
+  <section>
+    <h2>🗓️ FORTNIGHTLY TOP 5 — Buying % Change (Nifty 500)</h2>
+    <div class="secsub" id="fortnightlySub">Delivery volume (institutional accumulation proxy) me sabse zyada <b class="up">15-din (fortnight) % increase</b> — <b>har month ki 16th ko final</b>, baaki din daily refresh hota hai. Saare 500 stocks scan hote hain.</div>
+    <div class="panel">
+      <div class="strip">
+        <button class="btn" onclick="downloadTop5CSV('fortnightlyTop5')">⬇ CSV</button>
+        <span class="kv" id="fortnightlylabel"></span>
+      </div>
+      <div class="tblwrap" id="fortnightlyarea"></div>
+    </div>
+  </section>
+
+  <!-- ============ MONTHLY TOP 5 ============ -->
+  <section>
+    <h2>📅 MONTHLY TOP 5 — Buying % Change (Nifty 500)</h2>
+    <div class="secsub" id="monthlySub">Delivery volume me sabse zyada <b class="up">monthly % increase</b> — pichhle month-end se compare, <b>har month-end ko final</b>, baaki din daily refresh. Saare 500 stocks scan hote hain.</div>
+    <div class="panel">
+      <div class="strip">
+        <button class="btn" onclick="downloadTop5CSV('monthlyTop5')">⬇ CSV</button>
+        <span class="kv" id="monthlylabel"></span>
+      </div>
+      <div class="tblwrap" id="monthlyarea"></div>
+    </div>
+  </section>
+
+  <!-- ============ DEALS ============ -->
+  <section>
+    <h2>📋 BULK &amp; BLOCK DEALS — Detail Table</h2>
+    <div class="secsub">NSE bulk (≥0.5% equity) + block (&gt;₹10Cr) deals. Har client ka class badge: <span class="badge b-insti">INSTITUTION</span> <span class="badge b-prom">PROMOTER</span> <span class="badge b-other">OTHER</span></div>
+    <div class="panel">
+      <div class="strip">
+        <select id="fDate" onchange="renderDeals()"></select>
+        <select id="fClass" onchange="renderDeals()">
+          <option value="">Class: All</option>
+          <option value="INSTITUTION">Institution</option>
+          <option value="PROMOTER">Promoter</option>
+          <option value="OTHER">Other</option>
+        </select>
+        <select id="fSide" onchange="renderDeals()">
+          <option value="">Side: All</option><option value="BUY">BUY</option><option value="SELL">SELL</option>
+        </select>
+        <select id="fType" onchange="renderDeals()">
+          <option value="">Type: All</option><option value="BULK">BULK</option><option value="BLOCK">BLOCK</option>
+        </select>
+        <input type="text" id="fSym" placeholder="🔍 symbol…" oninput="renderDeals()" style="width:110px">
+        <input type="number" id="fMin" placeholder="Min ₹Cr" oninput="renderDeals()" style="width:80px" step="1">
+        <button class="btn" onclick="clearDealFilters()" style="color:#ff8d85">✕</button>
+        <button class="btn" onclick="downloadDealsCSV()">⬇ CSV (filtered)</button>
+        <span class="kv" id="dealslabel"></span>
+      </div>
+      <div class="tblwrap" id="dealsarea"></div>
+    </div>
+  </section>
+
+  <!-- ============ SECTOR FLOW ============ -->
+  <section>
+    <h2>🗂 SECTOR-WISE INSTITUTIONAL FLOW (7 Din)</h2>
+    <div class="secsub">Kis sector me institutions paisa daal rahe hain ya nikal rahe hain — sector momentum ka signal.</div>
+    <div class="panel">
+      <div class="tblwrap" id="sectorarea"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div><b>Methodology:</b> Data source — NSE official (archives.nseindia.com bulk/block deals CSV + nseindia.com FII/DII API), Mon–Fri 18:30 IST auto-scan (GitHub Actions).
+    Client classification keyword-based hai (MF/Insurance/Bank/FII/Securities = INSTITUTION) — koi client galat class ho to table me naam dekh kar khud judge karo.</div>
+    <div style="margin-top:5px">⚠️ Institutional deals ≠ price guarantee. Ye sirf ek signal layer hai — entry/exit apne GTF zone system se hi lo. Past performance ≠ future guarantee. Educational dashboard — investment advice nahi.</div>
+  </footer>
+</div>
+
+<div id="toast"></div>
+
+<script>
+"use strict";
+/* ================= CONFIG ================= */
+const PASSWORD = "7004602";
+const DATA_URL = "insti_live_data.json";
+const HIST_URL = "history/all.json";
+const TV = "https://in.tradingview.com/chart/?symbol=NSE%3A";
+let DATA = null;
+let HISTORY = null;
+let usingEmbedded = false;
+let __toastTimer = null;
+let __EMBEDDED_DATA__ = {"date":"20-AUG-2026","timestamp":"2026-08-21 06:31:20 IST","passwordRef":"7004602","version":"v1.0 Insti Tracker","scanStats":{"bulkDeals":169,"blockDeals":16,"instiDeals":113,"instiSymbols":24,"historyDays":1},"fiidiiToday":{"DII":{"buy":16932.72,"sell":13395.01,"net":3537.71},"FII":{"buy":11411.73,"sell":11995.09,"net":-583.36}},"fiidiiSeries":[{"date":"20-AUG-2026","fiiNet":-583.36,"fiiBuy":11411.73,"fiiSell":11995.09,"diiNet":3537.71,"diiBuy":16932.72,"diiSell":13395.01}],"dealsToday":[{"date":"20-AUG-2026","sym":"AARTECH","name":"Aartech Solonics Limited","client":"KABRA KAILASH","side":"BUY","qty":1155,"price":50.21,"valueCr":0.01,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"ABINFRA","name":"A B Infrabuild Limited","client":"ARIHANT CAPITAL MARKETS LIMITED","side":"BUY","qty":6849200,"price":13.65,"valueCr":9.35,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"ASIANTILES","name":"Asian Granito India Limited","client":"THAKKAR NILESHKUMAR FARSHURAM HUF","side":"BUY","qty":2007440,"price":45.41,"valueCr":9.12,"type":"BULK","cls":"PROMOTER","sector":""},{"date":"20-AUG-2026","sym":"ATALREAL","name":"Atal Realtech Limited","client":"ALTIZEN VENTURES LLP","side":"BUY","qty":698318,"price":33.32,"valueCr":2.33,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"AVADHSUGAR","name":"Avadh Sugar & Energy Limited","client":"HRTI PRIVATE LIMITED","side":"BUY","qty":105843,"price":798.35,"valueCr":8.45,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"AVADHSUGAR","name":"Avadh Sugar & Energy Limited","client":"QE SECURITIES LLP","side":"BUY","qty":99104,"price":795.29,"valueCr":7.88,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"BALRAMCHIN","name":"Balrampur Chini Mills Limited","client":"MICROCURVES TRADING PRIVATE LIMITED","side":"BUY","qty":1303610,"price":740.38,"valueCr":96.52,"type":"BULK","cls":"INSTITUTION","sector":"Fast Moving Consumer Goods"},{"date":"20-AUG-2026","sym":"BALRAMCHIN","name":"Balrampur Chini Mills Limited","client":"JUNOMONETA FINSOL PRIVATE LIMITED","side":"BUY","qty":1082504,"price":735.89,"valueCr":79.66,"type":"BULK","cls":"INSTITUTION","sector":"Fast Moving Consumer Goods"},{"date":"20-AUG-2026","sym":"BALRAMCHIN","name":"Balrampur Chini Mills Limited","client":"GRAVITON RESEARCH CAPITAL LLP","side":"BUY","qty":1074739,"price":709.58,"valueCr":76.26,"type":"BULK","cls":"INSTITUTION","sector":"Fast Moving Consumer Goods"},{"date":"20-AUG-2026","sym":"BALRAMCHIN","name":"Balrampur Chini Mills Limited","client":"HRTI PRIVATE LIMITED","side":"BUY","qty":1334558,"price":724.21,"valueCr":96.65,"type":"BULK","cls":"INSTITUTION","sector":"Fast Moving Consumer Goods"},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"GOLDMINE STOCKS PRIVATE LIMITED","side":"BUY","qty":391528,"price":531.7,"valueCr":20.82,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"MICROCURVES TRADING PRIVATE LIMITED","side":"BUY","qty":1206239,"price":531.54,"valueCr":64.12,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"JUNOMONETA FINSOL PRIVATE LIMITED","side":"BUY","qty":419187,"price":532.47,"valueCr":22.32,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"MARWADI CHANDARANA INTERMEDIARIES BROKERS PRIVATE LIMITED","side":"BUY","qty":446773,"price":519.19,"valueCr":23.2,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"JUMP TRADING FINANCIAL INDIA PRIVATE LIMITED","side":"BUY","qty":288492,"price":530.98,"valueCr":15.32,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"MATHISYS QUANTCAP LLP","side":"BUY","qty":331894,"price":534.41,"valueCr":17.74,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"IRAGE BROKING SERVICES LLP","side":"BUY","qty":625288,"price":533.14,"valueCr":33.34,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"PURE BROKING PRIVATE LIMITED","side":"BUY","qty":316055,"price":532.04,"valueCr":16.82,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"NK SECURITIES RESEARCH PRIVATE LIMITED","side":"BUY","qty":586717,"price":531.58,"valueCr":31.19,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"SILVER LINE VENTURES PRIVATE LIMITED","side":"BUY","qty":215910,"price":523.35,"valueCr":11.3,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"PLUTUS RESEARCH PRIVATE LIMITED","side":"BUY","qty":617434,"price":529.14,"valueCr":32.67,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"ELIXIR WEALTH MANAGEMENT PRIVATE LIMITED","side":"BUY","qty":452986,"price":532.03,"valueCr":24.1,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"DIPAN MEHTA COMMODITIES PRIVATE LIMITED","side":"BUY","qty":252672,"price":534.16,"valueCr":13.5,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"CALSOFT","name":"California Soft Ltd.","client":"SHRI MUKTA SHARES","side":"BUY","qty":206471,"price":27.26,"valueCr":0.56,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"CREDENT","name":"Credent Connect N Care L","client":"MOTILAL OSWAL FINANCIAL SERVICES LIMITED","side":"BUY","qty":298200,"price":373.97,"valueCr":11.15,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"CREDENT","name":"Credent Connect N Care L","client":"OM TRADING","side":"BUY","qty":100200,"price":359.1,"valueCr":3.6,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"DHAMPURSUG","name":"Dhampur Sugar Mills Limited","client":"QE SECURITIES LLP","side":"BUY","qty":339889,"price":187.18,"valueCr":6.36,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"DWARKESH","name":"Dwarikesh Sugar Industries Limited","client":"JUNOMONETA FINSOL PRIVATE LIMITED","side":"BUY","qty":2427910,"price":54.07,"valueCr":13.13,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"DWARKESH","name":"Dwarikesh Sugar Industries Limited","client":"QE SECURITIES LLP","side":"BUY","qty":1537370,"price":53.26,"valueCr":8.19,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"DWARKESH","name":"Dwarikesh Sugar Industries Limited","client":"ALPHAGREP SECURITIES PRIVATE LIMITED","side":"BUY","qty":988556,"price":53.53,"valueCr":5.29,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"DWARKESH","name":"Dwarikesh Sugar Industries Limited","client":"NK SECURITIES RESEARCH PRIVATE LIMITED","side":"BUY","qty":1244624,"price":54.48,"valueCr":6.78,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"GATECH","name":"GACM Technologies Limited","client":"L7 HITECH PRIVATE LIMITED","side":"BUY","qty":818316,"price":0.86,"valueCr":0.07,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"GSMFOILS","name":"GSM Foils Limited","client":"LAKHTARIYA SHIVAM","side":"BUY","qty":75000,"price":87.87,"valueCr":0.66,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"GSMFOILS","name":"GSM Foils Limited","client":"MEZZANINE EQUITY PRIVATE LIMITED","side":"BUY","qty":299000,"price":85.64,"valueCr":2.56,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"GSMFOILS","name":"GSM Foils Limited","client":"ANAND MOHAN","side":"BUY","qty":75000,"price":80.15,"valueCr":0.6,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"GSMFOILS","name":"GSM Foils Limited","client":"JOWIN WILSON","side":"BUY","qty":87500,"price":83.64,"valueCr":0.73,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"GSMFOILS","name":"GSM Foils Limited","client":"KENIL JAYSUKHBHAI THATHAGAR","side":"BUY","qty":82500,"price":86.26,"valueCr":0.71,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"GSMFOILS","name":"GSM Foils Limited","client":"SOHAM FINCARE INDIA LLP","side":"BUY","qty":99000,"price":83.22,"valueCr":0.82,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"GSMFOILS","name":"GSM Foils Limited","client":"MATALIA STOCK BROKING PRIVATE LIMITED","side":"BUY","qty":71500,"price":83.67,"valueCr":0.6,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"GSMFOILS","name":"GSM Foils Limited","client":"HI GROWTH CORPORATE SERVICES PVT LTD","side":"BUY","qty":75500,"price":80.79,"valueCr":0.61,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"GSMFOILS","name":"GSM Foils Limited","client":"MULTIPLIER SHARE & STOCK ADVISORS PRIVATE LIMITED","side":"BUY","qty":578000,"price":80.2,"valueCr":4.64,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"GSMFOILS","name":"GSM Foils Limited","client":"PRIJAL TRADEFIN LLP","side":"BUY","qty":82000,"price":79.9,"valueCr":0.66,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"GSMFOILS","name":"GSM Foils Limited","client":"EPITOME TRADING AND INVESTMENTS","side":"BUY","qty":87000,"price":79.85,"valueCr":0.69,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"GSMFOILS","name":"GSM Foils Limited","client":"JENIVA ANTONY EPHREM","side":"BUY","qty":200000,"price":79.7,"valueCr":1.59,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"INDOBORAX","name":"Indo Borax & Chemicals Limited","client":"NK SECURITIES RESEARCH PRIVATE LIMITED","side":"BUY","qty":188589,"price":489.26,"valueCr":9.23,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"INDOBORAX","name":"Indo Borax & Chemicals Limited","client":"HRTI PRIVATE LIMITED","side":"BUY","qty":256769,"price":479.66,"valueCr":12.32,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"INDOBORAX","name":"Indo Borax & Chemicals Limited","client":"MICROCURVES TRADING PRIVATE LIMITED","side":"BUY","qty":300553,"price":492.7,"valueCr":14.81,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"INDOBORAX","name":"Indo Borax & Chemicals Limited","client":"JUNOMONETA FINSOL PRIVATE LIMITED","side":"BUY","qty":318475,"price":486.05,"valueCr":15.48,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"KFINTECH","name":"Kfin Technologies Limited","client":"MIRAE ASSET MUTUAL FUND","side":"BUY","qty":2562162,"price":925.0,"valueCr":237.0,"type":"BULK","cls":"INSTITUTION","sector":"Financial Services"},{"date":"20-AUG-2026","sym":"KFINTECH","name":"Kfin Technologies Limited","client":"KOTAK MAHINDRA MUTUAL FUND","side":"BUY","qty":2000000,"price":925.0,"valueCr":185.0,"type":"BULK","cls":"INSTITUTION","sector":"Financial Services"},{"date":"20-AUG-2026","sym":"KFINTECH","name":"Kfin Technologies Limited","client":"INVESCO MUTUAL FUND","side":"BUY","qty":4324324,"price":925.0,"valueCr":400.0,"type":"BULK","cls":"INSTITUTION","sector":"Financial Services"},{"date":"20-AUG-2026","sym":"KFINTECH","name":"Kfin Technologies Limited","client":"EDELWEISS MUTUAL FUND","side":"BUY","qty":1081081,"price":925.0,"valueCr":100.0,"type":"BULK","cls":"INSTITUTION","sector":"Financial Services"},{"date":"20-AUG-2026","sym":"KFINTECH","name":"Kfin Technologies Limited","client":"HSBC MUTUAL FUND","side":"BUY","qty":1783784,"price":925.0,"valueCr":165.0,"type":"BULK","cls":"INSTITUTION","sector":"Financial Services"},{"date":"20-AUG-2026","sym":"KFINTECH","name":"Kfin Technologies Limited","client":"MOTILAL OSWAL MUTUAL FUND","side":"BUY","qty":983784,"price":925.0,"valueCr":91.0,"type":"BULK","cls":"INSTITUTION","sector":"Financial Services"},{"date":"20-AUG-2026","sym":"KIRIINDUS","name":"Kiri Industries Limited","client":"MICROCURVES TRADING PRIVATE LIMITED","side":"BUY","qty":334847,"price":469.27,"valueCr":15.71,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"KRONOX","name":"Kronox Lab Sciences Limited","client":"NK SECURITIES RESEARCH PRIVATE LIMITED","side":"BUY","qty":196285,"price":177.31,"valueCr":3.48,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"KRYSTAL","name":"Krystal Integrated Services Limited","client":"RADIANT COMPUTECH PRIVATE LIMITED","side":"BUY","qty":115766,"price":683.8,"valueCr":7.92,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"KRYSTAL","name":"Krystal Integrated Services Limited","client":"JAGID VANITABEN RAJENDRAPRASAD","side":"BUY","qty":149454,"price":633.31,"valueCr":9.47,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"MAHICKRA","name":"Mahickra Chemical Limited","client":"ORENDA ENTERPRISES LLP","side":"BUY","qty":125250,"price":258.35,"valueCr":3.24,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"MARSONS","name":"Marsons Limited","client":"PSL LIMITED","side":"BUY","qty":1000000,"price":109.77,"valueCr":10.98,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"MOREPENLAB","name":"Morepen Laboratories Limited","client":"HRTI PRIVATE LIMITED","side":"BUY","qty":3005655,"price":93.44,"valueCr":28.08,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"MOREPENLAB","name":"Morepen Laboratories Limited","client":"QE SECURITIES LLP","side":"BUY","qty":2934639,"price":93.91,"valueCr":27.56,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"MYSORPETRO","name":"Mysore Petro Chemicals L","client":"ARHAM SHARE PRIVATE LIMITED","side":"BUY","qty":28126,"price":165.43,"valueCr":0.47,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"NXT-INFRA","name":"Nxt-Infra Trust","client":"KOTAK MAHINDRA BANK LIMITED","side":"BUY","qty":9550000,"price":93.85,"valueCr":89.63,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"NXT-INFRA","name":"Nxt-Infra Trust","client":"LARSEN & TOUBRO LIMITED","side":"BUY","qty":9575000,"price":93.85,"valueCr":89.86,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"PONNIERODE","name":"Ponni Sugars (Erode) Limited","client":"YACHNA BHATIA","side":"BUY","qty":55000,"price":414.38,"valueCr":2.28,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"PROPSHOP","name":"Propshop Events and Exh L","client":"PREMIUM PRIORITY ZONE LLP","side":"BUY","qty":150000,"price":69.5,"valueCr":1.04,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"RATNAVEER","name":"Ratnaveer Precision Engineering Limited","client":"JUNOMONETA FINSOL PRIVATE LIMITED","side":"BUY","qty":509270,"price":263.88,"valueCr":13.44,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"RATNAVEER","name":"Ratnaveer Precision Engineering Limited","client":"ARIHANT CAPITAL MARKETS LIMITED","side":"BUY","qty":2170546,"price":263.59,"valueCr":57.21,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"RATNAVEER","name":"Ratnaveer Precision Engineering Limited","client":"QE SECURITIES LLP","side":"BUY","qty":737565,"price":263.27,"valueCr":19.42,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"RATNAVEER","name":"Ratnaveer Precision Engineering Limited","client":"HRTI PRIVATE LIMITED","side":"BUY","qty":553080,"price":263.97,"valueCr":14.6,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"SANGINITA","name":"Sanginita Chemicals Limit","client":"NEO APEX SHARE BROKING SERVICES LLP","side":"BUY","qty":380000,"price":60.93,"valueCr":2.32,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"SBC","name":"SBC Exports Limited","client":"DEEPIKA GUPTA","side":"BUY","qty":2617321,"price":39.7,"valueCr":10.39,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"SHANTIGOLD","name":"Shanti Gold International Limited","client":"HRTI PRIVATE LIMITED","side":"BUY","qty":95580,"price":248.13,"valueCr":2.37,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"SHIPROCKET","name":"Shiprocket Limited","client":"NK SECURITIES RESEARCH PRIVATE LIMITED","side":"BUY","qty":4234987,"price":150.28,"valueCr":63.64,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"SHIPROCKET","name":"Shiprocket Limited","client":"MICROCURVES TRADING PRIVATE LIMITED","side":"BUY","qty":4025494,"price":149.68,"valueCr":60.25,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"SIRCA","name":"Sirca Paints India Limited","client":"ACME CAPITAL MARKET LIMITED","side":"BUY","qty":305342,"price":443.38,"valueCr":13.54,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"SOLARA","name":"Solara Active Pharma Sciences Limited","client":"JUNOMONETA FINSOL PRIVATE LIMITED","side":"BUY","qty":283420,"price":626.19,"valueCr":17.75,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"SUMEETINDS","name":"Sumeet Industries Limited","client":"ANKITA VISHAL SHAH","side":"BUY","qty":5422093,"price":13.26,"valueCr":7.19,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"SUN-RE","name":"Sunrest Life Ltd","client":"RASHI ENTERPRISES","side":"BUY","qty":100800,"price":2.1,"valueCr":0.02,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"TECHNOCRAF","name":"Technocraft Ventures Ltd","client":"JUNOMONETA FINSOL PRIVATE LIMITED","side":"BUY","qty":276651,"price":327.9,"valueCr":9.07,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"TECHNOCRAF","name":"Technocraft Ventures Ltd","client":"QE SECURITIES LLP","side":"BUY","qty":208942,"price":326.65,"valueCr":6.83,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"TFCILTD","name":"Tourism Finance Corporation of India Limited","client":"HRTI PRIVATE LIMITED","side":"BUY","qty":1022415,"price":131.82,"valueCr":13.48,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"WELINV","name":"Welspun Inv & Comm Ltd","client":"LLOYDS ENTERPRISES LIMITED","side":"BUY","qty":22238,"price":1851.0,"valueCr":4.12,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"ZAGGLE","name":"Zaggle Prepaid Ocean Services Limited","client":"QE SECURITIES LLP","side":"BUY","qty":1742168,"price":194.05,"valueCr":33.81,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"ZAGGLE","name":"Zaggle Prepaid Ocean Services Limited","client":"MICROCURVES TRADING PRIVATE LIMITED","side":"BUY","qty":1035199,"price":194.23,"valueCr":20.11,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"ZAGGLE","name":"Zaggle Prepaid Ocean Services Limited","client":"JUNOMONETA FINSOL PRIVATE LIMITED","side":"BUY","qty":977511,"price":193.55,"valueCr":18.92,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"ZAGGLE","name":"Zaggle Prepaid Ocean Services Limited","client":"HRTI PRIVATE LIMITED","side":"BUY","qty":1292148,"price":193.97,"valueCr":25.06,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"AARTECH","name":"Aartech Solonics Limited","client":"KABRA KAILASH","side":"SELL","qty":237155,"price":49.61,"valueCr":1.18,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"ABINFRA","name":"A B Infrabuild Limited","client":"ARIHANT CAPITAL MARKETS LIMITED","side":"SELL","qty":5809228,"price":13.73,"valueCr":7.98,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"AMRUTANJAN","name":"Amrutanjan Health Care Limited","client":"ENVISION INDIA FUND","side":"SELL","qty":213000,"price":523.58,"valueCr":11.15,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"ASIANTILES","name":"Asian Granito India Limited","client":"THAKKAR NILESHKUMAR FARSHURAM HUF","side":"SELL","qty":20500,"price":45.5,"valueCr":0.09,"type":"BULK","cls":"PROMOTER","sector":""},{"date":"20-AUG-2026","sym":"ATALREAL","name":"Atal Realtech Limited","client":"ALTIZEN VENTURES LLP","side":"SELL","qty":698318,"price":33.48,"valueCr":2.34,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"AVADHSUGAR","name":"Avadh Sugar & Energy Limited","client":"HRTI PRIVATE LIMITED","side":"SELL","qty":98683,"price":798.79,"valueCr":7.88,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"AVADHSUGAR","name":"Avadh Sugar & Energy Limited","client":"QE SECURITIES LLP","side":"SELL","qty":100852,"price":792.36,"valueCr":7.99,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"BALRAMCHIN","name":"Balrampur Chini Mills Limited","client":"GRAVITON RESEARCH CAPITAL LLP","side":"SELL","qty":1074739,"price":712.08,"valueCr":76.53,"type":"BULK","cls":"INSTITUTION","sector":"Fast Moving Consumer Goods"},{"date":"20-AUG-2026","sym":"BALRAMCHIN","name":"Balrampur Chini Mills Limited","client":"HRTI PRIVATE LIMITED","side":"SELL","qty":1281792,"price":737.36,"valueCr":94.51,"type":"BULK","cls":"INSTITUTION","sector":"Fast Moving Consumer Goods"},{"date":"20-AUG-2026","sym":"BALRAMCHIN","name":"Balrampur Chini Mills Limited","client":"JUNOMONETA FINSOL PRIVATE LIMITED","side":"SELL","qty":1090287,"price":736.96,"valueCr":80.35,"type":"BULK","cls":"INSTITUTION","sector":"Fast Moving Consumer Goods"},{"date":"20-AUG-2026","sym":"BALRAMCHIN","name":"Balrampur Chini Mills Limited","client":"MICROCURVES TRADING PRIVATE LIMITED","side":"SELL","qty":1303610,"price":740.89,"valueCr":96.58,"type":"BULK","cls":"INSTITUTION","sector":"Fast Moving Consumer Goods"},{"date":"20-AUG-2026","sym":"BLBLIMITED","name":"BLB Limited","client":"ACN FINANCIAL SERVICES LTD","side":"SELL","qty":280615,"price":16.05,"valueCr":0.45,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"DIPAN MEHTA COMMODITIES PRIVATE LIMITED","side":"SELL","qty":253172,"price":534.5,"valueCr":13.53,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"ELIXIR WEALTH MANAGEMENT PRIVATE LIMITED","side":"SELL","qty":458606,"price":532.55,"valueCr":24.42,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"PLUTUS RESEARCH PRIVATE LIMITED","side":"SELL","qty":614052,"price":529.41,"valueCr":32.51,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"SILVER LINE VENTURES PRIVATE LIMITED","side":"SELL","qty":160910,"price":527.59,"valueCr":8.49,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"MICROCURVES TRADING PRIVATE LIMITED","side":"SELL","qty":1206239,"price":531.76,"valueCr":64.14,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"PURE BROKING PRIVATE LIMITED","side":"SELL","qty":316655,"price":532.65,"valueCr":16.87,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"IRAGE BROKING SERVICES LLP","side":"SELL","qty":635401,"price":532.48,"valueCr":33.83,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"MATHISYS QUANTCAP LLP","side":"SELL","qty":331894,"price":534.15,"valueCr":17.73,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"MARWADI CHANDARANA INTERMEDIARIES BROKERS PRIVATE LIMITED","side":"SELL","qty":446773,"price":525.31,"valueCr":23.47,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"JUMP TRADING FINANCIAL INDIA PRIVATE LIMITED","side":"SELL","qty":289287,"price":531.49,"valueCr":15.38,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"JUNOMONETA FINSOL PRIVATE LIMITED","side":"SELL","qty":424990,"price":533.1,"valueCr":22.66,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"GOLDMINE STOCKS PRIVATE LIMITED","side":"SELL","qty":391528,"price":532.54,"valueCr":20.85,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"BLEL","name":"Behari Lal Engineering L","client":"NK SECURITIES RESEARCH PRIVATE LIMITED","side":"SELL","qty":586717,"price":531.82,"valueCr":31.2,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"CALSOFT","name":"California Soft Ltd.","client":"SHRI MUKTA SHARES","side":"SELL","qty":207114,"price":27.13,"valueCr":0.56,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"DHAMPURSUG","name":"Dhampur Sugar Mills Limited","client":"QE SECURITIES LLP","side":"SELL","qty":341685,"price":187.81,"valueCr":6.42,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"DWARKESH","name":"Dwarikesh Sugar Industries Limited","client":"ALPHAGREP SECURITIES PRIVATE LIMITED","side":"SELL","qty":988556,"price":53.58,"valueCr":5.3,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"DWARKESH","name":"Dwarikesh Sugar Industries Limited","client":"JUNOMONETA FINSOL PRIVATE LIMITED","side":"SELL","qty":2441950,"price":54.12,"valueCr":13.22,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"DWARKESH","name":"Dwarikesh Sugar Industries Limited","client":"QE SECURITIES LLP","side":"SELL","qty":1553999,"price":53.5,"valueCr":8.31,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"DWARKESH","name":"Dwarikesh Sugar Industries Limited","client":"NK SECURITIES RESEARCH PRIVATE LIMITED","side":"SELL","qty":1244624,"price":54.5,"valueCr":6.78,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"GATECH","name":"GACM Technologies Limited","client":"PARIJATA TRADING PRIVATE LIMITED","side":"SELL","qty":8000000,"price":0.87,"valueCr":0.7,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"GATECH","name":"GACM Technologies Limited","client":"L7 HITECH PRIVATE LIMITED","side":"SELL","qty":12389026,"price":0.87,"valueCr":1.08,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"GSMFOILS","name":"GSM Foils Limited","client":"IMRAN KHAN","side":"SELL","qty":424000,"price":80.21,"valueCr":3.4,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"GSMFOILS","name":"GSM Foils Limited","client":"JOWIN WILSON","side":"SELL","qty":83500,"price":84.25,"valueCr":0.7,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"GSMFOILS","name":"GSM Foils Limited","client":"MULTIPLIER SHARE & STOCK ADVISORS PRIVATE LIMITED","side":"SELL","qty":448000,"price":86.45,"valueCr":3.87,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"GSMFOILS","name":"GSM Foils Limited","client":"JENIVA ANTONY EPHREM","side":"SELL","qty":1000,"price":86.0,"valueCr":0.01,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"GSMFOILS","name":"GSM Foils Limited","client":"EPITOME TRADING AND INVESTMENTS","side":"SELL","qty":87000,"price":86.2,"valueCr":0.75,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"GSMFOILS","name":"GSM Foils Limited","client":"PRIJAL TRADEFIN LLP","side":"SELL","qty":82000,"price":79.88,"valueCr":0.66,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"GSMFOILS","name":"GSM Foils Limited","client":"HI GROWTH CORPORATE SERVICES PVT LTD","side":"SELL","qty":75500,"price":82.58,"valueCr":0.62,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"GSMFOILS","name":"GSM Foils Limited","client":"SMART HORIZON OPPORTUNITY FUND","side":"SELL","qty":335000,"price":86.44,"valueCr":2.9,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"GSMFOILS","name":"GSM Foils Limited","client":"MATALIA STOCK BROKING PRIVATE LIMITED","side":"SELL","qty":70500,"price":84.15,"valueCr":0.59,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"GSMFOILS","name":"GSM Foils Limited","client":"SOHAM FINCARE INDIA LLP","side":"SELL","qty":99000,"price":84.11,"valueCr":0.83,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"GSMFOILS","name":"GSM Foils Limited","client":"VIJAYA SHARMA","side":"SELL","qty":148500,"price":83.97,"valueCr":1.25,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"INDOBORAX","name":"Indo Borax & Chemicals Limited","client":"NK SECURITIES RESEARCH PRIVATE LIMITED","side":"SELL","qty":188589,"price":489.55,"valueCr":9.23,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"INDOBORAX","name":"Indo Borax & Chemicals Limited","client":"MICROCURVES TRADING PRIVATE LIMITED","side":"SELL","qty":300553,"price":493.46,"valueCr":14.83,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"INDOBORAX","name":"Indo Borax & Chemicals Limited","client":"JUNOMONETA FINSOL PRIVATE LIMITED","side":"SELL","qty":312632,"price":487.01,"valueCr":15.23,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"INDOBORAX","name":"Indo Borax & Chemicals Limited","client":"HRTI PRIVATE LIMITED","side":"SELL","qty":216327,"price":481.44,"valueCr":10.41,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"KFINTECH","name":"Kfin Technologies Limited","client":"GENERAL ATLANTIC SINGAPORE FUND PTE LTD","side":"SELL","qty":15135135,"price":925.0,"valueCr":1400.0,"type":"BULK","cls":"OTHER","sector":"Financial Services"},{"date":"20-AUG-2026","sym":"KIRIINDUS","name":"Kiri Industries Limited","client":"MICROCURVES TRADING PRIVATE LIMITED","side":"SELL","qty":334850,"price":469.47,"valueCr":15.72,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"KRONOX","name":"Kronox Lab Sciences Limited","client":"NK SECURITIES RESEARCH PRIVATE LIMITED","side":"SELL","qty":197129,"price":177.43,"valueCr":3.5,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"KRYSTAL","name":"Krystal Integrated Services Limited","client":"JAGID VANITABEN RAJENDRAPRASAD","side":"SELL","qty":150705,"price":626.54,"valueCr":9.44,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"MAHICKRA","name":"Mahickra Chemical Limited","client":"SAGAR PRAVINCHANDRA KHAKHARA","side":"SELL","qty":125250,"price":258.35,"valueCr":3.24,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"MOREPENLAB","name":"Morepen Laboratories Limited","client":"HRTI PRIVATE LIMITED","side":"SELL","qty":3104810,"price":93.72,"valueCr":29.1,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"MOREPENLAB","name":"Morepen Laboratories Limited","client":"QE SECURITIES LLP","side":"SELL","qty":2964621,"price":93.39,"valueCr":27.69,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"MYSORPETRO","name":"Mysore Petro Chemicals L","client":"ARHAM SHARE PRIVATE LIMITED","side":"SELL","qty":38023,"price":164.03,"valueCr":0.62,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"NXT-INFRA","name":"Nxt-Infra Trust","client":"ACTIS HIGHWAY INFRA LIMITED","side":"SELL","qty":19125000,"price":93.85,"valueCr":179.49,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"PROPSHOP","name":"Propshop Events and Exh L","client":"NOVA GLOBAL OPPORTUNITIES FUND PCC - TOUCHSTONE","side":"SELL","qty":230000,"price":69.51,"valueCr":1.6,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"RATNAVEER","name":"Ratnaveer Precision Engineering Limited","client":"ARIHANT CAPITAL MARKETS LIMITED","side":"SELL","qty":2080278,"price":264.62,"valueCr":55.05,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"RATNAVEER","name":"Ratnaveer Precision Engineering Limited","client":"JUNOMONETA FINSOL PRIVATE LIMITED","side":"SELL","qty":473450,"price":263.89,"valueCr":12.49,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"RATNAVEER","name":"Ratnaveer Precision Engineering Limited","client":"HRTI PRIVATE LIMITED","side":"SELL","qty":456944,"price":262.74,"valueCr":12.01,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"RATNAVEER","name":"Ratnaveer Precision Engineering Limited","client":"QE SECURITIES LLP","side":"SELL","qty":743400,"price":262.76,"valueCr":19.53,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"SANGINITA","name":"Sanginita Chemicals Limit","client":"GUTTIKONDA VARA LAKSHMI","side":"SELL","qty":850000,"price":60.15,"valueCr":5.11,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"SANGINITA","name":"Sanginita Chemicals Limit","client":"GUTTIKONDA RAJASEKHAR","side":"SELL","qty":839970,"price":62.03,"valueCr":5.21,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"SANGINITA","name":"Sanginita Chemicals Limit","client":"GUTTIKONDA VARA LAKSHMI","side":"SELL","qty":1117273,"price":62.73,"valueCr":7.01,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"SHANTIGOLD","name":"Shanti Gold International Limited","client":"HRTI PRIVATE LIMITED","side":"SELL","qty":448798,"price":248.74,"valueCr":11.16,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"SHIPROCKET","name":"Shiprocket Limited","client":"NK SECURITIES RESEARCH PRIVATE LIMITED","side":"SELL","qty":4234987,"price":150.35,"valueCr":63.67,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"SHIPROCKET","name":"Shiprocket Limited","client":"MICROCURVES TRADING PRIVATE LIMITED","side":"SELL","qty":4025494,"price":149.73,"valueCr":60.27,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"SIRCA","name":"Sirca Paints India Limited","client":"ACME CAPITAL MARKET LIMITED","side":"SELL","qty":305342,"price":444.88,"valueCr":13.58,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"SOLARA","name":"Solara Active Pharma Sciences Limited","client":"JUNOMONETA FINSOL PRIVATE LIMITED","side":"SELL","qty":282513,"price":626.82,"valueCr":17.71,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"SUMEETINDS","name":"Sumeet Industries Limited","client":"ANKITA VISHAL SHAH","side":"SELL","qty":367218,"price":12.99,"valueCr":0.48,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"SUN-RE","name":"Sunrest Life Ltd","client":"ASNANI STOCK BROKER PRIVATE LIMITED - ERROR ACCOUNT","side":"SELL","qty":40000,"price":2.1,"valueCr":0.01,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"SUN-RE","name":"Sunrest Life Ltd","client":"PRAKASH GOURISANKAR JHUNJHUNWALA","side":"SELL","qty":48000,"price":2.1,"valueCr":0.01,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"TECHNOCRAF","name":"Technocraft Ventures Ltd","client":"QE SECURITIES LLP","side":"SELL","qty":209264,"price":325.74,"valueCr":6.82,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"TECHNOCRAF","name":"Technocraft Ventures Ltd","client":"JUNOMONETA FINSOL PRIVATE LIMITED","side":"SELL","qty":282937,"price":327.95,"valueCr":9.28,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"TFCILTD","name":"Tourism Finance Corporation of India Limited","client":"HRTI PRIVATE LIMITED","side":"SELL","qty":2486357,"price":131.44,"valueCr":32.68,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"TIJARIA","name":"Tijaria Polypipes Limited","client":"GYANIRAM PATLE","side":"SELL","qty":146000,"price":5.91,"valueCr":0.09,"type":"BULK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"ZAGGLE","name":"Zaggle Prepaid Ocean Services Limited","client":"QE SECURITIES LLP","side":"SELL","qty":1746704,"price":193.2,"valueCr":33.75,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"ZAGGLE","name":"Zaggle Prepaid Ocean Services Limited","client":"MICROCURVES TRADING PRIVATE LIMITED","side":"SELL","qty":1035199,"price":194.33,"valueCr":20.12,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"ZAGGLE","name":"Zaggle Prepaid Ocean Services Limited","client":"JUNOMONETA FINSOL PRIVATE LIMITED","side":"SELL","qty":979048,"price":193.59,"valueCr":18.95,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"ZAGGLE","name":"Zaggle Prepaid Ocean Services Limited","client":"HRTI PRIVATE LIMITED","side":"SELL","qty":1263871,"price":193.54,"valueCr":24.46,"type":"BULK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"KFINTECH","name":"Kfin Technologies Limited","client":"HSBC MUTUAL FUND","side":"BUY","qty":1783784,"price":925.0,"valueCr":165.0,"type":"BLOCK","cls":"INSTITUTION","sector":"Financial Services"},{"date":"20-AUG-2026","sym":"KFINTECH","name":"Kfin Technologies Limited","client":"MOTILAL OSWAL MUTUAL FUND","side":"BUY","qty":983784,"price":925.0,"valueCr":91.0,"type":"BLOCK","cls":"INSTITUTION","sector":"Financial Services"},{"date":"20-AUG-2026","sym":"KFINTECH","name":"Kfin Technologies Limited","client":"MORGAN STANLEY ASIA SINGAPORE PTE","side":"BUY","qty":270275,"price":925.0,"valueCr":25.0,"type":"BLOCK","cls":"INSTITUTION","sector":"Financial Services"},{"date":"20-AUG-2026","sym":"KFINTECH","name":"Kfin Technologies Limited","client":"MIRAE ASSET MUTUAL FUND","side":"BUY","qty":2562162,"price":925.0,"valueCr":237.0,"type":"BLOCK","cls":"INSTITUTION","sector":"Financial Services"},{"date":"20-AUG-2026","sym":"KFINTECH","name":"Kfin Technologies Limited","client":"BANDHAN MUTUAL FUND","side":"BUY","qty":518919,"price":925.0,"valueCr":48.0,"type":"BLOCK","cls":"INSTITUTION","sector":"Financial Services"},{"date":"20-AUG-2026","sym":"KFINTECH","name":"Kfin Technologies Limited","client":"CITIGROUP GLOBAL MARKETS SINGAPORE PTE LIMITED","side":"BUY","qty":270275,"price":925.0,"valueCr":25.0,"type":"BLOCK","cls":"INSTITUTION","sector":"Financial Services"},{"date":"20-AUG-2026","sym":"KFINTECH","name":"Kfin Technologies Limited","client":"EDELWEISS MUTUAL FUND","side":"BUY","qty":1081081,"price":925.0,"valueCr":100.0,"type":"BLOCK","cls":"INSTITUTION","sector":"Financial Services"},{"date":"20-AUG-2026","sym":"KFINTECH","name":"Kfin Technologies Limited","client":"SOCIETE GENERALE","side":"BUY","qty":518909,"price":925.0,"valueCr":48.0,"type":"BLOCK","cls":"INSTITUTION","sector":"Financial Services"},{"date":"20-AUG-2026","sym":"KFINTECH","name":"Kfin Technologies Limited","client":"ICICI LOMBARD GENERAL INSURANCE CO LTD","side":"BUY","qty":281081,"price":925.0,"valueCr":26.0,"type":"BLOCK","cls":"INSTITUTION","sector":"Financial Services"},{"date":"20-AUG-2026","sym":"KFINTECH","name":"Kfin Technologies Limited","client":"ICICI PRUDENTIAL LIFE INSURANCE COMPANY LIMITED","side":"BUY","qty":540541,"price":925.0,"valueCr":50.0,"type":"BLOCK","cls":"INSTITUTION","sector":"Financial Services"},{"date":"20-AUG-2026","sym":"KFINTECH","name":"Kfin Technologies Limited","client":"INVESCO MUTUAL FUND","side":"BUY","qty":4324324,"price":925.0,"valueCr":400.0,"type":"BLOCK","cls":"INSTITUTION","sector":"Financial Services"},{"date":"20-AUG-2026","sym":"KFINTECH","name":"Kfin Technologies Limited","client":"KOTAK MAHINDRA MUTUAL FUND","side":"BUY","qty":2000000,"price":925.0,"valueCr":185.0,"type":"BLOCK","cls":"INSTITUTION","sector":"Financial Services"},{"date":"20-AUG-2026","sym":"NXT-INFRA","name":"Nxt-Infra Trust","client":"LARSEN & TOUBRO LIMITED","side":"BUY","qty":9575000,"price":93.85,"valueCr":89.86,"type":"BLOCK","cls":"OTHER","sector":""},{"date":"20-AUG-2026","sym":"NXT-INFRA","name":"Nxt-Infra Trust","client":"KOTAK MAHINDRA BANK LIMITED","side":"BUY","qty":9550000,"price":93.85,"valueCr":89.63,"type":"BLOCK","cls":"INSTITUTION","sector":""},{"date":"20-AUG-2026","sym":"KFINTECH","name":"Kfin Technologies Limited","client":"GENERAL ATLANTIC SINGAPORE FUND PTE LTD","side":"SELL","qty":15135135,"price":925.0,"valueCr":1400.0,"type":"BLOCK","cls":"OTHER","sector":"Financial Services"},{"date":"20-AUG-2026","sym":"NXT-INFRA","name":"Nxt-Infra Trust","client":"ACTIS HIGHWAY INFRA LIMITED","side":"SELL","qty":19125000,"price":93.85,"valueCr":179.49,"type":"BLOCK","cls":"OTHER","sector":""}],"accumulation":[{"sym":"KFINTECH","name":"Kfin Technologies Limited","sector":"Financial Services","buyCr":2578.0,"sellCr":0.0,"netCr":2578.0,"buys":18,"sells":0,"nInsti":12,"nDays":1,"status":"ACCUMULATING"},{"sym":"NXT-INFRA","name":"Nxt-Infra Trust","sector":"","buyCr":179.26,"sellCr":0.0,"netCr":179.26,"buys":2,"sells":0,"nInsti":1,"nDays":1,"status":"ACCUMULATING"},{"sym":"TFCILTD","name":"Tourism Finance Corporation of India Limited","sector":"","buyCr":13.48,"sellCr":32.68,"netCr":-19.2,"buys":1,"sells":1,"nInsti":1,"nDays":1,"status":"DISTRIBUTING"},{"sym":"CREDENT","name":"Credent Connect N Care L","sector":"","buyCr":14.75,"sellCr":0.0,"netCr":14.75,"buys":2,"sells":0,"nInsti":2,"nDays":1,"status":"ACCUMULATING"},{"sym":"SHANTIGOLD","name":"Shanti Gold International Limited","sector":"","buyCr":2.37,"sellCr":11.16,"netCr":-8.79,"buys":1,"sells":1,"nInsti":1,"nDays":1,"status":"DISTRIBUTING"},{"sym":"RATNAVEER","name":"Ratnaveer Precision Engineering Limited","sector":"","buyCr":104.67,"sellCr":99.08,"netCr":5.59,"buys":4,"sells":4,"nInsti":4,"nDays":1,"status":"ACCUMULATING"},{"sym":"SANGINITA","name":"Sanginita Chemicals Limit","sector":"","buyCr":2.32,"sellCr":0.0,"netCr":2.32,"buys":1,"sells":0,"nInsti":1,"nDays":1,"status":"ACCUMULATING"},{"sym":"INDOBORAX","name":"Indo Borax & Chemicals Limited","sector":"","buyCr":51.84,"sellCr":49.7,"netCr":2.14,"buys":4,"sells":4,"nInsti":4,"nDays":1,"status":"ACCUMULATING"},{"sym":"ABINFRA","name":"A B Infrabuild Limited","sector":"","buyCr":9.35,"sellCr":7.98,"netCr":1.37,"buys":1,"sells":1,"nInsti":1,"nDays":1,"status":"ACCUMULATING"},{"sym":"BLEL","name":"Behari Lal Engineering L","sector":"","buyCr":207.21,"sellCr":208.5,"netCr":-1.29,"buys":7,"sells":7,"nInsti":7,"nDays":1,"status":"DISTRIBUTING"},{"sym":"MOREPENLAB","name":"Morepen Laboratories Limited","sector":"","buyCr":55.64,"sellCr":56.79,"netCr":-1.15,"buys":2,"sells":2,"nInsti":2,"nDays":1,"status":"DISTRIBUTING"},{"sym":"BALRAMCHIN","name":"Balrampur Chini Mills Limited","sector":"Fast Moving Consumer Goods","buyCr":349.09,"sellCr":347.97,"netCr":1.12,"buys":4,"sells":4,"nInsti":4,"nDays":1,"status":"ACCUMULATING"},{"sym":"GATECH","name":"GACM Technologies Limited","sector":"","buyCr":0.0,"sellCr":0.7,"netCr":-0.7,"buys":0,"sells":1,"nInsti":1,"nDays":1,"status":"DISTRIBUTING"},{"sym":"ZAGGLE","name":"Zaggle Prepaid Ocean Services Limited","sector":"","buyCr":97.9,"sellCr":97.28,"netCr":0.62,"buys":4,"sells":4,"nInsti":4,"nDays":1,"status":"ACCUMULATING"},{"sym":"AVADHSUGAR","name":"Avadh Sugar & Energy Limited","sector":"","buyCr":16.33,"sellCr":15.87,"netCr":0.46,"buys":2,"sells":2,"nInsti":2,"nDays":1,"status":"ACCUMULATING"},{"sym":"BLBLIMITED","name":"BLB Limited","sector":"","buyCr":0.0,"sellCr":0.45,"netCr":-0.45,"buys":0,"sells":1,"nInsti":1,"nDays":1,"status":"DISTRIBUTING"},{"sym":"DWARKESH","name":"Dwarikesh Sugar Industries Limited","sector":"","buyCr":33.39,"sellCr":33.61,"netCr":-0.22,"buys":4,"sells":4,"nInsti":4,"nDays":1,"status":"DISTRIBUTING"},{"sym":"TECHNOCRAF","name":"Technocraft Ventures Ltd","sector":"","buyCr":15.9,"sellCr":16.1,"netCr":-0.2,"buys":2,"sells":2,"nInsti":2,"nDays":1,"status":"DISTRIBUTING"},{"sym":"DHAMPURSUG","name":"Dhampur Sugar Mills Limited","sector":"","buyCr":6.36,"sellCr":6.42,"netCr":-0.06,"buys":1,"sells":1,"nInsti":1,"nDays":1,"status":"DISTRIBUTING"},{"sym":"SHIPROCKET","name":"Shiprocket Limited","sector":"","buyCr":123.89,"sellCr":123.94,"netCr":-0.05,"buys":2,"sells":2,"nInsti":2,"nDays":1,"status":"DISTRIBUTING"},{"sym":"GSMFOILS","name":"GSM Foils Limited","sector":"","buyCr":1.29,"sellCr":1.34,"netCr":-0.05,"buys":2,"sells":2,"nInsti":2,"nDays":1,"status":"DISTRIBUTING"},{"sym":"SOLARA","name":"Solara Active Pharma Sciences Limited","sector":"","buyCr":17.75,"sellCr":17.71,"netCr":0.04,"buys":1,"sells":1,"nInsti":1,"nDays":1,"status":"ACCUMULATING"},{"sym":"KRONOX","name":"Kronox Lab Sciences Limited","sector":"","buyCr":3.48,"sellCr":3.5,"netCr":-0.02,"buys":1,"sells":1,"nInsti":1,"nDays":1,"status":"DISTRIBUTING"},{"sym":"KIRIINDUS","name":"Kiri Industries Limited","sector":"","buyCr":15.71,"sellCr":15.72,"netCr":-0.01,"buys":1,"sells":1,"nInsti":1,"nDays":1,"status":"DISTRIBUTING"}],"sectorFlow":[{"sector":"Financial Services","buyCr":2578.0,"sellCr":0.0,"netCr":2578.0,"deals":18},{"sector":"UNMAPPED","buyCr":972.89,"sellCr":798.53,"netCr":174.36,"deals":87},{"sector":"Fast Moving Consumer Goods","buyCr":349.09,"sellCr":347.97,"netCr":1.12,"deals":8}],"weeklyTop5":{"curDate":"2026-08-20","refDate":"2026-08-13","final":false,"status":"WEEK IN PROGRESS \u2014 daily refresh, Friday ko final","coverage":439,"rows":[{"sym":"BALRAMCHIN","name":"Balrampur Chini Mills Limited","sector":"Fast Moving Consumer Goods","dqCur":4426907,"dqRef":113727,"dpCur":13.2,"dpRef":34.3,"buyPct":3792.6,"dpChg":-21.1,"close":767.1,"instiNetCr":1.12,"instiDeals":8},{"sym":"ASTERDM","name":"Aster DM Quality Care Limited","sector":"Healthcare","dqCur":4643365,"dqRef":128068,"dpCur":47.0,"dpRef":39.2,"buyPct":3525.7,"dpChg":7.8,"close":765.65,"instiNetCr":0.0,"instiDeals":0},{"sym":"MMTC","name":"MMTC Limited","sector":"Services","dqCur":3747141,"dqRef":299677,"dpCur":8.8,"dpRef":41.7,"buyPct":1150.4,"dpChg":-32.9,"close":66.27,"instiNetCr":0.0,"instiDeals":0},{"sym":"ACMESOLAR","name":"Acme Solar Holdings Limited","sector":"Power","dqCur":3360466,"dqRef":353255,"dpCur":35.5,"dpRef":52.0,"buyPct":851.3,"dpChg":-16.5,"close":397.4,"instiNetCr":0.0,"instiDeals":0},{"sym":"BRIGADE","name":"Brigade Enterprises Limited","sector":"Realty","dqCur":528373,"dqRef":77096,"dpCur":34.9,"dpRef":41.7,"buyPct":585.3,"dpChg":-6.8,"close":625.75,"instiNetCr":0.0,"instiDeals":0}]},"fortnightlyTop5":{"curDate":"2026-08-20","refDate":"2026-08-05","final":false,"status":"FORTNIGHT IN PROGRESS \u2014 daily refresh, har month ki 16th ko final","coverage":444,"rows":[{"sym":"WELSPUNLIV","name":"Welspun Living Limited","sector":"Textiles","dqCur":4762037,"dqRef":306862,"dpCur":21.9,"dpRef":33.2,"buyPct":1451.8,"dpChg":-11.3,"close":188.69,"instiNetCr":0.0,"instiDeals":0},{"sym":"BALRAMCHIN","name":"Balrampur Chini Mills Limited","sector":"Fast Moving Consumer Goods","dqCur":4426907,"dqRef":302888,"dpCur":13.2,"dpRef":40.9,"buyPct":1361.6,"dpChg":-27.7,"close":767.1,"instiNetCr":1.12,"instiDeals":8},{"sym":"MMTC","name":"MMTC Limited","sector":"Services","dqCur":3747141,"dqRef":420707,"dpCur":8.8,"dpRef":38.2,"buyPct":790.7,"dpChg":-29.3,"close":66.27,"instiNetCr":0.0,"instiDeals":0},{"sym":"HSCL","name":"Himadri Speciality Chemical Limited","sector":"Chemicals","dqCur":4504992,"dqRef":587624,"dpCur":36.1,"dpRef":27.6,"buyPct":666.6,"dpChg":8.5,"close":704.2,"instiNetCr":0.0,"instiDeals":0},{"sym":"ASTERDM","name":"Aster DM Quality Care Limited","sector":"Healthcare","dqCur":4643365,"dqRef":633306,"dpCur":47.0,"dpRef":53.4,"buyPct":633.2,"dpChg":-6.4,"close":765.65,"instiNetCr":0.0,"instiDeals":0}]},"monthlyTop5":{"curDate":"2026-08-20","anchorDate":"2026-07-31","final":false,"status":"MONTH IN PROGRESS \u2014 daily refresh, month-end ko final","coverage":463,"rows":[{"sym":"ASTERDM","name":"Aster DM Quality Care Limited","sector":"Healthcare","dqCur":4643365,"dqRef":238860,"dpCur":47.0,"dpRef":58.0,"buyPct":1844.0,"dpChg":-11.1,"close":765.65,"instiNetCr":0.0,"instiDeals":0},{"sym":"LICI","name":"Life Insurance Corporation Of India","sector":"Financial Services","dqCur":11498786,"dqRef":689578,"dpCur":60.4,"dpRef":53.1,"buyPct":1567.5,"dpChg":7.4,"close":419.0,"instiNetCr":0.0,"instiDeals":0},{"sym":"BALRAMCHIN","name":"Balrampur Chini Mills Limited","sector":"Fast Moving Consumer Goods","dqCur":4426907,"dqRef":307686,"dpCur":13.2,"dpRef":58.5,"buyPct":1338.8,"dpChg":-45.2,"close":767.1,"instiNetCr":1.12,"instiDeals":8},{"sym":"COHANCE","name":"Cohance Lifesciences Limited","sector":"Healthcare","dqCur":1364462,"dqRef":111930,"dpCur":20.8,"dpRef":65.1,"buyPct":1119.0,"dpChg":-44.3,"close":475.55,"instiNetCr":0.0,"instiDeals":0},{"sym":"MEESHO","name":"Meesho Limited","sector":"Consumer Services","dqCur":11196472,"dqRef":1355501,"dpCur":32.9,"dpRef":37.1,"buyPct":726.0,"dpChg":-4.2,"close":209.51,"instiNetCr":0.0,"instiDeals":0}]},"dates":["20-AUG-2026"]};
+
+/* ================= LOCK ================= */
+function unlock() {
+  const v = document.getElementById("pw").value.trim();
+  if (v === PASSWORD) {
+    document.getElementById("lock").style.display = "none";
+    document.getElementById("app").style.display = "block";
+    loadData(false);
+  } else {
+    document.getElementById("lockerr").textContent = "❌ Incorrect Password. Access Denied.";
+  }
+}
+function lockScreen() {
+  document.getElementById("lock").style.display = "flex";
+  document.getElementById("app").style.display = "none";
+}
+
+/* ================= TOAST ================= */
+function toast(msg) {
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.className = "show";
+  clearTimeout(__toastTimer);
+  __toastTimer = setTimeout(function () { t.className = ""; }, 4200);
+}
+
+/* ================= HELPERS ================= */
+function fmtCr(v) { return "₹" + Number(v || 0).toFixed(2) + "Cr"; }
+function fmtNum(v) { return Number(v || 0).toLocaleString("en-IN"); }
+function fmtDate(d) {
+  // "20-AUG-2026" -> "20-Aug"
+  const m = /(\d{2})-([A-Z]{3})-(\d{4})/.exec(String(d || ""));
+  if (!m) return d;
+  const mon = { JAN:"Jan",FEB:"Feb",MAR:"Mar",APR:"Apr",MAY:"May",JUN:"Jun",
+    JUL:"Jul",AUG:"Aug",SEP:"Sep",OCT:"Oct",NOV:"Nov",DEC:"Dec" };
+  return m[1] + " " + (mon[m[2]] || m[2]);
+}
+function clsBadge(c) {
+  if (c === "INSTITUTION") return '<span class="badge b-insti">INSTITUTION</span>';
+  if (c === "PROMOTER") return '<span class="badge b-prom">PROMOTER</span>';
+  return '<span class="badge b-other">OTHER</span>';
+}
+function sideBadge(s) {
+  return s === "BUY" ? '<span class="badge b-buy">BUY</span>' : '<span class="badge b-sell">SELL</span>';
+}
+function statusBadge(s) {
+  if (s === "ACCUMULATING") return '<span class="badge b-acc">ACCUMULATING</span>';
+  if (s === "DISTRIBUTING") return '<span class="badge b-dist">DISTRIBUTING</span>';
+  return '<span class="badge b-flat">FLAT</span>';
+}
+function typeBadge(t) {
+  return t === "BLOCK" ? '<span class="badge b-block">BLOCK</span>' : '<span class="badge b-bulk">BULK</span>';
+}
+function symCell(sym) {
+  return '<td><a class="sym" href="' + TV + encodeURIComponent(sym) + '" target="_blank" rel="noopener" title="TradingView chart">' + sym + '</a></td>';
+}
+
+/* ================= DATA LOAD ================= */
+async function loadData(force) {
+  document.getElementById("hdr-sub").textContent = "loading data…";
+  const btn = document.getElementById("btnRefresh");
+  if (btn) { btn.disabled = true; btn.textContent = "⏳ Refreshing…"; }
+  let payload = null;
+  try {
+    const r = await fetch(DATA_URL + (force ? "?t=" + Date.now() : ""), { cache: "no-store" });
+    if (r.ok) payload = await r.json();
+  } catch (e) {}
+  if (!payload && __EMBEDDED_DATA__) { payload = __EMBEDDED_DATA__; usingEmbedded = true; }
+  if (!payload) {
+    document.getElementById("hdr-sub").textContent = "❌ data load nahi hua";
+    toast("❌ Data load nahi hua");
+    if (btn) { btn.disabled = false; btn.textContent = "🔄 Refresh"; }
+    return;
+  }
+  DATA = payload;
+  try {
+    const r2 = await fetch(HIST_URL, { cache: "no-store" });
+    if (r2.ok) HISTORY = await r2.json();
+  } catch (e) { HISTORY = null; }
+  renderAll();
+  if (btn) { btn.disabled = false; btn.textContent = "🔄 Refresh"; }
+  document.getElementById("hdr-sub").textContent =
+    "NSE BULK/BLOCK DEALS + FII/DII • SCAN " + (DATA.date || "?") +
+    " • history " + (DATA.scanStats ? DATA.scanStats.historyDays : "?") + " din" +
+    (usingEmbedded ? " • ⚠ EMBEDDED SNAPSHOT" : "");
+  toast("✅ Refreshed — scan date: " + (DATA.date || "?"));
+}
+
+/* ================= FII/DII ================= */
+function renderFiiDii() {
+  const today = DATA.fiidiiToday || {};
+  const fii = today.FII || {}; const dii = today.DII || {};
+  const cards = document.getElementById("fiidiiCards");
+  const upCls = function (v) { return (v || 0) >= 0 ? "up" : "dn"; };
+  cards.innerHTML =
+    '<div class="card"><div class="k">FII / FPI — Net Investment (aaj)</div>' +
+    '<div class="v ' + upCls(fii.net) + '">' + ((fii.net || 0) >= 0 ? "+" : "") + fmtCr(fii.net) + '</div>' +
+    '<div class="s">Buy ' + fmtCr(fii.buy) + ' • Sell ' + fmtCr(fii.sell) + '</div></div>' +
+    '<div class="card"><div class="k">DII — Net Investment (aaj)</div>' +
+    '<div class="v ' + upCls(dii.net) + '">' + ((dii.net || 0) >= 0 ? "+" : "") + fmtCr(dii.net) + '</div>' +
+    '<div class="s">Buy ' + fmtCr(dii.buy) + ' • Sell ' + fmtCr(dii.sell) + '</div></div>' +
+    '<div class="card"><div class="k">Combined Net (aaj)</div>' +
+    '<div class="v ' + upCls((fii.net || 0) + (dii.net || 0)) + '">' +
+    (((fii.net || 0) + (dii.net || 0)) >= 0 ? "+" : "") + fmtCr((fii.net || 0) + (dii.net || 0)) + '</div>' +
+    '<div class="s">FII+DII dono mila ke — market ka combined mood</div></div>';
+
+  const series = (DATA.fiidiiSeries || []).slice(-15);
+  const barArea = document.getElementById("fiidiiBars");
+  if (!series.length) { barArea.innerHTML = '<div class="mut small" style="margin-top:10px">History abhi jam rahi hai — roz ek naya din add hoga.</div>'; return; }
+  const maxAbs = Math.max.apply(null, [1].concat(series.map(function (x) {
+    return Math.max(Math.abs(x.fiiNet || 0), Math.abs(x.diiNet || 0));
+  })));
+  let html = "";
+  series.forEach(function (x) {
+    const fw = Math.max(1, Math.round(Math.abs(x.fiiNet || 0) / maxAbs * 300));
+    const dw = Math.max(1, Math.round(Math.abs(x.diiNet || 0) / maxAbs * 300));
+    const fc = (x.fiiNet || 0) >= 0 ? "#58a6ff" : "#f85149";
+    const dc = (x.diiNet || 0) >= 0 ? "#3fb950" : "#f0883e";
+    html += '<div class="barrow"><span class="lb">' + fmtDate(x.date) + '</span>' +
+      '<span class="bar" style="width:' + fw + 'px;background:' + fc + '"></span>' +
+      '<span class="mut" style="width:86px;text-align:right">' + ((x.fiiNet || 0) >= 0 ? "+" : "") + (x.fiiNet || 0).toFixed(0) + '</span>' +
+      '<span class="bar" style="width:' + dw + 'px;background:' + dc + '"></span>' +
+      '<span class="mut" style="width:86px;text-align:right">' + ((x.diiNet || 0) >= 0 ? "+" : "") + (x.diiNet || 0).toFixed(0) + '</span></div>';
+  });
+  barArea.innerHTML = html;
+}
+
+/* ================= ACCUMULATION ================= */
+function renderAccum() {
+  const rows = DATA.accumulation || [];
+  document.getElementById("accumlabel").textContent = rows.length + " symbols — 7 din me institutional deals wale";
+  const area = document.getElementById("accumarea");
+  if (!rows.length) {
+    area.innerHTML = '<div class="nopicks"><h3>Abhi koi institutional accumulation nahi</h3><p>Jab institutions bulk/block deals me active honge to yahan list banegi.</p></div>';
+    return;
+  }
+  let html = '<table><tr><th>#</th><th>SYMBOL</th><th>COMPANY</th><th>SECTOR</th>' +
+    '<th>INSTI BUY ₹Cr</th><th>INSTI SELL ₹Cr</th><th>NET ₹Cr</th><th>BUYS</th><th>SELLS</th>' +
+    '<th>INSTITUTIONS</th><th>ACTIVE DIN</th><th>STATUS</th></tr>';
+  rows.forEach(function (r, i) {
+    const netCls = r.netCr > 0 ? "up" : (r.netCr < 0 ? "dn" : "mut");
+    html += '<tr><td class="mut">' + (i + 1) + '</td>' + symCell(r.sym) +
+      '<td>' + (r.name || "") + '</td><td class="mut">' + (r.sector || "—") + '</td>' +
+      '<td class="up">' + r.buyCr.toFixed(2) + '</td>' +
+      '<td class="dn">' + r.sellCr.toFixed(2) + '</td>' +
+      '<td class="' + netCls + '"><b>' + (r.netCr >= 0 ? "+" : "") + r.netCr.toFixed(2) + '</b></td>' +
+      '<td>' + r.buys + '</td><td>' + r.sells + '</td>' +
+      '<td>' + r.nInsti + '</td><td>' + r.nDays + '</td>' +
+      '<td>' + statusBadge(r.status) + '</td></tr>';
+  });
+  area.innerHTML = html + '</table>';
+}
+
+/* ================= WEEKLY / MONTHLY TOP 5 ================= */
+function renderTop5(key, areaId, labelId, subId, metaTitle) {
+  const sec = DATA[key];
+  const area = document.getElementById(areaId);
+  const label = document.getElementById(labelId);
+  const sub = document.getElementById(subId);
+  if (!sec) {
+    area.innerHTML = '<div class="nopicks"><h3>Abhi data build ho raha hai</h3><p>Delivery history jamne ke baad yahan top 5 dikhenge.</p></div>';
+    label.textContent = "0 stocks";
+    return;
+  }
+  const refLabel = key === "monthlyTop5" ? "vs " + (sec.anchorDate || "?") : "vs " + (sec.refDate || "?");
+  label.textContent = sec.curDate + " " + refLabel + " • coverage " + (sec.coverage || 0) + "/500 • " + (sec.status || "");
+  sub.innerHTML = metaTitle + ' — compare: <b>' + sec.curDate + '</b> ' + refLabel +
+    ' • <span class="' + (sec.final ? 'up' : 'mut') + '">' + (sec.status || "") + '</span>' +
+    ' • <span class="mut">delivery = institutional accumulation proxy (NSE official bhavcopy)</span>';
+  const rows = sec.rows || [];
+  if (!rows.length) {
+    area.innerHTML = '<div class="nopicks"><h3>Abhi koi eligible stock nahi</h3><p>Filter: ref din pe delivery qty ≥50k + delivery% ≥5. History jamte hi list banegi.</p></div>';
+    return;
+  }
+  let html = '<table><tr><th>#</th><th>SYMBOL</th><th>COMPANY</th><th>SECTOR</th>' +
+    '<th>DELIV% NOW</th><th>DELIV% REF</th><th>DELIV QTY NOW</th><th>DELIV QTY REF</th>' +
+    '<th>🚀 BUY % CHANGE</th><th>INSTI DEALS</th><th>CLOSE ₹</th></tr>';
+  rows.forEach(function (r, i) {
+    const instiTxt = r.instiDeals > 0
+      ? (r.instiNetCr >= 0 ? '<span class="up">+' : '<span class="dn">') + r.instiNetCr + 'Cr</span> <span class="mut small">(' + r.instiDeals + ' deal' + (r.instiDeals > 1 ? "s" : "") + ')</span>'
+      : '<span class="mut small">—</span>';
+    html += '<tr><td class="mut">' + (i + 1) + '</td>' + symCell(r.sym) +
+      '<td class="mut">' + (r.name || "") + '</td><td class="mut">' + (r.sector || "—") + '</td>' +
+      '<td>' + r.dpCur + '%</td><td class="mut">' + r.dpRef + '%</td>' +
+      '<td>' + fmtNum(r.dqCur) + '</td><td class="mut">' + fmtNum(r.dqRef) + '</td>' +
+      '<td><b class="' + (r.buyPct >= 0 ? "up" : "dn") + '">' + (r.buyPct >= 0 ? "+" : "") + r.buyPct + '%</b>' +
+      ' <span class="mut small">(deliv% ' + (r.dpChg >= 0 ? "+" : "") + r.dpChg + ')</span></td>' +
+      '<td>' + instiTxt + '</td>' +
+      '<td>₹' + r.close + '</td></tr>';
+  });
+  area.innerHTML = html + '</table>';
+}
+function renderWeeklyTop5() { renderTop5("weeklyTop5", "weeklyarea", "weeklylabel", "weeklySub",
+  "Nifty 500 me delivery volume ki sabse badi weekly buying % jump — har Friday night final, baaki din daily refresh."); }
+function renderFortnightlyTop5() { renderTop5("fortnightlyTop5", "fortnightlyarea", "fortnightlylabel", "fortnightlySub",
+  "Nifty 500 me delivery volume ki sabse badi 15-din (fortnightly) buying % jump — har month ki 16th ko final, baaki din daily refresh."); }
+function renderMonthlyTop5() { renderTop5("monthlyTop5", "monthlyarea", "monthlylabel", "monthlySub",
+  "Nifty 500 me delivery volume ki sabse badi monthly buying % jump — har month-end final, baaki din daily refresh."); }
+function downloadTop5CSV(key) {
+  const sec = DATA[key];
+  const rows = sec ? sec.rows || [] : [];
+  if (!rows.length) { toast("Abhi koi row nahi"); return; }
+  const ref = key === "monthlyTop5" ? sec.anchorDate : sec.refDate;
+  const fname = key === "weeklyTop5" ? "INSTI_WeeklyTop5" : (key === "fortnightlyTop5" ? "INSTI_FortnightlyTop5" : "INSTI_MonthlyTop5");
+  dlCSV(rows.map(function (r) {
+    return [r.sym, r.name, r.sector, r.dpCur, r.dpRef, r.dqCur, r.dqRef, r.buyPct, r.dpChg, r.instiNetCr, r.instiDeals, r.close, ref];
+  }), ["Symbol", "Company", "Sector", "DelivPerNow", "DelivPerRef", "DelivQtyNow", "DelivQtyRef",
+       "BuyPctChg", "DelivPerChg", "InstiNetCr", "InstiDeals", "Close", "RefDate"], fname);
+}
+
+/* ================= DEALS ================= */
+function fillDateDropdown() {
+  const sel = document.getElementById("fDate");
+  if (!sel) return;
+  const dates = DATA.dates || [DATA.date].filter(Boolean);
+  let html = '<option value="latest">📅 Latest (' + (dates[0] || "") + ')</option>';
+  dates.forEach(function (d) {
+    html += '<option value="' + d + '">📅 ' + d + '</option>';
+  });
+  sel.innerHTML = html;
+}
+
+function dealsForDate() {
+  const v = document.getElementById("fDate").value;
+  if (v && v !== "latest" && HISTORY && HISTORY.scans && HISTORY.scans[v]) {
+    return HISTORY.scans[v].deals || [];
+  }
+  return DATA.dealsToday || [];
+}
+
+function renderDeals() {
+  const clsF = document.getElementById("fClass").value;
+  const sideF = document.getElementById("fSide").value;
+  const typeF = document.getElementById("fType").value;
+  const symF = document.getElementById("fSym").value.trim().toLowerCase();
+  const minF = parseFloat(document.getElementById("fMin").value || "0");
+  let rows = dealsForDate().filter(function (r) {
+    if (clsF && r.cls !== clsF) return false;
+    if (sideF && r.side !== sideF) return false;
+    if (typeF && r.type !== typeF) return false;
+    if (symF && r.sym.toLowerCase().indexOf(symF) === -1) return false;
+    if (r.valueCr < minF) return false;
+    return true;
+  });
+  rows.sort(function (a, b) { return b.valueCr - a.valueCr; });
+  document.getElementById("dealslabel").textContent = rows.length + " deals";
+  const area = document.getElementById("dealsarea");
+  if (!rows.length) {
+    area.innerHTML = '<div class="nopicks"><h3>Koi deal nahi mili</h3><p>Filters change karke dekho.</p></div>';
+    return;
+  }
+  let html = '<table><tr><th>DATE</th><th>SYMBOL</th><th>COMPANY</th><th>CLIENT</th><th>CLASS</th>' +
+    '<th>SIDE</th><th>QTY</th><th>PRICE ₹</th><th>VALUE ₹Cr</th><th>TYPE</th></tr>';
+  rows.forEach(function (r) {
+    html += '<tr><td class="mut">' + fmtDate(r.date) + '</td>' + symCell(r.sym) +
+      '<td class="mut">' + (r.name || "") + '</td>' +
+      '<td>' + r.client + '</td>' +
+      '<td>' + clsBadge(r.cls) + '</td>' +
+      '<td>' + sideBadge(r.side) + '</td>' +
+      '<td>' + fmtNum(r.qty) + '</td>' +
+      '<td>' + (r.price || 0).toFixed(2) + '</td>' +
+      '<td class="' + (r.side === "BUY" ? "up" : "dn") + '"><b>' + r.valueCr.toFixed(2) + '</b></td>' +
+      '<td>' + typeBadge(r.type) + '</td></tr>';
+  });
+  area.innerHTML = html + '</table>';
+}
+
+function clearDealFilters() {
+  ["fClass", "fSide", "fType", "fSym", "fMin"].forEach(function (id) {
+    document.getElementById(id).value = "";
+  });
+  renderDeals();
+}
+
+/* ================= SECTOR FLOW ================= */
+function renderSector() {
+  const rows = DATA.sectorFlow || [];
+  const area = document.getElementById("sectorarea");
+  if (!rows.length) {
+    area.innerHTML = '<div class="nopicks"><h3>Abhi koi sector flow data nahi</h3></div>';
+    return;
+  }
+  const maxAbs = Math.max.apply(null, [1].concat(rows.map(function (r) { return Math.abs(r.netCr); })));
+  let html = '<table><tr><th>SECTOR</th><th>BUY ₹Cr</th><th>SELL ₹Cr</th><th>NET ₹Cr</th><th>NET VISUAL</th><th>DEALS</th></tr>';
+  rows.forEach(function (r) {
+    const w = Math.max(1, Math.round(Math.abs(r.netCr) / maxAbs * 260));
+    const c = r.netCr >= 0 ? "#3fb950" : "#f85149";
+    html += '<tr><td>' + r.sector + '</td>' +
+      '<td class="up">' + r.buyCr.toFixed(2) + '</td>' +
+      '<td class="dn">' + r.sellCr.toFixed(2) + '</td>' +
+      '<td class="' + (r.netCr >= 0 ? "up" : "dn") + '"><b>' + (r.netCr >= 0 ? "+" : "") + r.netCr.toFixed(2) + '</b></td>' +
+      '<td><span class="netbar" style="width:' + w + 'px;background:' + c + '"></span></td>' +
+      '<td class="mut">' + r.deals + '</td></tr>';
+  });
+  area.innerHTML = html + '</table>';
+}
+
+/* ================= CSV ================= */
+function dlCSV(rows, cols, name) {
+  if (!rows || !rows.length) { toast("Koi row nahi — CSV me kuch nahi"); return; }
+  const data = [cols].concat(rows);
+  const csv = data.map(function (x) {
+    return x.map(function (v) { return '"' + String(v == null ? "" : v).replace(/"/g, '""') + '"'; }).join(",");
+  }).join("\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv" }));
+  a.download = name + "_" + (DATA ? DATA.date : "scan") + ".csv";
+  a.click();
+  toast("⬇ CSV downloaded — " + rows.length + " rows");
+}
+function downloadAccumCSV() {
+  dlCSV((DATA.accumulation || []).map(function (r) {
+    return [r.sym, r.name, r.sector, r.buyCr, r.sellCr, r.netCr, r.buys, r.sells, r.nInsti, r.nDays, r.status];
+  }), ["Symbol", "Company", "Sector", "InstiBuyCr", "InstiSellCr", "NetCr", "Buys", "Sells", "Institutions", "ActiveDays", "Status"], "INSTI_Accumulation");
+}
+function downloadDealsCSV() {
+  const clsF = document.getElementById("fClass").value;
+  const sideF = document.getElementById("fSide").value;
+  const typeF = document.getElementById("fType").value;
+  const symF = document.getElementById("fSym").value.trim().toLowerCase();
+  const minF = parseFloat(document.getElementById("fMin").value || "0");
+  const rows = dealsForDate().filter(function (r) {
+    if (clsF && r.cls !== clsF) return false;
+    if (sideF && r.side !== sideF) return false;
+    if (typeF && r.type !== typeF) return false;
+    if (symF && r.sym.toLowerCase().indexOf(symF) === -1) return false;
+    return r.valueCr >= minF;
+  });
+  dlCSV(rows.map(function (r) {
+    return [r.date, r.sym, r.name, r.client, r.cls, r.side, r.qty, r.price, r.valueCr, r.type, r.sector];
+  }), ["Date", "Symbol", "Company", "Client", "Class", "Side", "Qty", "Price", "ValueCr", "Type", "Sector"], "INSTI_Deals");
+}
+
+/* ================= RENDER ALL ================= */
+function renderAll() {
+  fillDateDropdown();
+  renderFiiDii();
+  renderAccum();
+  renderWeeklyTop5();
+  renderFortnightlyTop5();
+  renderMonthlyTop5();
+  renderDeals();
+  renderSector();
+}
+</script>
+</body>
+</html>

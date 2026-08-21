@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insti Tracker — Complete Guide + GitHub Setup</title>
+</head>
+<body style="margin:0;padding:0;background:#0d1117;color:#e6edf3;font-family:'Segoe UI',system-ui,Arial,sans-serif;line-height:1.6;">
+<div style="max-width:1000px;margin:0 auto;padding:24px 20px 60px;">
+
+  <div style="background:linear-gradient(135deg,#1a2332,#0d1117);border:1px solid #30363d;border-radius:14px;padding:26px 28px;margin-bottom:24px;">
+    <div style="font-size:12px;letter-spacing:2px;color:#58a6ff;text-transform:uppercase;">Complete Guide • Insti Tracker v1.0</div>
+    <h1 style="margin:6px 0 4px;font-size:26px;">🐘 INSTI TRACKER — Dashboard Guide + GitHub Setup</h1>
+    <div style="color:#8b949e;font-size:14px;">Institutional buying tracking • Weekly / Fortnightly / Monthly Top 5 • 100% free NSE data • Roz auto-update</div>
+  </div>
+
+  <!-- ============ PART 1: DASHBOARD EXPLANATION ============ -->
+  <div style="background:#12261b;border:1px solid #2ea043;border-radius:14px;padding:16px 20px;margin-bottom:26px;font-size:15px;">
+    <b style="color:#3fb950;">📖 PART 1 — Dashboard kya karta hai, section by section</b>
+  </div>
+
+  <div style="border:1px solid #30363d;border-radius:12px;background:#161b22;padding:18px 22px;font-size:14px;">
+    <p style="margin:0 0 14px;">Ye dashboard <b>NSE ke official free data</b> se track karta hai ki <b>institutions (MF, Insurance, Banks, FII) kis stock me paisa daal rahe hain</b>. Data ke 2 sources:</p>
+    <ul style="margin:0 0 16px;padding-left:22px;">
+      <li><b>Bulk/Block Deals</b> — jab koi institution ₹10Cr+ ya 0.5%+ equity ka bada trade karta hai, NSE usko publish karta hai (client ka naam ke saath!)</li>
+      <li><b>Delivery Volume (bhavcopy)</b> — har stock ki roz ki delivery quantity. Institutions delivery-based buying karte hain, isliye delivery % jump = institutional accumulation ka signal. Isi se <b>teeno Top 5 rankings</b> banti hain (saare 500 Nifty stocks scan hote hain)</li>
+    </ul>
+
+    <table style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:640px;margin-bottom:16px;">
+      <tr style="background:#21262d;">
+        <th style="padding:9px 12px;text-align:left;border-bottom:1px solid #30363d;">Section</th>
+        <th style="padding:9px 12px;text-align:left;border-bottom:1px solid #30363d;">Kya dikhata hai</th>
+        <th style="padding:9px 12px;text-align:left;border-bottom:1px solid #30363d;">Final kab hota hai</th>
+      </tr>
+      <tr style="border-bottom:1px solid #21262d;">
+        <td style="padding:9px 12px;"><b>🏦 FII vs DII</b></td>
+        <td style="padding:9px 12px;">Aaj ka net investment (₹ Cr) + pichhle 15 sessions ki bars — market ka overall mood</td>
+        <td style="padding:9px 12px;color:#8b949e;">Roz (market ke baad)</td>
+      </tr>
+      <tr style="border-bottom:1px solid #21262d;">
+        <td style="padding:9px 12px;"><b>🔥 Insti Accumulation (7D)</b></td>
+        <td style="padding:9px 12px;">Bulk/block deals se — kis stock me institutions 7 din me net buy/sell kar rahe hain (₹Cr leaderboard)</td>
+        <td style="padding:9px 12px;color:#8b949e;">Roz</td>
+      </tr>
+      <tr style="background:#12261b;border-bottom:1px solid #21262d;">
+        <td style="padding:9px 12px;"><b>🚀 WEEKLY TOP 5</b></td>
+        <td style="padding:9px 12px;">500 stocks me delivery buying ka sabse bada <b>weekly % change</b> (vs 7 din pehle)</td>
+        <td style="padding:9px 12px;"><b style="color:#3fb950;">Har Friday night ✅</b></td>
+      </tr>
+      <tr style="background:#12261b;border-bottom:1px solid #21262d;">
+        <td style="padding:9px 12px;"><b>🗓️ FORTNIGHTLY TOP 5</b></td>
+        <td style="padding:9px 12px;">500 stocks me delivery buying ka sabse bada <b>15-din % change</b> (vs 15 din pehle)</td>
+        <td style="padding:9px 12px;"><b style="color:#3fb950;">Har month ki 16th ✅</b></td>
+      </tr>
+      <tr style="background:#12261b;border-bottom:1px solid #21262d;">
+        <td style="padding:9px 12px;"><b>📅 MONTHLY TOP 5</b></td>
+        <td style="padding:9px 12px;">500 stocks me delivery buying ka sabse bada <b>monthly % change</b> (vs pichhla month-end)</td>
+        <td style="padding:9px 12px;"><b style="color:#3fb950;">Har month-end ✅</b></td>
+      </tr>
+      <tr style="border-bottom:1px solid #21262d;">
+        <td style="padding:9px 12px;"><b>📋 Bulk &amp; Block Deals</b></td>
+        <td style="padding:9px 12px;">Har deal ki detail — kaun client (INSTITUTION/PROMOTER/OTHER badge), kitna, kis price pe. Filters + date history</td>
+        <td style="padding:9px 12px;color:#8b949e;">Roz</td>
+      </tr>
+      <tr>
+        <td style="padding:9px 12px;"><b>🗂 Sector Flow (7D)</b></td>
+        <td style="padding:9px 12px;">Kis sector me institutions net paisa daal/nikal rahe hain</td>
+        <td style="padding:9px 12px;color:#8b949e;">Roz</td>
+      </tr>
+    </table>
+
+    <div style="background:#1c2129;border:1px solid #30363d;border-radius:10px;padding:12px 16px;font-size:13px;">
+      <b style="color:#d29922;">📌 Important samajhne wali baatein:</b><br>
+      1. Top 5 sections me "IN PROGRESS" dikhna <b>normal hai</b> — rankings roz refresh hoti hain, final date pe "FINAL ✅" badge lagta hai. Aapko daily dekhna hai, isliye daily data chahiye — final sirf tag hai.<br>
+      2. Har Top 5 row me <b>Delivery% change</b> bhi dikhta hai (green/red) — agar quantity badhi hai lekin delivery% gira hai, to sirf zyada trading thi, institutional buying nahi. Dono columns dekh kar judge karo.<br>
+      3. Har row me <b>Insti Deals overlay</b> — agar us stock me bulk/block deals hue to unka net ₹Cr dikhta hai (cross-validation).<br>
+      4. Har section ka apna <b>⬇ CSV download</b> button hai.<br>
+      5. Kisi bhi stock pe click → <b>TradingView chart</b> khulta hai.<br>
+      6. <b>Use kaise karo:</b> Top 5 stocks ko apne GTF zone dashboards (strict-pure-stocks / all-timeframe-stocks) se cross-check karo — institutional buying + GTF demand zone = strong setup.
+    </div>
+  </div>
+
+  <!-- ============ PART 2: FILES ============ -->
+  <div style="background:#12261b;border:1px solid #2ea043;border-radius:14px;padding:16px 20px;margin:26px 0 16px;font-size:15px;">
+    <b style="color:#3fb950;">📦 PART 2 — Upload karne wali files (14 files + 2 folders)</b>
+  </div>
+
+  <div style="border:1px solid #30363d;border-radius:12px;background:#161b22;padding:18px 22px;font-size:14px;">
+    <p style="margin:0 0 12px;">Workspace ka folder <code style="background:#21262d;padding:2px 8px;border-radius:6px;">insti-tracker/</code> hai — <b>iske andar ki saari files</b> GitHub pe upload karni hain. Sab ready aur tested hain:</p>
+
+    <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:680px;margin-bottom:14px;">
+      <tr style="background:#21262d;">
+        <th style="padding:8px 10px;text-align:left;border-bottom:1px solid #30363d;">File</th>
+        <th style="padding:8px 10px;text-align:left;border-bottom:1px solid #30363d;">Kya hai</th>
+        <th style="padding:8px 10px;text-align:left;border-bottom:1px solid #30363d;">Zaroori?</th>
+      </tr>
+      <tr style="border-bottom:1px solid #21262d;"><td style="padding:7px 10px;"><code>index.html</code></td><td style="padding:7px 10px;">Dashboard UI (password lock + saare sections + embedded demo data)</td><td style="padding:7px 10px;color:#3fb950;">✅ Haan</td></tr>
+      <tr style="border-bottom:1px solid #21262d;"><td style="padding:7px 10px;"><code>insti_scanner.py</code></td><td style="padding:7px 10px;">Scanner — NSE se data fetch + teeno Top 5 compute karta hai</td><td style="padding:7px 10px;color:#3fb950;">✅ Haan</td></tr>
+      <tr style="border-bottom:1px solid #21262d;"><td style="padding:7px 10px;"><code>nse_symbols.csv</code></td><td style="padding:7px 10px;">2,075 NSE stocks ki company-name list</td><td style="padding:7px 10px;color:#3fb950;">✅ Haan</td></tr>
+      <tr style="border-bottom:1px solid #21262d;"><td style="padding:7px 10px;"><code>nifty500_universe.csv</code></td><td style="padding:7px 10px;">Nifty 500 universe + industry mapping (Top 5 yahi 500 me se banta hai)</td><td style="padding:7px 10px;color:#3fb950;">✅ Haan</td></tr>
+      <tr style="border-bottom:1px solid #21262d;"><td style="padding:7px 10px;"><code>insti_live_data.json</code></td><td style="padding:7px 10px;">Aaj ka scan data (bot roz update karega)</td><td style="padding:7px 10px;color:#3fb950;">✅ Haan</td></tr>
+      <tr style="border-bottom:1px solid #21262d;"><td style="padding:7px 10px;"><code>history/all.json</code></td><td style="padding:7px 10px;">Deals + FII/DII ki date-wise history (60 din auto)</td><td style="padding:7px 10px;color:#3fb950;">✅ Haan</td></tr>
+      <tr style="border-bottom:1px solid #21262d;"><td style="padding:7px 10px;"><code>history/delivery.json</code></td><td style="padding:7px 10px;">Delivery history — isi se teeno Top 5 % change banta hai (2.5MB)</td><td style="padding:7px 10px;color:#3fb950;">✅ Haan (ise seed ki wajah se pehle din se rankings dikhengi)</td></tr>
+      <tr style="border-bottom:1px solid #21262d;"><td style="padding:7px 10px;"><code>.github/workflows/daily_scan.yml</code></td><td style="padding:7px 10px;">Auto-scan schedule — Mon–Fri 18:30 IST</td><td style="padding:7px 10px;color:#3fb950;">✅ Haan (auto-update isi se chalta hai)</td></tr>
+      <tr style="border-bottom:1px solid #21262d;"><td style="padding:7px 10px;"><code>INSTI_Deals.csv</code></td><td style="padding:7px 10px;">Aaj ke deals ka CSV export</td><td style="padding:7px 10px;color:#d29922;">Optional</td></tr>
+      <tr style="border-bottom:1px solid #21262d;"><td style="padding:7px 10px;"><code>INSTI_Accumulation.csv</code></td><td style="padding:7px 10px;">7D accumulation leaderboard CSV</td><td style="padding:7px 10px;color:#d29922;">Optional</td></tr>
+      <tr style="border-bottom:1px solid #21262d;"><td style="padding:7px 10px;"><code>INSTI_WeeklyTop5.csv</code></td><td style="padding:7px 10px;">Weekly Top 5 CSV</td><td style="padding:7px 10px;color:#d29922;">Optional</td></tr>
+      <tr style="border-bottom:1px solid #21262d;"><td style="padding:7px 10px;"><code>INSTI_FortnightlyTop5.csv</code></td><td style="padding:7px 10px;">Fortnightly Top 5 CSV</td><td style="padding:7px 10px;color:#d29922;">Optional</td></tr>
+      <tr style="border-bottom:1px solid #21262d;"><td style="padding:7px 10px;"><code>INSTI_MonthlyTop5.csv</code></td><td style="padding:7px 10px;">Monthly Top 5 CSV</td><td style="padding:7px 10px;color:#d29922;">Optional</td></tr>
+      <tr style="border-bottom:1px solid #21262d;"><td style="padding:7px 10px;"><code>README.md</code></td><td style="padding:7px 10px;">Documentation (repo pe dikhegi)</td><td style="padding:7px 10px;color:#d29922;">Optional</td></tr>
+      <tr><td style="padding:7px 10px;"><code>.gitignore</code></td><td style="padding:7px 10px;">pycache ignore</td><td style="padding:7px 10px;color:#d29922;">Optional</td></tr>
+    </table>
+
+    <div style="background:#1c2129;border:1px solid #30363d;border-radius:10px;padding:12px 16px;font-size:13px;">
+      ⚠️ <b>Sabse important:</b> <code>.github</code> aur <code>history</code> folders <b>hidden folders</b> hain (naam me dot/poori structure hai). Upload karte waqt browser me "Show hidden files" ya poora folder drag karo — warna auto-scan <b>nahi chalega</b>.
+    </div>
+  </div>
+
+  <!-- ============ PART 3: GITHUB STEPS ============ -->
+  <div style="background:#12261b;border:1px solid #2ea043;border-radius:14px;padding:16px 20px;margin:26px 0 16px;font-size:15px;">
+    <b style="color:#3fb950;">🛠️ PART 3 — GitHub pe step by step (10 minute)</b>
+  </div>
+
+  <div style="border:1px solid #30363d;border-radius:12px;background:#161b22;padding:18px 22px;font-size:14px;">
+
+    <div style="margin-bottom:18px;">
+      <div style="color:#58a6ff;font-weight:700;">STEP 1 — Naya repo banao</div>
+      <ol style="margin:6px 0 0;padding-left:22px;">
+        <li>github.com kholo → login karo → top-right <b>➕</b> icon → <b>New repository</b></li>
+        <li><b>Repository name</b> me likho: <code>insti-tracker</code></li>
+        <li><b>Public</b> select karo (Private me pages free me kaam nahi karta)</li>
+        <li>"Add a README file" ka checkbox <b>KHALI chhodo</b></li>
+        <li><b>Create repository</b> dabao</li>
+      </ol>
+    </div>
+
+    <div style="margin-bottom:18px;">
+      <div style="color:#58a6ff;font-weight:700;">STEP 2 — Files upload karo (dono tarike, koi bhi use karo)</div>
+      <div style="margin:6px 0 6px;"><b style="color:#3fb950;">Tarika A — Website se (aasaan):</b></div>
+      <ol style="margin:0 0 8px;padding-left:22px;">
+        <li>Naye repo me dikhega: <b>"uploading an existing file"</b> link (ya <b>Add file → Upload files</b>)</li>
+        <li>Workspace folder <code>insti-tracker/</code> kholo → <b>saari files aur folders select karke drag &amp; drop</b> karo us box me</li>
+        <li>Neeche <b>Commit changes</b> (green button) dabao</li>
+      </ol>
+      <div style="margin:6px 0 6px;"><b style="color:#3fb950;">Tarika B — Git commands (laptop pe folder download karke):</b></div>
+      <div style="background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:12px 16px;font-family:Consolas,monospace;font-size:12.5px;overflow-x:auto;margin:0 0 8px;">
+git clone https://github.com/heartaltafhussain-lgtm/insti-tracker.git<br>
+cd insti-tracker<br>
+<span style="color:#8b949e;"># workspace ke insti-tracker folder ki saari files is folder me copy karo</span><br>
+git add .<br>
+git commit -m "Insti Tracker v1.0 - weekly/fortnightly/monthly top5"<br>
+git push origin main
+      </div>
+    </div>
+
+    <div style="margin-bottom:18px;">
+      <div style="color:#58a6ff;font-weight:700;">STEP 3 — Workflow permission do (sabse zaroori setting!)</div>
+      <ol style="margin:6px 0 0;padding-left:22px;">
+        <li>Repo me jao → <b>Settings</b> tab → left sidebar me <b>Actions → General</b></li>
+        <li>Neeche scroll karo → section <b>"Workflow permissions"</b></li>
+        <li><b>"Read and write permissions"</b> select karo ✅</li>
+        <li><b>Save</b> dabao</li>
+      </ol>
+      <div style="margin:8px 0 0;color:#f0883e;font-size:13px;">⚠️ Ye setting ke bina auto-scan chalega, data banayega, lekin <b>commit nahi kar payega</b> — dashboard kabhi update nahi hoga. Ye miss mat karna!</div>
+    </div>
+
+    <div style="margin-bottom:18px;">
+      <div style="color:#58a6ff;font-weight:700;">STEP 4 — GitHub Pages on karo</div>
+      <ol style="margin:6px 0 0;padding-left:22px;">
+        <li>Repo <b>Settings</b> → left sidebar me <b>Pages</b></li>
+        <li><b>"Deploy from a branch"</b> select karo</li>
+        <li>Branch: <b>main</b> → Folder: <b>/ (root)</b></li>
+        <li><b>Save</b> dabao</li>
+        <li>1-2 minute me upar dikhega: <b>"Your site is live at https://heartaltafhussain-lgtm.github.io/insti-tracker/"</b></li>
+      </ol>
+    </div>
+
+    <div style="margin-bottom:18px;">
+      <div style="color:#58a6ff;font-weight:700;">STEP 5 — Pehla scan manually chalao</div>
+      <ol style="margin:6px 0 0;padding-left:22px;">
+        <li>Repo me <b>Actions</b> tab kholo</li>
+        <li>Left side me <b>"daily_insti_scan"</b> pe click</li>
+        <li><b>Run workflow</b> → green <b>Run workflow</b> button dabao</li>
+        <li>2-3 minute wait karo → <b>🟢 green tick</b> aayega (yellow chalta hua hai, red = fail)</li>
+      </ol>
+      <div style="margin:8px 0 0;color:#8b949e;font-size:13px;">Agar red aaya: workflow pe click → job pe click → <b>Run Insti Scanner</b> step kholo — error yahan dikhega. Screenshot le kar mujhe bhej do.</div>
+    </div>
+
+    <div style="margin-bottom:8px;">
+      <div style="color:#58a6ff;font-weight:700;">STEP 6 — Dashboard kholo aur verify karo ✅</div>
+      <ol style="margin:6px 0 0;padding-left:22px;">
+        <li>URL kholo: <code style="background:#21262d;padding:2px 8px;border-radius:6px;">https://heartaltafhussain-lgtm.github.io/insti-tracker/</code></li>
+        <li>Password: <b><code>7004602</code></b></li>
+        <li>Ctrl+Shift+R (hard refresh)</li>
+        <li>Checklist: 🏦 FII/DII cards • 🚀 Weekly Top 5 • 🗓️ Fortnightly Top 5 • 📅 Monthly Top 5 • 📋 Deals table — sab dikhna chahiye</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ============ PART 4: AUTO-UPDATE TIMELINE ============ -->
+  <div style="border:1px solid #30363d;border-radius:12px;background:#161b22;padding:18px 22px;font-size:14px;margin-top:22px;">
+    <b style="color:#3fb950;">⏰ Deploy ke baad kya hoga (timeline)</b>
+    <table style="width:100%;border-collapse:collapse;font-size:13px;margin-top:10px;min-width:640px;">
+      <tr style="background:#21262d;"><th style="padding:8px 10px;text-align:left;">Kab</th><th style="padding:8px 10px;text-align:left;">Kya hoga</th></tr>
+      <tr style="border-bottom:1px solid #21262d;"><td style="padding:8px 10px;">Abhi (deploy ke turant baad)</td><td style="padding:8px 10px;">Dashboard live — embedded data se teeno Top 5 pehle din se dikhengi</td></tr>
+      <tr style="border-bottom:1px solid #21262d;"><td style="padding:8px 10px;">Har din <b>18:30 IST</b> (Mon–Fri)</td><td style="padding:8px 10px;">Auto-scan: naya bhavcopy + deals + FII/DII → teeno Top 5 fresh rankings ke saath</td></tr>
+      <tr style="border-bottom:1px solid #21262d;"><td style="padding:8px 10px;"><b>Har Friday</b> 18:30 IST</td><td style="padding:8px 10px;">Weekly Top 5 pe <b>"FINAL WEEKLY ✅"</b> badge</td></tr>
+      <tr style="border-bottom:1px solid #21262d;"><td style="padding:8px 10px;"><b>Har month ki 16th</b> 18:30 IST</td><td style="padding:8px 10px;">Fortnightly Top 5 pe <b>"FINAL FORTNIGHTLY ✅"</b> badge</td></tr>
+      <tr style="border-bottom:1px solid #21262d;"><td style="padding:8px 10px;"><b>Har month-end</b> 18:30 IST</td><td style="padding:8px 10px;">Monthly Top 5 pe <b>"FINAL MONTHLY ✅"</b> badge</td></tr>
+      <tr><td style="padding:8px 10px;">Kuch din baad</td><td style="padding:8px 10px;">FII/DII bars + deals table me date-wise history jamti jayegi</td></tr>
+    </table>
+  </div>
+
+  <!-- ============ TROUBLESHOOTING ============ -->
+  <div style="border:1px solid #30363d;border-radius:12px;background:#161b22;padding:18px 22px;font-size:14px;margin-top:18px;">
+    <b style="color:#d29922;">🔧 Problem aaye to (troubleshooting)</b>
+    <table style="width:100%;border-collapse:collapse;font-size:13px;margin-top:10px;min-width:640px;">
+      <tr style="background:#21262d;"><th style="padding:8px 10px;text-align:left;">Problem</th><th style="padding:8px 10px;text-align:left;">Fix</th></tr>
+      <tr style="border-bottom:1px solid #21262d;"><td style="padding:8px 10px;">404 page aata hai</td><td style="padding:8px 10px;">Pages setting check karo (Step 4) — 2 min lagta hai live hone me</td></tr>
+      <tr style="border-bottom:1px solid #21262d;"><td style="padding:8px 10px;">Dashboard khulta hai par sections khali</td><td style="padding:8px 10px;">Hard refresh (Ctrl+Shift+R) — ya <code>insti_live_data.json</code> upload hua hai check karo</td></tr>
+      <tr style="border-bottom:1px solid #21262d;"><td style="padding:8px 10px;">Actions red fail ho raha</td><td style="padding:8px 10px;">Step 3 (Read and write permissions) check karo — 90% fail yahi hota hai</td></tr>
+      <tr style="border-bottom:1px solid #21262d;"><td style="padding:8px 10px;">Auto-scan chal raha par data same hai</td><td style="padding:8px 10px;">NSE ka aaj ka data 18:30 IST ke baad aata hai — kal ka scan check karo. Weekend pe scan nahi chalta (market band)</td></tr>
+      <tr><td style="padding:8px 10px;">Files upload nahi ho rahi (hidden folders)</td><td style="padding:8px 10px;">Laptop me folder kholo → View → "Hidden items" tick karo → phir drag. Ya Tarika B (git commands) use karo</td></tr>
+    </table>
+  </div>
+
+  <div style="color:#8b949e;font-size:12px;margin-top:24px;border-top:1px solid #30363d;padding-top:14px;">
+    ⚠️ Institutional data ≠ price guarantee — ye ek signal layer hai. Entry/exit apne GTF zone system se karo. Educational project, investment advice nahi. Past performance ≠ future guarantee.
+  </div>
+</div>
+</body>
+</html>
