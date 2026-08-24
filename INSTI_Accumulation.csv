@@ -1,36 +1,50 @@
 Symbol,Company,Sector,InstiBuyCr,InstiSellCr,NetCr,Buys,Sells,Institutions,ActiveDays,Status
 KFINTECH,Kfin Technologies Limited,Financial Services,2578.0,0.0,2578.0,18,0,12,1,ACCUMULATING
+MEESHO,Meesho Limited,Consumer Services,854.61,0.0,854.61,18,0,17,1,ACCUMULATING
 NXT-INFRA,Nxt-Infra Trust,,487.88,0.0,487.88,7,0,3,2,ACCUMULATING
 AMAGI,Amagi Media Labs Limited,,922.33,610.84,311.49,12,4,9,1,ACCUMULATING
+SETL,Standard Engineering Technology Limited,,0.0,47.13,-47.13,0,1,1,1,DISTRIBUTING
+PCJEWELLER,PC Jeweller Limited,,122.06,101.06,21.0,2,2,2,1,ACCUMULATING
 TFCILTD,Tourism Finance Corporation of India Limited,,13.48,32.68,-19.2,1,1,1,1,DISTRIBUTING
 CREDENT,Credent Connect N Care L,,19.91,3.59,16.32,3,1,3,2,ACCUMULATING
+QUADFUTURE,Quadrant Future Tek Limited,,334.83,323.14,11.69,13,13,10,2,ACCUMULATING
 SHANTIGOLD,Shanti Gold International Limited,,2.37,11.16,-8.79,1,1,1,1,DISTRIBUTING
-RATNAVEER,Ratnaveer Precision Engineering Limited,,176.7,168.21,8.49,7,7,4,2,ACCUMULATING
+RAMBHAJO,Advit Jewels Limited,,8.46,0.0,8.46,1,0,1,1,ACCUMULATING
+COMSYN,Commercial Syn Bags Limited,,1.18,8.0,-6.82,1,1,1,1,DISTRIBUTING
+BALUFORGE,Balu Forge Industries Limited,,77.13,71.68,5.45,2,2,2,1,ACCUMULATING
+RATNAVEER,Ratnaveer Precision Engineering Limited,,246.7,241.9,4.8,10,10,4,3,ACCUMULATING
+GCSL,Gretex Corporate Services Limited,,4.11,8.56,-4.45,1,1,1,1,DISTRIBUTING
+SANGINITA,Sanginita Chemicals Limit,,5.13,1.09,4.04,2,1,1,2,ACCUMULATING
 KRONOX,Kronox Lab Sciences Limited,,122.42,119.53,2.89,12,12,11,2,ACCUMULATING
-SANGINITA,Sanginita Chemicals Limit,,2.32,0.0,2.32,1,0,1,1,ACCUMULATING
+DAVANGERE,Davangere Sugar Company Limited,,2.98,5.37,-2.39,2,2,1,2,DISTRIBUTING
+ALLCARGO,Allcargo Logistics Limited,,30.59,32.77,-2.18,3,3,2,2,DISTRIBUTING
 INDOBORAX,Indo Borax & Chemicals Limited,,51.84,49.7,2.14,4,4,4,1,ACCUMULATING
-QUADFUTURE,Quadrant Future Tek Limited,,40.05,38.19,1.86,4,4,4,1,ACCUMULATING
+ATALREAL,Atal Realtech Limited,,14.68,12.57,2.11,5,5,4,2,ACCUMULATING
 BLEL,Behari Lal Engineering L,,218.22,220.02,-1.8,8,8,8,2,DISTRIBUTING
 ABINFRA,A B Infrabuild Limited,,9.35,7.98,1.37,1,1,1,1,ACCUMULATING
 ZAGGLE,Zaggle Prepaid Ocean Services Limited,,113.5,112.15,1.35,5,5,4,2,ACCUMULATING
-ALLCARGO,Allcargo Logistics Limited,,7.78,9.09,-1.31,1,1,1,1,DISTRIBUTING
+FASCINATE,Fascinate Textiles Ltd,,1.21,0.0,1.21,1,0,1,1,ACCUMULATING
 MOREPENLAB,Morepen Laboratories Limited,,55.64,56.79,-1.15,2,2,2,1,DISTRIBUTING
 BALRAMCHIN,Balrampur Chini Mills Limited,Fast Moving Consumer Goods,349.09,347.97,1.12,4,4,4,1,ACCUMULATING
 BLBLIMITED,BLB Limited,,0.0,0.92,-0.92,0,2,1,2,DISTRIBUTING
 GATECH,GACM Technologies Limited,,0.0,0.7,-0.7,0,1,1,1,DISTRIBUTING
 DBSTOCKBRO,DB (Int) Stock Brokers,,0.0,0.67,-0.67,0,1,1,1,DISTRIBUTING
+CORALFINAC,Coral India Finance & Housing Limited,,0.71,0.12,0.59,1,1,1,1,ACCUMULATING
+BIOFILCHEM,Biofil Chemicals & Pharmaceuticals Limited,,0.64,0.06,0.58,1,1,1,1,ACCUMULATING
 AVADHSUGAR,Avadh Sugar & Energy Limited,,16.33,15.87,0.46,2,2,2,1,ACCUMULATING
-DAVANGERE,Davangere Sugar Company Limited,,1.96,2.2,-0.24,1,1,1,1,DISTRIBUTING
-DWARKESH,Dwarikesh Sugar Industries Limited,,33.39,33.61,-0.22,4,4,4,1,DISTRIBUTING
+SHIVAUM,Shiv Aum Steels Limited,,9.76,9.53,0.23,2,2,2,2,ACCUMULATING
 TECHNOCRAF,Technocraft Ventures Ltd,,15.9,16.1,-0.2,2,2,2,1,DISTRIBUTING
+DWARKESH,Dwarikesh Sugar Industries Limited,,59.0,58.82,0.18,7,7,5,2,ACCUMULATING
+SHANTIGEAR,Shanthi Gears Limited,,87.6,87.43,0.17,3,3,3,1,ACCUMULATING
+DJML,DJ Mediaprint & Logistics Limited,,4.18,4.02,0.16,1,1,1,1,ACCUMULATING
+LALITHAA,Lalithaa Jewellery Mart L,,177.72,177.82,-0.1,1,1,1,1,DISTRIBUTING
 TBZ,Tribhovandas Bhimji Zaveri Limited,,10.34,10.42,-0.08,1,1,1,1,DISTRIBUTING
-ATALREAL,Atal Realtech Limited,,3.95,4.03,-0.08,1,1,1,1,DISTRIBUTING
-DHAMPURSUG,Dhampur Sugar Mills Limited,,6.36,6.42,-0.06,1,1,1,1,DISTRIBUTING
+LTFOODS,LT Foods Limited,Fast Moving Consumer Goods,96.52,96.58,-0.06,1,1,1,1,DISTRIBUTING
 SHIPROCKET,Shiprocket Limited,,123.89,123.94,-0.05,2,2,2,1,DISTRIBUTING
 PRSMJOHNSN,Prism Johnson Limited,,66.68,66.73,-0.05,1,1,1,1,DISTRIBUTING
-SHIVAUM,Shiv Aum Steels Limited,,3.97,3.92,0.05,1,1,2,1,ACCUMULATING
+MOTISONS,Motisons Jewellers Limited,,42.05,42.1,-0.05,2,2,1,2,DISTRIBUTING
 GSMFOILS,GSM Foils Limited,,1.29,1.34,-0.05,2,2,2,1,DISTRIBUTING
 KWIL,Kwality Wall's (India) Limited,,63.44,63.4,0.04,1,1,1,1,ACCUMULATING
 SOLARA,Solara Active Pharma Sciences Limited,,17.75,17.71,0.04,1,1,1,1,ACCUMULATING
-MOTISONS,Motisons Jewellers Limited,,20.54,20.57,-0.03,1,1,1,1,DISTRIBUTING
+DHAMPURSUG,Dhampur Sugar Mills Limited,,12.64,12.68,-0.04,2,2,2,2,DISTRIBUTING
 KIRIINDUS,Kiri Industries Limited,,15.71,15.72,-0.01,1,1,1,1,DISTRIBUTING

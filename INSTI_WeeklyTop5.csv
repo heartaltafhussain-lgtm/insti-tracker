@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,ASTERDM,Aster DM Quality Care Limited,Healthcare,69724289,1969504,3440.2,19388536,1776198,991.6,78.2,52.6,761.55,0.0,0,2026-08-14,FINAL WEEKLY ✅ (Friday close)
-2,BALRAMCHIN,Balrampur Chini Mills Limited,Fast Moving Consumer Goods,7912555,1283355,516.6,49734292,2043147,2334.2,13.7,38.6,729.35,1.12,8,2026-08-14,FINAL WEEKLY ✅ (Friday close)
-3,GLAXO,GlaxoSmithKline Pharmaceuticals Limited,Healthcare,970784,180630,437.4,1356725,101736,1233.6,41.7,64.0,2902.2,0.0,0,2026-08-14,FINAL WEEKLY ✅ (Friday close)
-4,DALBHARAT,Dalmia Bharat Limited,Construction Materials,869514,195783,344.1,715607,300175,138.4,54.9,39.5,1880.0,0.0,0,2026-08-14,FINAL WEEKLY ✅ (Friday close)
-5,ACMESOLAR,Acme Solar Holdings Limited,Power,6987295,1596905,337.6,10768876,1402817,667.7,39.4,53.2,401.6,0.0,0,2026-08-14,FINAL WEEKLY ✅ (Friday close)
+1,ASTERDM,Aster DM Quality Care Limited,Healthcare,75702662,2114178,3480.7,21109382,1799321,1073.2,78.2,54.0,750.9,0.0,0,2026-08-17,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+2,BALRAMCHIN,Balrampur Chini Mills Limited,Fast Moving Consumer Goods,9511615,1438367,561.3,59165088,2394471,2370.9,13.8,37.5,695.5,1.12,8,2026-08-17,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+3,APOLLOTYRE,Apollo Tyres Limited,Automobile and Auto Components,4936393,911775,441.4,5115956,865847,490.9,49.1,51.3,445.85,0.0,0,2026-08-17,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+4,LTFOODS,LT Foods Limited,Fast Moving Consumer Goods,3802522,738427,414.9,39990886,917593,4258.2,8.7,44.6,459.0,-0.06,2,2026-08-17,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+5,DALBHARAT,Dalmia Bharat Limited,Construction Materials,992678,207152,379.2,814283,232932,249.6,54.9,47.1,1853.0,0.0,0,2026-08-17,"WEEK IN PROGRESS — daily refresh, Friday ko final"
