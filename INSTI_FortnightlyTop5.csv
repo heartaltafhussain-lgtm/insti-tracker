@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,ASTERDM,Aster DM Quality Care Limited,Healthcare,78366325,4485050,1647.3,23371925,4232420,452.2,77.0,51.4,750.9,0.0,0,2026-08-07,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
-2,TENNIND,Tenneco Clean Air India Limited,Automobile and Auto Components,45395837,6700623,577.5,29750055,5190885,473.1,60.4,56.3,553.5,0.0,0,2026-08-07,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
-3,GODREJCP,Godrej Consumer Products Limited,Fast Moving Consumer Goods,23498766,3839422,512.0,19564206,4222484,363.3,54.6,47.6,928.9,0.0,0,2026-08-07,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
-4,FINCABLES,Finolex Cables Limited,Capital Goods,6360331,1083171,487.2,31980279,1149134,2683.0,16.6,48.5,1291.6,0.0,0,2026-08-07,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
-5,LGEINDIA,LG Electronics India Limited,Consumer Durables,8127856,1541598,427.2,9107666,1085674,738.9,47.2,58.7,1664.2,0.0,0,2026-08-07,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+1,ASTERDM,Aster DM Quality Care Limited,Healthcare,78885385,5034535,1466.9,23838156,4695642,407.7,76.8,51.7,765.25,0.0,0,2026-08-10,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+2,TENNIND,Tenneco Clean Air India Limited,Automobile and Auto Components,45398497,7097045,539.7,29944347,5382249,456.4,60.3,56.9,546.15,0.0,0,2026-08-10,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+3,FACT,Fertilizers and Chemicals Travancore Limited,Chemicals,1508702,265726,467.8,34145281,499569,6734.9,4.2,34.7,876.1,0.0,0,2026-08-10,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+4,GODREJCP,Godrej Consumer Products Limited,Fast Moving Consumer Goods,23072939,4571645,404.7,19149977,5006851,282.5,54.6,47.7,929.2,0.0,0,2026-08-10,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+5,LGEINDIA,LG Electronics India Limited,Consumer Durables,8352011,1661787,402.6,9294435,1169201,694.9,47.3,58.7,1690.4,0.0,0,2026-08-10,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
