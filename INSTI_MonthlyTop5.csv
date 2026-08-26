@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,ASTERDM,Aster DM Quality Care Limited,Healthcare,82401632,6054093,1261.1,27405453,4859992,463.9,75.0,55.5,765.25,0.0,0,2026-07-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-2,LICI,Life Insurance Corporation Of India,Financial Services,232389015,26153927,788.5,156582350,25021372,525.8,59.7,51.1,424.0,0.0,0,2026-07-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-3,TENNIND,Tenneco Clean Air India Limited,Automobile and Auto Components,50180465,7622608,558.3,34363253,5313575,546.7,59.4,58.9,546.15,0.0,0,2026-07-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-4,TRAVELFOOD,Travel Food Services Limited,Consumer Services,824982,232161,255.3,1442087,185103,679.1,36.4,55.6,1296.3,0.0,0,2026-07-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-5,URBANCO,Urban Company Limited,Consumer Services,84800561,24865960,241.0,277059964,24689099,1022.2,23.4,50.2,169.28,0.0,0,2026-07-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+1,ASTERDM,Aster DM Quality Care Limited,Healthcare,83421003,6054093,1277.9,28059455,4859992,477.4,74.8,55.5,762.1,0.0,0,2026-07-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+2,LICI,Life Insurance Corporation Of India,Financial Services,241737065,26153927,824.3,162420225,25021372,549.1,59.8,51.1,415.3,0.0,0,2026-07-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+3,TENNIND,Tenneco Clean Air India Limited,Automobile and Auto Components,50568287,7622608,563.4,34741266,5313575,553.8,59.3,58.9,539.6,0.0,0,2026-07-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+4,HINDCOPPER,Hindustan Copper Limited,Metals & Mining,100486913,26603021,277.7,223692197,42402580,427.5,31.0,38.6,556.05,0.0,0,2026-07-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+5,TRAVELFOOD,Travel Food Services Limited,Consumer Services,840824,232161,262.2,1454891,185103,686.0,36.6,55.6,1287.8,0.0,0,2026-07-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
