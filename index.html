@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Insti Tracker — NSE Institutional Flow Dashboard</title>
+<title>Insti Tracker — NSE Institutional Flow + GTF Zone Analysis</title>
 <style>
   :root {
     --bg: #0d1117; --panel: #161b22; --panel2: #1c2129; --border: #30363d;
@@ -80,6 +80,42 @@
     background: #21262d; border: 1px solid var(--border); padding: 9px 16px; border-radius: 9px;
     font-size: 13px; display: none; z-index: 99; max-width: 92vw; }
   #toast.show { display: block; }
+  /* ===== v1.1 GTF ZONE ANALYSIS POPUP ===== */
+  .anabtn { background: var(--panel2); border: 1px solid var(--border); color: var(--blue);
+    border-radius: 7px; padding: 3px 8px; cursor: pointer; font-size: 14px; line-height: 1; }
+  .anabtn:hover { border-color: var(--blue); background: #21262d; transform: scale(1.12); }
+  #anaModal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.72); z-index: 1000;
+    align-items: flex-start; justify-content: center; padding: 5vh 14px; overflow-y: auto; }
+  #anaModal .ambox { background: var(--panel); border: 1px solid var(--border); border-radius: 14px;
+    max-width: 760px; width: 100%; padding: 20px; box-shadow: 0 18px 60px rgba(0,0,0,.6); }
+  #anaModal .amhead { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+  #anaTitle { font-size: 19px; font-weight: 700; margin: 0; }
+  #anaTitle .sym { font-family: Consolas, monospace; letter-spacing: .5px; color: var(--blue); }
+  #anaSub { color: var(--mut); font-size: 12px; margin: 4px 0 14px; }
+  #anaClose { background: var(--panel2); border: 1px solid var(--border); color: var(--mut);
+    border-radius: 8px; padding: 5px 11px; cursor: pointer; font-size: 14px; flex: 0 0 auto; }
+  #anaClose:hover { color: var(--red); border-color: var(--red); }
+  .zgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 640px) { .zgrid { grid-template-columns: 1fr; } }
+  .zcard { background: var(--panel2); border: 1px solid var(--border); border-radius: 11px; padding: 12px; }
+  .zhead { font-size: 12px; font-weight: 700; color: var(--mut); text-transform: uppercase;
+    letter-spacing: .6px; margin-bottom: 7px; }
+  .zrange { font-size: 16.5px; font-weight: 700; font-family: Consolas, monospace; }
+  .zmeta { font-size: 12px; color: var(--mut); margin-top: 6px; line-height: 1.65; }
+  .zstrength { display: flex; align-items: center; gap: 8px; margin-top: 10px; padding-top: 9px;
+    border-top: 1px dashed var(--border); }
+  .bigsc { font-size: 17px; }
+  .zs-badge { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 11px; font-weight: 700; }
+  .zs-strong { background: rgba(63,185,80,.16); color: var(--green); }
+  .zs-med    { background: rgba(210,153,34,.16); color: var(--amber); }
+  .zs-weak   { background: rgba(248,81,73,.16); color: var(--red); }
+  .zs-none   { background: var(--panel); color: var(--mut); }
+  .pbars { margin-top: 10px; display: flex; flex-direction: column; gap: 5px; }
+  .pbar { display: grid; grid-template-columns: 128px 1fr 24px; gap: 8px; align-items: center; font-size: 11px; }
+  .plabel { color: var(--mut); }
+  .ptrack { background: var(--panel); border-radius: 999px; height: 7px; overflow: hidden; border: 1px solid var(--border); }
+  .pfill { display: block; height: 100%; background: linear-gradient(90deg, var(--red), var(--amber), var(--green)); }
+  .pval { text-align: right; font-weight: 700; font-family: Consolas, monospace; }
   footer { margin-top: 26px; color: var(--mut); font-size: 12px; border-top: 1px solid var(--border); padding-top: 12px; }
   .small { font-size: 11.5px; color: var(--mut); }
 </style>
@@ -116,7 +152,7 @@
   <!-- ============ ACCUMULATION ============ -->
   <section>
     <h2>🔥 INSTITUTIONAL ACCUMULATION — 7 Din ka Leaderboard</h2>
-    <div class="secsub">Institutions (MF/Insurance/Bank/FII/Securities) kis stock me <b class="up">buying</b> kar rahe hain ya <b class="dn">bech</b> rahe hain — net value ke hisaab se. <b>Tip:</b> ACCUMULATING stocks ko apne GTF zone dashboard se cross-check karo.</div>
+    <div class="secsub">Institutions (MF/Insurance/Bank/FII/Securities) kis stock me <b class="up">buying</b> kar rahe hain ya <b class="dn">bech</b> rahe hain — net value ke hisaab se. <b>Tip:</b> har row me 🔍 dabao — us stock ka GTF demand/supply zone (1D + monthly, last + next upcoming) aur calculated strength popup me khul jayega.</div>
     <div class="panel">
       <div class="strip">
         <button class="btn" onclick="downloadAccumCSV()">⬇ CSV</button>
@@ -224,6 +260,16 @@
 </div>
 
 <div id="toast"></div>
+<div id="anaModal" onclick="if(event.target===this)closeInstiAnalysis()">
+  <div class="ambox">
+    <div class="amhead">
+      <h3 id="anaTitle"></h3>
+      <button id="anaClose" onclick="closeInstiAnalysis()">✕ Close</button>
+    </div>
+    <div id="anaSub"></div>
+    <div id="anaBody"></div>
+  </div>
+</div>
 
 <script>
 "use strict";
@@ -378,7 +424,7 @@ function renderAccum() {
   }
   let html = '<table><tr><th class="stk">SYMBOL</th><th>COMPANY</th><th>SECTOR</th>' +
     '<th>INSTI BUY ₹Cr</th><th>INSTI SELL ₹Cr</th><th>NET ₹Cr</th><th>BUYS</th><th>SELLS</th>' +
-    '<th>INSTITUTIONS</th><th>ACTIVE DIN</th><th>STATUS</th></tr>';
+    '<th>INSTITUTIONS</th><th>ACTIVE DIN</th><th>STATUS</th><th>🔍</th></tr>';
   rows.forEach(function (r, i) {
     const netCls = r.netCr > 0 ? "up" : (r.netCr < 0 ? "dn" : "mut");
     html += '<tr>' + symCell(r.sym) + nameCell(r.sym, r.name || "") +
@@ -388,7 +434,7 @@ function renderAccum() {
       '<td class="' + netCls + '"><b>' + (r.netCr >= 0 ? "+" : "") + r.netCr.toFixed(2) + '</b></td>' +
       '<td>' + r.buys + '</td><td>' + r.sells + '</td>' +
       '<td>' + r.nInsti + '</td><td>' + r.nDays + '</td>' +
-      '<td>' + statusBadge(r.status) + '</td></tr>';
+      '<td>' + statusBadge(r.status) + '</td>' + instiAnalysisBtn(r) + '</tr>';
   });
   area.innerHTML = html + '</table>';
 }
@@ -429,7 +475,7 @@ function renderTop5(key, areaId, labelId, subId, metaTitle) {
   let html = '<table><tr><th class="stk">SYMBOL</th><th>COMPANY</th><th>SECTOR</th>' +
     '<th>🚀 BUY % CHG</th><th>🔻 SELL % CHG</th>' +
     '<th>BUY QTY NOW</th><th>BUY QTY REF</th><th>SELL QTY NOW</th><th>SELL QTY REF</th>' +
-    '<th>DELIV% NOW</th><th>DELIV% REF</th><th>INSTI DEALS</th><th>CLOSE ₹</th></tr>';
+    '<th>DELIV% NOW</th><th>DELIV% REF</th><th>INSTI DEALS</th><th>CLOSE ₹</th><th>🔍</th></tr>';
   rows.forEach(function (r, i) {
     const instiTxt = r.instiDeals > 0
       ? (r.instiNetCr >= 0 ? '<span class="up">+' : '<span class="dn">') + r.instiNetCr + 'Cr</span> <span class="mut small">(' + r.instiDeals + ' deal' + (r.instiDeals > 1 ? "s" : "") + ')</span>'
@@ -440,7 +486,7 @@ function renderTop5(key, areaId, labelId, subId, metaTitle) {
       '<td>' + fmtL(r.curSell) + '</td><td class="mut">' + fmtL(r.prevSell) + '</td>' +
       '<td>' + r.dpCur + '%</td><td class="mut">' + r.dpPrev + '%</td>' +
       '<td>' + instiTxt + '</td>' +
-      '<td>₹' + r.close + '</td></tr>';
+      '<td>₹' + r.close + '</td>' + instiAnalysisBtn(r) + '</tr>';
   });
   area.innerHTML = html + '</table>';
 }
@@ -469,7 +515,7 @@ function renderTriple() {
   }
   let html = '<table><tr><th class="stk">SYMBOL</th><th>COMPANY</th><th>SECTOR</th>' +
     '<th>WEEKLY BUY %</th><th>FORTNIGHTLY BUY %</th><th>MONTHLY BUY %</th>' +
-    '<th>COMBINED SCORE</th><th>INSTI DEALS</th><th>CLOSE ₹</th></tr>';
+    '<th>COMBINED SCORE</th><th>INSTI DEALS</th><th>CLOSE ₹</th><th>🔍</th></tr>';
   rows.forEach(function (r, i) {
     const instiTxt = r.instiDeals > 0
       ? (r.instiNetCr >= 0 ? '<span class="up">+' : '<span class="dn">') + r.instiNetCr + 'Cr</span> <span class="mut small">(' + r.instiDeals + ' deal' + (r.instiDeals > 1 ? "s" : "") + ')</span>'
@@ -480,7 +526,7 @@ function renderTriple() {
       '<td class="up"><b>+' + r.mBuyPct + '%</b></td>' +
       '<td><span class="badge b-acc">' + r.score + '</span></td>' +
       '<td>' + instiTxt + '</td>' +
-      '<td>₹' + r.close + '</td></tr>';
+      '<td>₹' + r.close + '</td>' + instiAnalysisBtn(r) + '</tr>';
   });
   area.innerHTML = html + '</table>';
 }
@@ -628,6 +674,100 @@ function downloadDealsCSV() {
 }
 
 /* ================= RENDER ALL ================= */
+/* ===== v1.1 GTF ZONE ANALYSIS POPUP ===== */
+let GTF = null, GTF_LOADING = null;
+function loadGTF() {
+  if (GTF) return Promise.resolve(GTF);
+  if (GTF_LOADING) return GTF_LOADING;
+  const urls = ["gtf_live_data.json",
+    "https://raw.githubusercontent.com/heartaltafhussain-lgtm/all-timeframe-stocks/main/gtf_live_data.json"];
+  GTF_LOADING = (async function () {
+    for (const u of urls) {
+      try {
+        const res = await fetch(u);
+        if (res.ok) {
+          const j = await res.json();
+          if (j && j.stockData) { GTF = j; return GTF; }
+        }
+      } catch (e) { /* next url */ }
+    }
+    GTF_LOADING = null;
+    return null;
+  })();
+  return GTF_LOADING;
+}
+function instiAnalysisBtn(r) {
+  return '<td><button class="anabtn" data-sym="' + r.sym + '" onclick="openInstiAnalysis(this)" title="GTF zone analysis — ' + r.sym + '">🔍</button></td>';
+}
+function zsVerdict(v, total) {
+  if (total == null) return '<span class="zs-badge zs-none">—</span>';
+  if (v === "STRONG") return '<span class="zs-badge zs-strong">💪 STRONG</span>';
+  if (v === "MEDIUM") return '<span class="zs-badge zs-med">⚡ MEDIUM</span>';
+  return '<span class="zs-badge zs-weak">⚠️ WEAK</span>';
+}
+function zsCard(tf, z, sub) {
+  const lbl = tf === "1M" ? "🗓 MONTHLY" : "📅 DAILY";
+  if (!z) return '<div class="zcard"><div class="zhead">' + lbl + ' — ' + sub + '</div>' +
+    '<div class="mut" style="padding:6px 0">— koi active zone nahi —</div></div>';
+  const st = z.strength || {}, parts = st.parts || {};
+  const rows = [["Freshness / Retests", parts.freshness], ["Base candles", parts.base],
+    ["Departure strength", parts.departure], ["Volume confirm", parts.volume],
+    ["Zone age", parts.age], ["Higher-TF confluence", parts.htf]];
+  const bars = rows.filter(function (x) { return x[1] !== undefined && x[1] !== null; }).map(function (x) {
+    return '<div class="pbar"><span class="plabel">' + x[0] + '</span>' +
+      '<span class="ptrack"><span class="pfill" style="width:' + (x[1] * 10) + '%"></span></span>' +
+      '<b class="pval">' + x[1] + '</b></div>';
+  }).join("");
+  const stOK = st.total !== undefined && st.total !== null;
+  return '<div class="zcard"><div class="zhead">' + lbl + ' — ' + sub + '</div>' +
+    '<div class="zrange">₹' + z.lo + ' – ₹' + z.hi + '</div>' +
+    '<div class="zmeta">' + (z.pat || "") + '<br>' +
+      'Existing zone score: <b style="color:var(--txt)">' + (z.score != null ? z.score + " " + (z.grade || "") : "—") + '</b>' +
+      (z.birth_score != null ? ' <span class="mut">(bante waqt: ' + z.birth_score + ' ' + (z.birth_grade || "") + ')</span>' : '') + '<br>' +
+      'Tests: <b style="color:var(--txt)">' + (z.tests || 0) + '</b>' + (z.tests === 0 ? ' <span class="up">(FRESH)</span>' : '') +
+      (z.born ? ' • Born: <b style="color:var(--txt)">' + z.born + '</b>' : '') +
+      (z.n_base != null ? ' • Base: <b style="color:var(--txt)">' + z.n_base + '</b>' : '') +
+      (z.legout != null ? ' • Leg-out: <b style="color:var(--txt)">' + z.legout + 'x ATR</b>' : '') +
+      (z.vol_ratio != null ? ' • Vol: <b style="color:var(--txt)">' + z.vol_ratio + 'x</b>' : '') +
+    '</div>' +
+    '<div class="zstrength">' + zsVerdict(st.verdict, stOK ? st.total : null) +
+      ' <b class="bigsc">' + (stOK ? st.total + '/10' : '—') + '</b> <span class="mut">calculated strength</span></div>' +
+    (bars ? '<div class="pbars">' + bars + '</div>' : '') + '</div>';
+}
+function closeInstiAnalysis() { document.getElementById("anaModal").style.display = "none"; }
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeInstiAnalysis(); });
+async function openInstiAnalysis(btn) {
+  const sym = btn.getAttribute("data-sym");
+  document.getElementById("anaTitle").innerHTML = '🔍 ' + sym + ' — GTF Zone Analysis';
+  document.getElementById("anaSub").textContent = "";
+  document.getElementById("anaBody").innerHTML = '<div class="mut" style="padding:18px 0">⏳ GTF zone data load ho raha hai…</div>';
+  document.getElementById("anaModal").style.display = "flex";
+  const g = await loadGTF();
+  if (!g) {
+    document.getElementById("anaBody").innerHTML = '<div class="mut" style="padding:18px 0">❌ GTF zone data fetch nahi hua. ' +
+      'Check karo ki all-timeframe-stocks ka <b>gtf_live_data.json</b> is repo me bhi hai ya internet se fetch ho pa raha hai.</div>';
+    return;
+  }
+  const r = (g.stockData || []).find(function (x) { return x.sym === sym; });
+  if (!r) {
+    document.getElementById("anaBody").innerHTML = '<div class="mut" style="padding:18px 0">' + sym +
+      ' aaj ke GTF zone scan me nahi hai (koi active zone nahi mila).</div>';
+    return;
+  }
+  const a = r.analysis || {};
+  const g1 = a.d1 || {}, gm = a.m1 || {};
+  document.getElementById("anaBody").innerHTML =
+    '<div class="plan-note" style="margin-bottom:12px;color:var(--mut);font-size:12.5px">GTF scan ' + (g.date || "?") +
+    ' • LTP ₹' + r.ltp + ' • ' + (r.sig || "") + '<br>Current zones — 1D: ' + ((r.z1d || "—") + '') +
+    '  |  1M: ' + ((r.z1m || "—") + '') + '</div>' +
+    '<div class="zgrid">' +
+    zsCard("1D", g1.last, "LAST / current support") +
+    zsCard("1D", g1.next, "NEXT upcoming support") +
+    zsCard("1M", gm.last, "LAST monthly support") +
+    zsCard("1M", gm.next, "NEXT monthly support") +
+    '</div>';
+}
+
 function renderAll() {
   fillDateDropdown();
   renderFiiDii();
