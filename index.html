@@ -748,10 +748,11 @@ async function openInstiAnalysis(btn) {
       'Check karo ki all-timeframe-stocks ka <b>gtf_live_data.json</b> is repo me bhi hai ya internet se fetch ho pa raha hai.</div>';
     return;
   }
-  const r = (g.stockData || []).find(function (x) { return x.sym === sym; });
+  const r = (g.stockData || []).find(function (x) { return x.sym === sym; }) || (g.analysisBySym || {})[sym];
   if (!r) {
     document.getElementById("anaBody").innerHTML = '<div class="mut" style="padding:18px 0">' + sym +
-      ' aaj ke GTF zone scan me nahi hai (koi active zone nahi mila).</div>';
+      ' ka GTF zone data abhi available nahi (naya IPO ho sakta hai ya scan me nahi aaya).<br>' +
+      '<span style="font-size:11.5px">GTF dashboard heartaltafhussain-lgtm.github.io/all-timeframe-stocks pe NIFTY 500 stocks ka daily scan hota hai.</span></div>';
     return;
   }
   const a = r.analysis || {};
