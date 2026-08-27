@@ -1,35 +1,37 @@
 Rank,Symbol,Company,Sector,WeeklyBuyPct,FortnightlyBuyPct,MonthlyBuyPct,CombinedScore,Close,InstiNetCr,InstiDeals
-1,FACT,Fertilizers and Chemicals Travancore Limited,Chemicals,882.1,528.2,128.9,1539.2,866.25,0.0,0
-2,TENNIND,Tenneco Clean Air India Limited,Automobile and Auto Components,10.3,587.9,563.4,1161.6,539.6,0.0,0
-3,BALRAMCHIN,Balrampur Chini Mills Limited,Fast Moving Consumer Goods,506.7,279.5,183.9,970.1,674.35,1.12,8
-4,CROMPTON,Crompton Greaves Consumer Electricals Limited,Consumer Durables,533.2,20.0,16.5,569.7,238.25,0.0,0
-5,HINDCOPPER,Hindustan Copper Limited,Metals & Mining,113.9,156.3,277.7,547.9,556.05,0.0,0
-6,LTFOODS,LT Foods Limited,Fast Moving Consumer Goods,389.7,61.8,20.6,472.1,451.3,-0.06,2
-7,GROWW,Billionbrains Garage Ventures Limited,Financial Services,211.2,158.6,24.0,393.8,196.24,0.0,0
-8,APTUS,Aptus Value Housing Finance India Limited,Financial Services,290.7,65.5,17.9,374.1,258.5,0.0,0
-9,VMM,Vishal Mega Mart Limited,Consumer Services,237.9,102.7,2.5,343.1,109.62,0.0,0
-10,PFIZER,Pfizer Limited,Healthcare,47.4,165.5,105.5,318.4,4802.5,0.0,0
-11,EIDPARRY,EID Parry India Limited,Fast Moving Consumer Goods,150.9,50.4,74.7,276.0,796.35,0.0,0
-12,CYIENT,Cyient Limited,Information Technology,74.7,127.4,70.7,272.8,1047.7,0.93,2
-13,NCC,NCC Limited,Construction,225.4,30.2,13.9,269.5,147.2,0.0,0
-14,HINDZINC,Hindustan Zinc Limited,Metals & Mining,182.3,26.0,61.1,269.4,626.5,0.0,0
-15,LICHSGFIN,LIC Housing Finance Limited,Financial Services,126.2,71.1,58.6,255.9,524.4,0.0,0
-16,EMAMILTD,Emami Limited,Fast Moving Consumer Goods,211.4,28.0,12.8,252.2,401.45,0.0,0
-17,ABREL,Aditya Birla Real Estate Limited,Realty,81.9,121.3,21.9,225.1,1392.3,0.0,0
-18,SAIL,Steel Authority of India Limited,Metals & Mining,177.3,27.4,20.3,225.0,194.9,0.0,0
-19,SHREECEM,SHREE CEMENT LIMITED,Construction Materials,79.5,98.8,45.9,224.2,24865.0,0.0,0
-20,BLS,BLS International Services Limited,Consumer Services,101.2,81.0,31.7,213.9,237.76,0.0,0
-21,GRASIM,Grasim Industries Limited,Construction Materials,38.2,83.8,76.4,198.4,3299.9,0.0,0
-22,THELEELA,Leela Palaces Hotels & Resorts Limited,Consumer Services,23.1,16.4,111.5,151.0,552.8,0.0,0
-23,CARBORUNIV,Carborundum Universal Limited,Capital Goods,7.5,92.1,47.3,146.9,1105.7,0.0,0
-24,APOLLOTYRE,Apollo Tyres Limited,Automobile and Auto Components,71.8,44.2,8.8,124.8,443.05,0.0,0
-25,IDEA,Vodafone Idea Limited,Telecommunication,27.6,81.6,12.2,121.4,15.06,0.0,0
-26,KEC,KEC International Limited,Construction,95.2,7.8,17.3,120.3,430.15,0.0,0
-27,GICRE,General Insurance Corporation of India,Financial Services,37.7,67.3,7.5,112.5,349.75,0.0,0
-28,BSE,BSE Limited,Financial Services,21.8,31.5,54.6,107.9,3325.6,0.0,0
-29,KPIL,Kalpataru Projects International Limited,Construction,0.8,70.9,16.1,87.8,1391.3,0.0,0
-30,AIIL,Authum Investment & Infrastructure Limited,Financial Services,42.6,13.0,18.3,73.9,561.6,0.0,0
-31,NAM-INDIA,Nippon Life India Asset Management Limited,Financial Services,60.8,6.0,0.7,67.5,1223.0,0.0,0
-32,ENGINERSIN,Engineers India Limited,Construction,33.1,2.8,22.4,58.3,250.36,0.0,0
-33,AMBUJACEM,Ambuja Cements Limited,Construction Materials,18.5,11.9,17.9,48.3,419.2,0.0,0
-34,PFC,Power Finance Corporation Limited,Financial Services,4.8,3.3,30.3,38.4,364.1,0.0,0
+1,FACT,Fertilizers and Chemicals Travancore Limited,Chemicals,711.3,555.3,141.3,1407.9,842.55,0.0,0
+2,BBTC,The Bombay Burmah Trading Corporation Limited,Fast Moving Consumer Goods,498.3,231.3,193.6,923.2,1613.6,-0.16,6
+3,HINDCOPPER,Hindustan Copper Limited,Metals & Mining,173.7,115.7,315.3,604.7,536.3,0.0,0
+4,HDBFS,HDB Financial Services Limited,Financial Services,273.1,138.4,26.4,437.9,685.15,0.0,0
+5,LTFOODS,LT Foods Limited,Fast Moving Consumer Goods,352.0,58.4,24.8,435.2,437.85,-0.06,2
+6,BALRAMCHIN,Balrampur Chini Mills Limited,Fast Moving Consumer Goods,1.8,240.2,192.1,434.1,649.95,1.12,8
+7,CROMPTON,Crompton Greaves Consumer Electricals Limited,Consumer Durables,374.0,32.8,25.1,431.9,237.9,0.0,0
+8,URBANCO,Urban Company Limited,Consumer Services,39.1,91.8,261.3,392.2,167.36,0.0,0
+9,CYIENT,Cyient Limited,Information Technology,111.6,171.3,88.3,371.2,1052.7,0.93,2
+10,ICICIAMC,ICICI Prudential Asset Management Company Limited,Financial Services,150.7,190.2,10.2,351.1,3093.6,0.0,0
+11,VMM,Vishal Mega Mart Limited,Consumer Services,229.1,90.3,5.4,324.8,108.0,0.0,0
+12,APTUS,Aptus Value Housing Finance India Limited,Financial Services,264.0,34.6,23.3,321.9,256.45,0.0,0
+13,GROWW,Billionbrains Garage Ventures Limited,Financial Services,123.7,152.1,27.4,303.2,196.84,0.0,0
+14,NSLNISP,NMDC Steel Limited,Metals & Mining,19.5,162.6,100.2,282.3,44.99,0.0,0
+15,SAIL,Steel Authority of India Limited,Metals & Mining,206.5,36.6,32.8,275.9,193.0,0.0,0
+16,SIEMENS,Siemens Limited,Capital Goods,260.0,8.5,5.8,274.3,4095.0,0.0,0
+17,BLS,BLS International Services Limited,Consumer Services,163.4,72.2,34.9,270.5,238.07,0.0,0
+18,LICHSGFIN,LIC Housing Finance Limited,Financial Services,109.6,72.6,73.8,256.0,535.5,0.0,0
+19,PVRINOX,PVR INOX Limited,Media Entertainment & Publication,196.8,32.2,2.7,231.7,1236.3,0.0,0
+20,HINDZINC,Hindustan Zinc Limited,Metals & Mining,138.6,11.8,66.6,217.0,610.1,0.0,0
+21,SHREECEM,SHREE CEMENT LIMITED,Construction Materials,75.4,88.1,48.6,212.1,24480.0,0.0,0
+22,GICRE,General Insurance Corporation of India,Financial Services,88.1,97.2,23.6,208.9,351.85,0.0,0
+23,EMAMILTD,Emami Limited,Fast Moving Consumer Goods,151.3,33.7,20.7,205.7,387.7,0.0,0
+24,NCC,NCC Limited,Construction,133.8,43.0,21.6,198.4,150.29,0.0,0
+25,AAVAS,Aavas Financiers Limited,Financial Services,93.0,76.5,25.6,195.1,1269.4,0.0,0
+26,GRASIM,Grasim Industries Limited,Construction Materials,11.9,56.2,83.4,151.5,3258.0,0.0,0
+27,ABREL,Aditya Birla Real Estate Limited,Realty,1.7,124.2,24.9,150.8,1393.4,0.0,0
+28,EIDPARRY,EID Parry India Limited,Fast Moving Consumer Goods,20.2,35.8,78.3,134.3,795.3,0.0,0
+29,IFCI,IFCI Limited,Financial Services,15.9,100.5,13.5,129.9,84.27,0.0,0
+30,IDEA,Vodafone Idea Limited,Telecommunication,54.9,51.2,18.0,124.1,14.97,0.0,0
+31,CUMMINSIND,Cummins India Limited,Capital Goods,109.0,11.4,2.1,122.5,5190.0,0.0,0
+32,CHAMBLFERT,Chambal Fertilizers & Chemicals Limited,Chemicals,87.6,7.0,4.2,98.8,424.75,0.0,0
+33,BSE,BSE Limited,Financial Services,0.9,22.3,59.0,82.2,3328.0,0.0,0
+34,ENGINERSIN,Engineers India Limited,Construction,51.5,3.3,27.2,82.0,246.96,0.0,0
+35,RAMCOCEM,The Ramco Cements Limited,Construction Materials,37.8,33.8,9.4,81.0,892.55,0.0,0
+36,APOLLOTYRE,Apollo Tyres Limited,Automobile and Auto Components,16.8,36.0,11.5,64.3,443.25,2249.9,5

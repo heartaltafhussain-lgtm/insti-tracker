@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,FACT,Fertilizers and Chemicals Travancore Limited,Chemicals,1455769,148236,882.1,35257885,544135,6379.6,4.0,21.4,866.25,0.0,0,2026-08-19,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-2,IDBI,IDBI Bank Limited,Financial Services,41805197,5574377,650.0,113646053,5989550,1797.4,26.9,48.2,94.75,0.0,0,2026-08-19,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-3,CROMPTON,Crompton Greaves Consumer Electricals Limited,Consumer Durables,19729606,3116102,533.2,17602550,4232644,315.9,52.8,42.4,238.25,0.0,0,2026-08-19,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-4,BALRAMCHIN,Balrampur Chini Mills Limited,Fast Moving Consumer Goods,10073513,1660452,506.7,65064844,3170350,1952.3,13.4,34.4,674.35,1.12,8,2026-08-19,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-5,LTFOODS,LT Foods Limited,Fast Moving Consumer Goods,4174406,852493,389.7,42353619,948423,4365.7,9.0,47.3,451.3,-0.06,2,2026-08-19,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+1,IDBI,IDBI Bank Limited,Financial Services,45310612,5392321,740.3,124428893,5842766,2029.6,26.7,48.0,92.24,0.0,0,2026-08-20,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+2,FACT,Fertilizers and Chemicals Travancore Limited,Chemicals,1497853,184634,711.3,35524808,572183,6108.6,4.0,24.4,842.55,0.0,0,2026-08-20,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+3,JINDALSAW,Jindal Saw Limited,Capital Goods,8257292,1310483,530.1,32174080,1912898,1582.0,20.4,40.7,310.25,0.0,0,2026-08-20,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+4,BBTC,The Bombay Burmah Trading Corporation Limited,Fast Moving Consumer Goods,565498,94518,498.3,13834700,67331,20447.3,3.9,58.4,1613.6,-0.16,6,2026-08-20,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+5,CROMPTON,Crompton Greaves Consumer Electricals Limited,Consumer Durables,20696513,4366054,374.0,16921627,5888839,187.4,55.0,42.6,237.9,0.0,0,2026-08-20,"WEEK IN PROGRESS — daily refresh, Friday ko final"
