@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,IDBI,IDBI Bank Limited,Financial Services,45310612,5392321,740.3,124428893,5842766,2029.6,26.7,48.0,92.24,0.0,0,2026-08-20,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-2,FACT,Fertilizers and Chemicals Travancore Limited,Chemicals,1497853,184634,711.3,35524808,572183,6108.6,4.0,24.4,842.55,0.0,0,2026-08-20,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-3,JINDALSAW,Jindal Saw Limited,Capital Goods,8257292,1310483,530.1,32174080,1912898,1582.0,20.4,40.7,310.25,0.0,0,2026-08-20,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-4,BBTC,The Bombay Burmah Trading Corporation Limited,Fast Moving Consumer Goods,565498,94518,498.3,13834700,67331,20447.3,3.9,58.4,1613.6,-0.16,6,2026-08-20,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-5,CROMPTON,Crompton Greaves Consumer Electricals Limited,Consumer Durables,20696513,4366054,374.0,16921627,5888839,187.4,55.0,42.6,237.9,0.0,0,2026-08-20,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+1,SHYAMMETL,Shyam Metalics and Energy Limited,Capital Goods,3215148,218939,1368.5,2443319,816275,199.3,56.8,21.1,1099.8,0.0,0,2026-08-21,FINAL WEEKLY ✅ (Friday close)
+2,IDBI,IDBI Bank Limited,Financial Services,47091595,5537834,750.4,129787915,7012914,1750.7,26.6,44.1,92.66,0.0,0,2026-08-21,FINAL WEEKLY ✅ (Friday close)
+3,FACT,Fertilizers and Chemicals Travancore Limited,Chemicals,1474232,216069,582.3,35310178,559589,6210.0,4.0,27.9,832.5,0.0,0,2026-08-21,FINAL WEEKLY ✅ (Friday close)
+4,BBTC,The Bombay Burmah Trading Corporation Limited,Fast Moving Consumer Goods,628707,94821,563.0,14375690,67482,21203.0,4.2,58.4,1563.2,-0.16,6,2026-08-21,FINAL WEEKLY ✅ (Friday close)
+5,BIKAJI,Bikaji Foods International Limited,Fast Moving Consumer Goods,550565,106765,415.7,762017,81489,835.1,41.9,56.7,618.8,0.0,0,2026-08-21,FINAL WEEKLY ✅ (Friday close)

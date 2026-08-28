@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,ASTERDM,Aster DM Quality Care Limited,Healthcare,84447671,6054093,1294.9,28763609,4859992,491.8,74.6,55.5,754.8,0.0,0,2026-07-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-2,LICI,Life Insurance Corporation Of India,Financial Services,244846602,26153927,836.2,164732816,25021372,558.4,59.8,51.1,413.95,0.0,0,2026-07-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-3,TENNIND,Tenneco Clean Air India Limited,Automobile and Auto Components,50861489,7622608,567.2,34981295,5313575,558.3,59.2,58.9,541.4,0.0,0,2026-07-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-4,HINDCOPPER,Hindustan Copper Limited,Metals & Mining,110471952,26603021,315.3,237810031,42402580,460.8,31.7,38.6,536.3,0.0,0,2026-07-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-5,TRAVELFOOD,Travel Food Services Limited,Consumer Services,923517,232161,297.8,1910444,185103,932.1,32.6,55.6,1333.9,0.0,0,2026-07-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+1,ASTERDM,Aster DM Quality Care Limited,Healthcare,85545256,6054093,1313.0,29434737,4859992,505.7,74.4,55.5,748.4,0.0,0,2026-07-31,FINAL MONTHLY ✅ (month-end close)
+2,LICI,Life Insurance Corporation Of India,Financial Services,254503305,26153927,873.1,171134280,25021372,584.0,59.8,51.1,422.0,0.0,0,2026-07-31,FINAL MONTHLY ✅ (month-end close)
+3,TENNIND,Tenneco Clean Air India Limited,Automobile and Auto Components,51220786,7622608,572.0,35304565,5313575,564.4,59.2,58.9,537.5,0.0,0,2026-07-31,FINAL MONTHLY ✅ (month-end close)
+4,HINDCOPPER,Hindustan Copper Limited,Metals & Mining,114434270,26603021,330.2,243966779,42402580,475.4,31.9,38.6,533.55,0.0,0,2026-07-31,FINAL MONTHLY ✅ (month-end close)
+5,TRAVELFOOD,Travel Food Services Limited,Consumer Services,952226,232161,310.2,1935932,185103,945.9,33.0,55.6,1297.7,0.0,0,2026-07-31,FINAL MONTHLY ✅ (month-end close)
