@@ -2,8 +2,8 @@ name: daily_insti_scan
 
 on:
   schedule:
-    # Monday-Friday 13:00 UTC = 6:30 PM IST
-    - cron: "0 13 * * 1-5"
+    - cron: "41 12 * * 1-5"
+    - cron: "53 14 * * 1-5"
   workflow_dispatch:
 
 permissions:
