@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Insti Tracker — NSE Institutional Flow + GTF Zone Analysis</title>
+<title>Insti Tracker — NSE Insti Flow + GTF Zones + Swing Grades</title>
 <style>
   :root {
     --bg: #0d1117; --panel: #161b22; --panel2: #1c2129; --border: #30363d;
@@ -80,6 +80,13 @@
     background: #21262d; border: 1px solid var(--border); padding: 9px 16px; border-radius: 9px;
     font-size: 13px; display: none; z-index: 99; max-width: 92vw; }
   #toast.show { display: block; }
+  /* ===== v1.3 sortable headers ===== */
+  th.srt { cursor: pointer; user-select: none; white-space: nowrap; }
+  th.srt::after { content: " ⇅"; opacity: .4; font-size: 9px; }
+  th.srt.asc::after { content: " ▲"; opacity: 1; color: var(--green); }
+  th.srt.desc::after { content: " ▼"; opacity: 1; color: var(--red); }
+  th.srt:hover { color: var(--txt); }
+
   /* ===== v1.1 GTF ZONE ANALYSIS POPUP ===== */
   .anabtn { background: var(--panel2); border: 1px solid var(--border); color: var(--blue);
     border-radius: 7px; padding: 3px 8px; cursor: pointer; font-size: 14px; line-height: 1; }
@@ -152,7 +159,7 @@
   <!-- ============ ACCUMULATION ============ -->
   <section>
     <h2>🔥 INSTITUTIONAL ACCUMULATION — 7 Din ka Leaderboard</h2>
-    <div class="secsub">Institutions (MF/Insurance/Bank/FII/Securities) kis stock me <b class="up">buying</b> kar rahe hain ya <b class="dn">bech</b> rahe hain — net value ke hisaab se. <b>Tip:</b> har row me 🔍 dabao — us stock ka GTF demand/supply zone (1D + monthly, last + next upcoming) aur calculated strength popup me khul jayega.</div>
+    <div class="secsub">Institutions (MF/Insurance/Bank/FII/Securities) kis stock me <b class="up">buying</b> kar rahe hain ya <b class="dn">bech</b> rahe hain — net value ke hisaab se. <b>Tip:</b> har row me 🔍 dabao — us stock ka GTF zone analysis khul jayega. <b>🔍🎯</b> = wo stock GTF dashboard ke <b>SWING 4-5 DIN</b> pick list me hai (best swing candidates).</div>
     <div class="panel">
       <div class="strip">
         <button class="btn" onclick="downloadAccumCSV()">⬇ CSV</button>
@@ -424,7 +431,7 @@ function renderAccum() {
   }
   let html = '<table><tr><th class="stk">SYMBOL</th><th>COMPANY</th><th>SECTOR</th>' +
     '<th>INSTI BUY ₹Cr</th><th>INSTI SELL ₹Cr</th><th>NET ₹Cr</th><th>BUYS</th><th>SELLS</th>' +
-    '<th>INSTITUTIONS</th><th>ACTIVE DIN</th><th>STATUS</th><th>🔍</th></tr>';
+    '<th>INSTITUTIONS</th><th>ACTIVE DIN</th><th>STATUS</th><th>GTF GRADE</th><th>🔍</th></tr>';
   rows.forEach(function (r, i) {
     const netCls = r.netCr > 0 ? "up" : (r.netCr < 0 ? "dn" : "mut");
     html += '<tr>' + symCell(r.sym) + nameCell(r.sym, r.name || "") +
@@ -434,7 +441,7 @@ function renderAccum() {
       '<td class="' + netCls + '"><b>' + (r.netCr >= 0 ? "+" : "") + r.netCr.toFixed(2) + '</b></td>' +
       '<td>' + r.buys + '</td><td>' + r.sells + '</td>' +
       '<td>' + r.nInsti + '</td><td>' + r.nDays + '</td>' +
-      '<td>' + statusBadge(r.status) + '</td>' + instiAnalysisBtn(r) + '</tr>';
+      '<td>' + statusBadge(r.status) + '</td>' + ggradeCell(r.sym) + instiAnalysisBtn(r) + '</tr>';
   });
   area.innerHTML = html + '</table>';
 }
@@ -475,7 +482,7 @@ function renderTop5(key, areaId, labelId, subId, metaTitle) {
   let html = '<table><tr><th class="stk">SYMBOL</th><th>COMPANY</th><th>SECTOR</th>' +
     '<th>🚀 BUY % CHG</th><th>🔻 SELL % CHG</th>' +
     '<th>BUY QTY NOW</th><th>BUY QTY REF</th><th>SELL QTY NOW</th><th>SELL QTY REF</th>' +
-    '<th>DELIV% NOW</th><th>DELIV% REF</th><th>INSTI DEALS</th><th>CLOSE ₹</th><th>🔍</th></tr>';
+    '<th>DELIV% NOW</th><th>DELIV% REF</th><th>INSTI DEALS</th><th>CLOSE ₹</th><th>GTF GRADE</th><th>🔍</th></tr>';
   rows.forEach(function (r, i) {
     const instiTxt = r.instiDeals > 0
       ? (r.instiNetCr >= 0 ? '<span class="up">+' : '<span class="dn">') + r.instiNetCr + 'Cr</span> <span class="mut small">(' + r.instiDeals + ' deal' + (r.instiDeals > 1 ? "s" : "") + ')</span>'
@@ -486,7 +493,7 @@ function renderTop5(key, areaId, labelId, subId, metaTitle) {
       '<td>' + fmtL(r.curSell) + '</td><td class="mut">' + fmtL(r.prevSell) + '</td>' +
       '<td>' + r.dpCur + '%</td><td class="mut">' + r.dpPrev + '%</td>' +
       '<td>' + instiTxt + '</td>' +
-      '<td>₹' + r.close + '</td>' + instiAnalysisBtn(r) + '</tr>';
+      '<td>₹' + r.close + '</td>' + ggradeCell(r.sym) + instiAnalysisBtn(r) + '</tr>';
   });
   area.innerHTML = html + '</table>';
 }
@@ -515,7 +522,7 @@ function renderTriple() {
   }
   let html = '<table><tr><th class="stk">SYMBOL</th><th>COMPANY</th><th>SECTOR</th>' +
     '<th>WEEKLY BUY %</th><th>FORTNIGHTLY BUY %</th><th>MONTHLY BUY %</th>' +
-    '<th>COMBINED SCORE</th><th>INSTI DEALS</th><th>CLOSE ₹</th><th>🔍</th></tr>';
+    '<th>COMBINED SCORE</th><th>INSTI DEALS</th><th>CLOSE ₹</th><th>GTF GRADE</th><th>🔍</th></tr>';
   rows.forEach(function (r, i) {
     const instiTxt = r.instiDeals > 0
       ? (r.instiNetCr >= 0 ? '<span class="up">+' : '<span class="dn">') + r.instiNetCr + 'Cr</span> <span class="mut small">(' + r.instiDeals + ' deal' + (r.instiDeals > 1 ? "s" : "") + ')</span>'
@@ -526,7 +533,7 @@ function renderTriple() {
       '<td class="up"><b>+' + r.mBuyPct + '%</b></td>' +
       '<td><span class="badge b-acc">' + r.score + '</span></td>' +
       '<td>' + instiTxt + '</td>' +
-      '<td>₹' + r.close + '</td>' + instiAnalysisBtn(r) + '</tr>';
+      '<td>₹' + r.close + '</td>' + ggradeCell(r.sym) + instiAnalysisBtn(r) + '</tr>';
   });
   area.innerHTML = html + '</table>';
 }
@@ -674,6 +681,60 @@ function downloadDealsCSV() {
 }
 
 /* ================= RENDER ALL ================= */
+/* ================= v1.3 SORT ENGINE (har column A-Z / Z-A) ================= */
+function enableTableSort(tb) {
+  if (tb.dataset.srt) return;
+  tb.dataset.srt = "1";
+  const heads = tb.querySelectorAll("tr:first-child th");
+  heads.forEach(function (th, i) {
+    th.classList.add("srt");
+    th.title = "Sort: click = A-Z, dobara = Z-A";
+    th.addEventListener("click", function () {
+      const rows = Array.from(tb.querySelectorAll("tr")).slice(1)
+        .filter(function (tr) { return !tr.querySelector("td[colspan]"); });
+      const dir = th.classList.contains("asc") ? -1 : 1;
+      heads.forEach(function (h) { h.classList.remove("asc", "desc"); });
+      th.classList.add(dir === 1 ? "asc" : "desc");
+      const val = function (tr) {
+        const td = tr.children[i];
+        if (!td) return "";
+        const t = td.textContent.trim().replace(/[₹,%★🎯🔍]/g, "").replace(/,/g, "");
+        const n = parseFloat(t);
+        return isNaN(n) ? td.textContent.trim().toLowerCase() : n;
+      };
+      rows.sort(function (a, b) {
+        const va = val(a), vb = val(b);
+        if (typeof va === "number" && typeof vb === "number") return (va - vb) * dir;
+        return String(va).localeCompare(String(vb)) * dir;
+      });
+      rows.forEach(function (tr) { tb.appendChild(tr); });
+    });
+  });
+}
+new MutationObserver(function (muts) {
+  muts.forEach(function (m) {
+    m.addedNodes.forEach(function (n) {
+      if (n.nodeType !== 1) return;
+      if (n.tagName === "TABLE") enableTableSort(n);
+      else if (n.querySelectorAll) n.querySelectorAll("table").forEach(enableTableSort);
+    });
+  });
+}).observe(document.body, { childList: true, subtree: true });
+
+/* ===== v1.3 GTF GRADE column (GTF swing verdict se) ===== */
+let GTF_SWING = {};
+function ggradeCell(sym) {
+  return '<td class="ggrade" data-sym="' + sym + '">—</td>';
+}
+function applyGtfGrades() {
+  document.querySelectorAll("td.ggrade").forEach(function (td) {
+    const g = GTF_SWING[td.getAttribute("data-sym")];
+    td.innerHTML = g
+      ? '<span class="badge ' + (g === "A+" ? "b-acc" : g === "A" ? "b-buy" : "b-flat") + '" title="GTF SWING 4-5D grade">' + g + '</span>'
+      : '<span class="mut">—</span>';
+  });
+}
+
 /* ===== v1.1 GTF ZONE ANALYSIS POPUP ===== */
 let GTF = null, GTF_LOADING = null;
 function loadGTF() {
@@ -769,8 +830,34 @@ async function openInstiAnalysis(btn) {
     '</div>';
 }
 
+/* v5.3: GTF SWING 4-5D badge — GTF dashboard ke swingPicks se */
+function markSwingRows(g) {
+  if (!g) return;
+  GTF_SWING = {};
+  (g.swingPicks || []).forEach(function (r) {
+    GTF_SWING[r.sym] = (r.swing && r.swing.verdict) || "A";
+  });
+  (g.stockData || []).forEach(function (r) {
+    if (!GTF_SWING[r.sym] && r.qualityGrade === "STRICT") GTF_SWING[r.sym] = "S";
+  });
+  applyGtfGrades();
+  if (!g.swingPicks) return;
+  const set = new Set(g.swingPicks.map(function (r) { return r.sym; }));
+  document.querySelectorAll(".anabtn").forEach(function (b) {
+    const sym = b.getAttribute("data-sym");
+    if (sym && set.has(sym) && !b.dataset.sw) {
+      b.dataset.sw = "1";
+      b.innerHTML = "🔍🎯";
+      b.title = "GTF SWING 4-5 DIN pick — " + b.title;
+    }
+  });
+}
 function renderAll() {
   fillDateDropdown();
+  loadGTF().then(function (g) {
+    if (g) markSwingRows(g);
+    else setTimeout(function () { loadGTF().then(function (g2) { if (g2) markSwingRows(g2); }); }, 4000);
+  });
   renderFiiDii();
   renderAccum();
   renderWeeklyTop5();
