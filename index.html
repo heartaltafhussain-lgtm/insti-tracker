@@ -793,6 +793,11 @@ function zsCard(tf, z, sub) {
     '</div>' +
     '<div class="zstrength">' + zsVerdict(st.verdict, stOK ? st.total : null) +
       ' <b class="bigsc">' + (stOK ? st.total + '/10' : '—') + '</b> <span class="mut">calculated strength</span></div>' +
+    (z.gtf ? '<div class="zstrength">' +
+      '<span class="badge ' + (z.gtf.score >= 8 ? "zs-strong" : (z.gtf.score >= 5 ? "zs-med" : "zs-weak")) + '" title="GTF book trade score">📘 GTF ' + z.gtf.score + '/9</span>' +
+      '<b style="font-size:12.5px">' + (z.gtf.et || "") + '</b>' +
+      (z.gtf.auth === 0 ? ' <span style="color:var(--red);font-size:11px">⚠ NON-AUTHENTIC (p33)</span>' : (z.gtf.auth === 2 ? ' <span class="mut" style="font-size:11px">reaction+good closing ✓</span>' : '')) + '</div>' +
+      '<div class="mut" style="font-size:11px;margin-top:3px">Departure ' + z.gtf.dep + '/3 • Freshness ' + z.gtf.fresh + '/3 • Base ' + z.gtf.base + '/3 — book: 8+ Set&Forget • 5-7 Confirmation • &lt;5 skip</div>' : '') +
     (bars ? '<div class="pbars">' + bars + '</div>' : '') + '</div>';
 }
 function closeInstiAnalysis() { document.getElementById("anaModal").style.display = "none"; }
@@ -868,5 +873,5 @@ function renderAll() {
   renderSector();
 }
 </script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a32d9abf289e7a07',t:'MTc4ODAyNzk5MA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
