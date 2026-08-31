@@ -1,37 +1,55 @@
 Rank,Symbol,Company,Sector,WeeklyBuyPct,FortnightlyBuyPct,MonthlyBuyPct,CombinedScore,Close,InstiNetCr,InstiDeals
-1,FACT,Fertilizers and Chemicals Travancore Limited,Chemicals,582.3,590.2,147.0,1319.5,832.5,0.0,0
-2,BBTC,The Bombay Burmah Trading Corporation Limited,Fast Moving Consumer Goods,563.0,240.0,219.7,1022.7,1563.2,-0.16,6
-3,HINDCOPPER,Hindustan Copper Limited,Metals & Mining,152.9,95.6,330.2,578.7,533.55,0.0,0
-4,NSLNISP,NMDC Steel Limited,Metals & Mining,117.7,222.5,151.9,492.1,49.02,0.0,0
-5,CYIENT,Cyient Limited,Information Technology,116.1,230.8,104.4,451.3,1107.45,0.93,2
-6,LTFOODS,LT Foods Limited,Fast Moving Consumer Goods,334.2,60.2,27.0,421.4,439.35,-0.06,2
-7,SAIL,Steel Authority of India Limited,Metals & Mining,280.6,80.0,46.9,407.5,200.0,0.0,0
-8,ICICIAMC,ICICI Prudential Asset Management Company Limited,Financial Services,178.4,194.8,19.0,392.2,3139.6,0.0,0
-9,GROWW,Billionbrains Garage Ventures Limited,Financial Services,122.9,187.7,38.5,349.1,191.46,0.0,0
-10,BLS,BLS International Services Limited,Consumer Services,255.2,46.2,37.2,338.6,239.03,0.0,0
-11,HDBFS,HDB Financial Services Limited,Financial Services,164.2,116.0,27.9,308.1,679.35,0.0,0
-12,AAVAS,Aavas Financiers Limited,Financial Services,147.9,107.0,45.8,300.7,1275.5,0.0,0
-13,APTUS,Aptus Value Housing Finance India Limited,Financial Services,234.0,29.0,24.6,287.6,256.15,0.0,0
-14,SHREECEM,SHREE CEMENT LIMITED,Construction Materials,146.8,86.1,53.4,286.3,24000.0,0.0,0
-15,LICHSGFIN,LIC Housing Finance Limited,Financial Services,96.5,86.3,88.2,271.0,535.0,0.0,0
-16,IFCI,IFCI Limited,Financial Services,75.1,130.5,40.1,245.7,89.96,0.0,0
-17,ADANIENSOL,Adani Energy Solutions Limited,Power,10.6,202.8,18.2,231.6,1581.4,0.0,0
-18,CHALET,Chalet Hotels Limited,Consumer Services,195.7,8.9,19.0,223.6,901.2,0.0,0
-19,EMAMILTD,Emami Limited,Fast Moving Consumer Goods,158.5,29.3,27.6,215.4,379.4,0.0,0
-20,VMM,Vishal Mega Mart Limited,Consumer Services,128.0,73.7,7.2,208.9,107.0,0.0,0
-21,IDEA,Vodafone Idea Limited,Telecommunication,127.9,43.4,24.0,195.3,14.68,0.0,0
-22,COALINDIA,Coal India Limited,Oil Gas & Consumable Fuels,119.2,43.4,26.8,189.4,401.0,0.0,0
-23,GICRE,General Insurance Corporation of India,Financial Services,86.2,70.4,30.0,186.6,353.3,0.0,0
-24,SIEMENS,Siemens Limited,Capital Goods,154.0,11.5,10.9,176.4,4089.0,0.0,0
-25,PVRINOX,PVR INOX Limited,Media Entertainment & Publication,128.6,39.1,5.8,173.5,1220.9,0.0,0
-26,HINDZINC,Hindustan Zinc Limited,Metals & Mining,64.4,15.5,74.7,154.6,622.0,0.0,0
-27,ENGINERSIN,Engineers India Limited,Construction,94.0,7.3,38.1,139.4,253.72,0.0,0
-28,TATASTEEL,Tata Steel Limited,Metals & Mining,97.4,16.3,9.3,123.0,186.5,0.0,0
-29,EIDPARRY,EID Parry India Limited,Fast Moving Consumer Goods,2.0,36.9,83.0,121.9,805.3,0.0,0
-30,CROMPTON,Crompton Greaves Consumer Electricals Limited,Consumer Durables,37.6,51.6,31.6,120.8,233.0,0.0,0
-31,CHAMBLFERT,Chambal Fertilizers & Chemicals Limited,Chemicals,66.7,21.8,8.6,97.1,421.55,0.0,0
-32,AMBER,Amber Enterprises India Limited,Consumer Durables,4.4,26.1,47.5,78.0,7675.0,0.0,0
-33,RAMCOCEM,The Ramco Cements Limited,Construction Materials,39.7,22.7,13.3,75.7,895.65,0.0,0
-34,CUMMINSIND,Cummins India Limited,Capital Goods,39.4,9.1,6.5,55.0,5193.0,0.0,0
-35,SUNTV,Sun TV Network Limited,Media Entertainment & Publication,27.4,6.8,14.8,49.0,474.5,0.0,0
-36,MAXHEALTH,Max Healthcare Institute Limited,Healthcare,8.0,1.6,3.8,13.4,1014.1,0.0,0
+1,BALKRISIND,Balkrishna Industries Limited,Automobile and Auto Components,2902.9,464.9,129.5,3497.3,2279.2,0.0,0
+2,ASTRAL,Astral Limited,Capital Goods,1292.1,224.8,134.7,1651.6,1522.2,0.0,0
+3,FACT,Fertilizers and Chemicals Travancore Limited,Chemicals,660.3,600.6,153.1,1414.0,821.25,0.0,0
+4,BBTC,The Bombay Burmah Trading Corporation Limited,Fast Moving Consumer Goods,703.0,298.3,248.0,1249.3,1502.9,-0.16,6
+5,ADANIENSOL,Adani Energy Solutions Limited,Power,436.0,350.8,162.3,949.1,1417.4,0.0,0
+6,LAURUSLABS,Laurus Labs Limited,Healthcare,481.2,340.3,88.3,909.8,1915.0,0.0,0
+7,ADANIENT,Adani Enterprises Limited,Metals & Mining,552.5,290.9,30.7,874.1,2859.1,0.0,0
+8,GROWW,Billionbrains Garage Ventures Limited,Financial Services,271.6,386.7,92.1,750.4,192.06,0.0,0
+9,SBICARD,SBI Cards and Payment Services Limited,Financial Services,224.9,318.2,180.5,723.6,644.75,0.0,0
+10,HINDCOPPER,Hindustan Copper Limited,Metals & Mining,237.9,103.7,344.0,685.6,525.35,0.0,0
+11,LENSKART,Lenskart Solutions Limited,Consumer Services,277.5,278.7,118.2,674.4,662.4,1585.95,21
+12,NSLNISP,NMDC Steel Limited,Metals & Mining,261.1,190.0,170.1,621.2,46.19,0.0,0
+13,ETERNAL,ETERNAL LIMITED,Consumer Services,279.7,320.9,10.0,610.6,328.1,0.0,0
+14,DALBHARAT,Dalmia Bharat Limited,Construction Materials,91.4,504.3,10.9,606.6,1856.2,0.0,0
+15,CYIENT,Cyient Limited,Information Technology,81.5,316.8,118.1,516.4,1174.8,0.93,2
+16,ICICIAMC,ICICI Prudential Asset Management Company Limited,Financial Services,124.8,239.7,27.4,391.9,3065.1,0.0,0
+17,IFCI,IFCI Limited,Financial Services,92.3,232.4,50.5,375.2,89.7,0.0,0
+18,SHREECEM,SHREE CEMENT LIMITED,Construction Materials,186.0,122.4,59.9,368.3,23200.0,0.0,0
+19,AAVAS,Aavas Financiers Limited,Financial Services,184.8,121.1,54.6,360.5,1261.2,0.0,0
+20,HDBFS,HDB Financial Services Limited,Financial Services,162.1,164.3,29.5,355.9,682.35,0.0,0
+21,ADANIPORTS,Adani Ports and Special Economic Zone Limited,Services,242.3,72.8,17.3,332.4,1593.1,0.0,0
+22,LICHSGFIN,LIC Housing Finance Limited,Financial Services,72.0,141.0,102.6,315.6,538.4,0.0,0
+23,EMAMILTD,Emami Limited,Fast Moving Consumer Goods,200.3,69.3,45.2,314.8,364.0,0.0,0
+24,APTUS,Aptus Value Housing Finance India Limited,Financial Services,211.6,62.3,28.8,302.7,248.85,0.0,0
+25,NAM-INDIA,Nippon Life India Asset Management Limited,Financial Services,97.4,136.3,65.5,299.2,1172.3,0.0,0
+26,ATHERENERG,Ather Energy Limited,Automobile and Auto Components,248.8,11.7,22.4,282.9,1717.7,-3516.48,2
+27,TTML,Tata Teleservices (Maharashtra) Limited,Telecommunication,192.9,77.7,2.4,273.0,38.58,0.0,0
+28,SAIL,Steel Authority of India Limited,Metals & Mining,107.8,97.8,55.1,260.7,195.0,0.0,0
+29,CHAMBLFERT,Chambal Fertilizers & Chemicals Limited,Chemicals,124.0,89.6,28.1,241.7,409.55,0.0,0
+30,COALINDIA,Coal India Limited,Oil Gas & Consumable Fuels,94.3,109.1,32.0,235.4,401.75,0.0,0
+31,NIACL,The New India Assurance Company Limited,Financial Services,154.8,39.4,37.1,231.3,191.23,0.0,0
+32,IDEA,Vodafone Idea Limited,Telecommunication,160.2,32.7,31.7,224.6,14.33,0.0,0
+33,SBFC,SBFC Finance Limited,Financial Services,204.8,7.2,9.1,221.1,98.82,0.0,0
+34,GICRE,General Insurance Corporation of India,Financial Services,104.0,76.0,39.4,219.4,354.75,0.0,0
+35,TATAPOWER,Tata Power Company Limited,Power,114.9,84.4,3.1,202.4,347.0,0.0,0
+36,SUPREMEIND,Supreme Industries Limited,Capital Goods,106.7,88.4,5.0,200.1,3559.0,0.0,0
+37,CHALET,Chalet Hotels Limited,Consumer Services,138.6,31.1,27.5,197.2,903.95,0.0,0
+38,SUNTV,Sun TV Network Limited,Media Entertainment & Publication,111.1,24.6,30.2,165.9,466.15,0.0,0
+39,CROMPTON,Crompton Greaves Consumer Electricals Limited,Consumer Durables,16.2,85.7,39.3,141.2,235.9,0.0,0
+40,VOLTAS,Voltas Limited,Consumer Durables,13.2,105.0,11.2,129.4,1194.4,0.0,0
+41,TATASTEEL,Tata Steel Limited,Metals & Mining,55.6,44.8,18.4,118.8,184.35,0.0,0
+42,CAMS,Computer Age Management Services Limited,Financial Services,35.0,53.6,27.7,116.3,782.0,0.0,0
+43,PVRINOX,PVR INOX Limited,Media Entertainment & Publication,29.4,69.7,11.1,110.2,1207.7,0.0,0
+44,CPPLUS,Aditya Infotech Limited,Capital Goods,12.7,54.2,35.0,101.9,3566.0,0.0,0
+45,COLPAL,Colgate Palmolive (India) Limited,Fast Moving Consumer Goods,26.6,46.6,18.6,91.8,1897.6,0.0,0
+46,ENGINERSIN,Engineers India Limited,Construction,24.1,8.1,53.7,85.9,261.87,0.0,0
+47,LEMONTREE,Lemon Tree Hotels Limited,Consumer Services,55.4,17.5,12.3,85.2,106.25,0.0,0
+48,RAMCOCEM,The Ramco Cements Limited,Construction Materials,14.2,51.0,16.5,81.7,879.55,0.0,0
+49,HYUNDAI,Hyundai Motor India Limited,Automobile and Auto Components,30.2,40.5,1.0,71.7,2205.0,0.0,0
+50,CUMMINSIND,Cummins India Limited,Capital Goods,29.0,21.5,13.3,63.8,5105.0,0.0,0
+51,SIEMENS,Siemens Limited,Capital Goods,21.1,25.1,15.6,61.8,4030.0,0.0,0
+52,INOXWIND,Inox Wind Limited,Capital Goods,21.4,14.4,1.2,37.0,70.37,0.0,0
+53,VEDL,Vedanta Limited,Metals & Mining,21.1,13.3,0.3,34.7,278.2,0.0,0
+54,UPL,UPL Limited,Chemicals,5.1,3.4,2.3,10.8,562.25,0.0,0

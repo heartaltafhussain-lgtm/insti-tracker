@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,SHYAMMETL,Shyam Metalics and Energy Limited,Capital Goods,3215148,218939,1368.5,2443319,816275,199.3,56.8,21.1,1099.8,0.0,0,2026-08-21,FINAL WEEKLY ✅ (Friday close)
-2,IDBI,IDBI Bank Limited,Financial Services,47091595,5537834,750.4,129787915,7012914,1750.7,26.6,44.1,92.66,0.0,0,2026-08-21,FINAL WEEKLY ✅ (Friday close)
-3,FACT,Fertilizers and Chemicals Travancore Limited,Chemicals,1474232,216069,582.3,35310178,559589,6210.0,4.0,27.9,832.5,0.0,0,2026-08-21,FINAL WEEKLY ✅ (Friday close)
-4,BBTC,The Bombay Burmah Trading Corporation Limited,Fast Moving Consumer Goods,628707,94821,563.0,14375690,67482,21203.0,4.2,58.4,1563.2,-0.16,6,2026-08-21,FINAL WEEKLY ✅ (Friday close)
-5,BIKAJI,Bikaji Foods International Limited,Fast Moving Consumer Goods,550565,106765,415.7,762017,81489,835.1,41.9,56.7,618.8,0.0,0,2026-08-21,FINAL WEEKLY ✅ (Friday close)
+1,BALKRISIND,Balkrishna Industries Limited,Automobile and Auto Components,7376048,245632,2902.9,3990146,218294,1727.9,64.9,52.9,2279.2,0.0,0,2026-08-24,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+2,ASTRAL,Astral Limited,Capital Goods,9939472,713968,1292.1,3597474,865866,315.5,73.4,45.2,1522.2,0.0,0,2026-08-24,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+3,SHYAMMETL,Shyam Metalics and Energy Limited,Capital Goods,3281020,298809,998.0,2678010,488430,448.3,55.1,38.0,1093.5,0.0,0,2026-08-24,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+4,BBTC,The Bombay Burmah Trading Corporation Limited,Fast Moving Consumer Goods,690951,86048,703.0,14507545,65802,21947.3,4.5,56.7,1502.9,-0.16,6,2026-08-24,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+5,FACT,Fertilizers and Chemicals Travancore Limited,Chemicals,1506021,198073,660.3,35381908,540084,6451.2,4.1,26.8,821.25,0.0,0,2026-08-24,"WEEK IN PROGRESS — daily refresh, Friday ko final"
