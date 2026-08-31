@@ -1,6 +1,6 @@
 {
  "date": "28-AUG-2026",
- "timestamp": "2026-08-31 12:44:35 IST",
+ "timestamp": "2026-08-31 14:56:31 IST",
  "passwordRef": "7004602",
  "version": "v1.0 Insti Tracker",
  "scanStats": {
@@ -12,14 +12,14 @@
  },
  "fiidiiToday": {
   "DII": {
-   "buy": 16539.38,
-   "sell": 11355.45,
-   "net": 5183.93
+   "buy": 19730.38,
+   "sell": 15141.5,
+   "net": 4588.88
   },
   "FII": {
-   "buy": 13263.62,
-   "sell": 18303.42,
-   "net": -5039.8
+   "buy": 60025.88,
+   "sell": 68011.76,
+   "net": -7985.88
   }
  },
  "fiidiiSeries": [
@@ -79,12 +79,12 @@
   },
   {
    "date": "28-AUG-2026",
-   "fiiNet": -5039.8,
-   "fiiBuy": 13263.62,
-   "fiiSell": 18303.42,
-   "diiNet": 5183.93,
-   "diiBuy": 16539.38,
-   "diiSell": 11355.45
+   "fiiNet": -7985.88,
+   "fiiBuy": 60025.88,
+   "fiiSell": 68011.76,
+   "diiNet": 4588.88,
+   "diiBuy": 19730.38,
+   "diiSell": 15141.5
   }
  ],
  "dealsToday": [
