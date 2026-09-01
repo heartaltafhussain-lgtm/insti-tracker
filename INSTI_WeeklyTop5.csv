@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,BALKRISIND,Balkrishna Industries Limited,Automobile and Auto Components,7376048,245632,2902.9,3990146,218294,1727.9,64.9,52.9,2279.2,0.0,0,2026-08-24,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-2,ASTRAL,Astral Limited,Capital Goods,9939472,713968,1292.1,3597474,865866,315.5,73.4,45.2,1522.2,0.0,0,2026-08-24,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-3,SHYAMMETL,Shyam Metalics and Energy Limited,Capital Goods,3281020,298809,998.0,2678010,488430,448.3,55.1,38.0,1093.5,0.0,0,2026-08-24,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-4,BBTC,The Bombay Burmah Trading Corporation Limited,Fast Moving Consumer Goods,690951,86048,703.0,14507545,65802,21947.3,4.5,56.7,1502.9,-0.16,6,2026-08-24,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-5,FACT,Fertilizers and Chemicals Travancore Limited,Chemicals,1506021,198073,660.3,35381908,540084,6451.2,4.1,26.8,821.25,0.0,0,2026-08-24,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+1,BALKRISIND,Balkrishna Industries Limited,Automobile and Auto Components,7542035,353958,2030.8,4097602,292734,1299.8,64.8,54.7,2331.8,232.69,1,2026-08-25,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+2,ASTRAL,Astral Limited,Capital Goods,9954014,930275,970.0,3744094,1038545,260.5,72.7,47.3,1507.0,774.56,3,2026-08-25,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+3,BBTC,The Bombay Burmah Trading Corporation Limited,Fast Moving Consumer Goods,731472,82667,784.8,14648955,59222,24635.7,4.8,58.3,1539.0,-0.16,6,2026-08-25,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+4,SBFC,SBFC Finance Limited,Financial Services,18128699,2421211,648.7,22105860,6791002,225.5,45.1,26.3,99.95,0.0,0,2026-08-25,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+5,SHYAMMETL,Shyam Metalics and Energy Limited,Capital Goods,3253304,460981,605.7,2742030,211450,1196.8,54.3,68.6,1078.0,0.0,0,2026-08-25,"WEEK IN PROGRESS — daily refresh, Friday ko final"
