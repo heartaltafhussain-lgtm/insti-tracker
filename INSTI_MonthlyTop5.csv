@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,SWIGGY,Swiggy Limited,Consumer Services,205079406,109376359,87.5,81704879,188153945,-56.6,71.5,36.8,276.45,1041.01,2,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-2,NIACL,The New India Assurance Company Limited,Financial Services,14337296,11146673,28.6,108849510,72428364,50.3,11.6,13.3,231.2,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-3,AFFLE,Affle 3i Limited,Information Technology,2011649,1853257,8.5,3543518,2282998,55.2,36.2,44.8,1623.2,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-4,USHAMART,Usha Martin Limited,Capital Goods,5183262,4904727,5.7,3828242,3822075,0.2,57.5,56.2,500.3,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-5,VTL,Vardhman Textiles Limited,Textiles,2108816,2116993,-0.4,26094050,2155572,1110.5,7.5,49.5,590.2,-0.11,2,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+1,SWIGGY,Swiggy Limited,Consumer Services,220564233,109376359,101.7,91994949,188153945,-51.1,70.6,36.8,275.7,1041.01,2,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+2,NIACL,The New India Assurance Company Limited,Financial Services,19242035,11146673,72.6,149259416,72428364,106.1,11.4,13.3,205.22,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+3,SPLPETRO,Supreme Petrochem Limited,Chemicals,1092707,922763,18.4,2671117,1950691,36.9,29.0,32.1,828.4,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+4,AFFLE,Affle 3i Limited,Information Technology,2065803,1853257,11.5,3635731,2282998,59.3,36.2,44.8,1609.4,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+5,USHAMART,Usha Martin Limited,Capital Goods,5352597,4904727,9.1,4016966,3822075,5.1,57.1,56.2,499.85,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
