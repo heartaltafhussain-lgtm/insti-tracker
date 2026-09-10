@@ -1,7 +1,8 @@
 Rank,Symbol,Company,Sector,WeeklyBuyPct,FortnightlyBuyPct,MonthlyBuyPct,CombinedScore,Close,InstiNetCr,InstiDeals
-1,SWIGGY,Swiggy Limited,Consumer Services,784.1,441.4,111.7,1337.2,282.75,1041.01,2
-2,NIACL,The New India Assurance Company Limited,Financial Services,199.1,498.9,82.5,780.5,205.51,0.0,0
-3,HEXT,Hexaware Technologies Limited,Information Technology,389.6,228.5,4.3,622.4,509.9,0.0,0
-4,SPLPETRO,Supreme Petrochem Limited,Chemicals,129.0,308.1,28.7,465.8,813.55,0.0,0
-5,AFFLE,Affle 3i Limited,Information Technology,154.8,234.9,13.9,403.6,1587.3,0.0,0
-6,IFCI,IFCI Limited,Financial Services,44.5,240.3,20.1,304.9,88.96,77.65,18
+1,SWIGGY,Swiggy Limited,Consumer Services,245.1,438.8,116.7,800.6,279.0,1041.01,2
+2,NIACL,The New India Assurance Company Limited,Financial Services,154.6,492.6,94.3,741.5,197.35,0.0,0
+3,SPLPETRO,Supreme Petrochem Limited,Chemicals,167.2,352.5,42.9,562.6,828.15,0.0,0
+4,GRAPHITE,Graphite India Limited,Capital Goods,221.0,250.0,8.1,479.1,824.8,10.55,8
+5,JSL,Jindal Stainless Limited,Metals & Mining,76.1,204.7,6.4,287.2,762.15,0.0,0
+6,IFCI,IFCI Limited,Financial Services,21.6,199.9,29.3,250.8,85.15,77.65,18
+7,NUVOCO,Nuvoco Vistas Corporation Limited,Construction Materials,49.5,167.4,1.0,217.9,331.3,0.0,0
