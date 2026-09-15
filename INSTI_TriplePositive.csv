@@ -1,8 +1,15 @@
 Rank,Symbol,Company,Sector,WeeklyBuyPct,FortnightlyBuyPct,MonthlyBuyPct,CombinedScore,Close,InstiNetCr,InstiDeals
-1,SWIGGY,Swiggy Limited,Consumer Services,245.1,438.8,116.7,800.6,279.0,1041.01,2
-2,NIACL,The New India Assurance Company Limited,Financial Services,154.6,492.6,94.3,741.5,197.35,0.0,0
-3,SPLPETRO,Supreme Petrochem Limited,Chemicals,167.2,352.5,42.9,562.6,828.15,0.0,0
-4,GRAPHITE,Graphite India Limited,Capital Goods,221.0,250.0,8.1,479.1,824.8,10.55,8
-5,JSL,Jindal Stainless Limited,Metals & Mining,76.1,204.7,6.4,287.2,762.15,0.0,0
-6,IFCI,IFCI Limited,Financial Services,21.6,199.9,29.3,250.8,85.15,77.65,18
-7,NUVOCO,Nuvoco Vistas Corporation Limited,Construction Materials,49.5,167.4,1.0,217.9,331.3,0.0,0
+1,TATAINVEST,Tata Investment Corporation Limited,Financial Services,783.6,245.2,30.8,1059.6,718.35,0.0,0
+2,GRAPHITE,Graphite India Limited,Capital Goods,501.9,310.0,35.0,846.9,781.5,10.55,8
+3,GRANULES,Granules India Limited,Healthcare,251.0,403.3,147.5,801.8,872.6,1250.07,13
+4,AFCONS,Afcons Infrastructure Limited,Construction,472.1,257.0,20.0,749.1,262.25,0.0,0
+5,ONESOURCE,Onesource Specialty Pharma Limited,Healthcare,304.8,297.2,50.1,652.1,1599.6,0.0,0
+6,SWANCORP,SWAN CORP LIMITED,Chemicals,301.5,130.9,1.7,434.1,292.6,0.02,6
+7,JSL,Jindal Stainless Limited,Metals & Mining,151.0,193.0,48.3,392.3,723.55,0.0,0
+8,PINELABS,Pine Labs Limited,Financial Services,191.5,167.1,25.8,384.4,193.8,624.3,16
+9,UBL,United Breweries Limited,Fast Moving Consumer Goods,51.3,229.4,57.9,338.6,1241.8,0.0,0
+10,USHAMART,Usha Martin Limited,Capital Goods,10.7,243.2,71.8,325.7,480.25,0.0,0
+11,EMAMILTD,Emami Limited,Fast Moving Consumer Goods,168.8,68.0,5.6,242.4,373.7,0.0,0
+12,SAILIFE,Sai Life Sciences Limited,Healthcare,7.1,178.6,14.9,200.6,1541.5,0.0,0
+13,SOLARINDS,Solar Industries India Limited,Chemicals,38.5,129.1,23.6,191.2,19250.0,0.0,0
+14,IDBI,IDBI Bank Limited,Financial Services,12.5,32.4,5.9,50.8,82.95,0.0,0
