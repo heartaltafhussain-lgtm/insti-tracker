@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,GRANULES,Granules India Limited,Healthcare,16055838,6488392,147.5,13036732,5607209,132.5,55.2,53.6,872.6,1250.07,13,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-2,SWIGGY,Swiggy Limited,Consumer Services,257814394,109376359,135.7,137460461,188153945,-26.9,65.2,36.8,275.0,1041.01,2,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-3,NIACL,The New India Assurance Company Limited,Financial Services,24650840,11146673,121.1,177187750,72428364,144.6,12.2,13.3,185.41,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-4,USHAMART,Usha Martin Limited,Capital Goods,8427468,4904727,71.8,5817869,3822075,52.2,59.2,56.2,480.25,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-5,SPLPETRO,Supreme Petrochem Limited,Chemicals,1516049,922763,64.3,3380984,1950691,73.3,31.0,32.1,789.35,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+1,GRANULES,Granules India Limited,Healthcare,17474222,6488392,169.3,14270326,5607209,154.5,55.0,53.6,835.6,1250.07,13,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+2,SWIGGY,Swiggy Limited,Consumer Services,262076188,109376359,139.6,142567943,188153945,-24.2,64.8,36.8,270.5,1041.01,2,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+3,NIACL,The New India Assurance Company Limited,Financial Services,25219432,11146673,126.3,179688779,72428364,148.1,12.3,13.3,184.19,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+4,USHAMART,Usha Martin Limited,Capital Goods,9038627,4904727,84.3,6261191,3822075,63.8,59.1,56.2,478.85,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+5,SPLPETRO,Supreme Petrochem Limited,Chemicals,1606704,922763,74.1,3465446,1950691,77.7,31.7,32.1,792.7,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
