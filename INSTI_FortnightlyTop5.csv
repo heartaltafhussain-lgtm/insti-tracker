@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,GRANULES,Granules India Limited,Healthcare,17305117,3176888,444.7,14093219,2451864,474.8,55.1,56.4,835.6,1250.07,13,2026-09-01,FINAL FORTNIGHTLY ✅ (16th of month)
-2,SWIGGY,Swiggy Limited,Consumer Services,259652765,56625448,358.5,139619225,75791834,84.2,65.0,42.8,270.5,1041.01,2,2026-09-01,FINAL FORTNIGHTLY ✅ (16th of month)
-3,TATAINVEST,Tata Investment Corporation Limited,Financial Services,3294692,771326,327.1,36152235,1010421,3477.9,8.4,43.3,681.95,0.0,0,2026-09-01,FINAL FORTNIGHTLY ✅ (16th of month)
-4,ONESOURCE,Onesource Specialty Pharma Limited,Healthcare,2751323,662534,315.3,3828791,546705,600.3,41.8,54.8,1596.6,0.0,0,2026-09-01,FINAL FORTNIGHTLY ✅ (16th of month)
-5,NIACL,The New India Assurance Company Limited,Financial Services,24712096,6445736,283.4,178621422,33799039,428.5,12.2,16.0,184.19,0.0,0,2026-09-01,FINAL FORTNIGHTLY ✅ (16th of month)
+1,GRANULES,Granules India Limited,Healthcare,17409503,3271413,432.2,14117298,2737745,415.7,55.2,54.4,870.4,1250.07,13,2026-09-02,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+2,TATAINVEST,Tata Investment Corporation Limited,Financial Services,3725818,734453,407.3,39340974,984165,3897.4,8.7,42.7,719.3,0.0,0,2026-09-02,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+3,ONESOURCE,Onesource Specialty Pharma Limited,Healthcare,2758669,569705,384.2,3806518,544296,599.3,42.0,51.1,1580.0,0.0,0,2026-09-02,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+4,AFCONS,Afcons Infrastructure Limited,Construction,12877339,2680831,380.3,37932252,5579023,579.9,25.3,32.5,267.3,0.0,0,2026-09-02,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+5,SWIGGY,Swiggy Limited,Consumer Services,256285215,60488366,323.7,135232404,80577622,67.8,65.5,42.9,276.5,1041.01,2,2026-09-02,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"

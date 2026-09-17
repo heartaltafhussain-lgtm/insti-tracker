@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,GRANULES,Granules India Limited,Healthcare,17474222,6488392,169.3,14270326,5607209,154.5,55.0,53.6,835.6,1250.07,13,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-2,SWIGGY,Swiggy Limited,Consumer Services,262076188,109376359,139.6,142567943,188153945,-24.2,64.8,36.8,270.5,1041.01,2,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-3,NIACL,The New India Assurance Company Limited,Financial Services,25219432,11146673,126.3,179688779,72428364,148.1,12.3,13.3,184.19,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-4,USHAMART,Usha Martin Limited,Capital Goods,9038627,4904727,84.3,6261191,3822075,63.8,59.1,56.2,478.85,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-5,SPLPETRO,Supreme Petrochem Limited,Chemicals,1606704,922763,74.1,3465446,1950691,77.7,31.7,32.1,792.7,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+1,GRANULES,Granules India Limited,Healthcare,17910303,6488392,176.0,14750221,5607209,163.1,54.8,53.6,870.4,1250.07,13,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+2,SWIGGY,Swiggy Limited,Consumer Services,265500615,109376359,142.7,148384718,188153945,-21.1,64.1,36.8,276.5,1041.01,2,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+3,NIACL,The New India Assurance Company Limited,Financial Services,26607086,11146673,138.7,212951918,72428364,194.0,11.1,13.3,197.05,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+4,USHAMART,Usha Martin Limited,Capital Goods,9759699,4904727,99.0,6662526,3822075,74.3,59.4,56.2,495.65,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+5,IFCI,IFCI Limited,Financial Services,319309446,177838303,79.6,1986561611,521168844,281.2,13.8,25.4,77.09,77.65,18,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
