@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,GRANULES,Granules India Limited,Healthcare,17910303,6488392,176.0,14750221,5607209,163.1,54.8,53.6,870.4,1250.07,13,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-2,SWIGGY,Swiggy Limited,Consumer Services,265500615,109376359,142.7,148384718,188153945,-21.1,64.1,36.8,276.5,1041.01,2,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-3,NIACL,The New India Assurance Company Limited,Financial Services,26607086,11146673,138.7,212951918,72428364,194.0,11.1,13.3,197.05,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-4,USHAMART,Usha Martin Limited,Capital Goods,9759699,4904727,99.0,6662526,3822075,74.3,59.4,56.2,495.65,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-5,IFCI,IFCI Limited,Financial Services,319309446,177838303,79.6,1986561611,521168844,281.2,13.8,25.4,77.09,77.65,18,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+1,GRANULES,Granules India Limited,Healthcare,18558275,6488392,186.0,15302978,5607209,172.9,54.8,53.6,875.5,1250.07,13,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+2,SWIGGY,Swiggy Limited,Consumer Services,280290284,109376359,156.3,153735331,188153945,-18.3,64.6,36.8,273.05,1041.01,2,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+3,NIACL,The New India Assurance Company Limited,Financial Services,28378921,11146673,154.6,220555802,72428364,204.5,11.4,13.3,187.66,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+4,TATACHEM,Tata Chemicals Limited,Chemicals,12388476,5036506,146.0,48669493,9841609,394.5,20.3,33.9,693.25,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+5,USHAMART,Usha Martin Limited,Capital Goods,10648684,4904727,117.1,7361932,3822075,92.6,59.1,56.2,507.2,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"

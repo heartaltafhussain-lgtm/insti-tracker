@@ -1,13 +1,26 @@
 Rank,Symbol,Company,Sector,WeeklyBuyPct,FortnightlyBuyPct,MonthlyBuyPct,CombinedScore,Close,InstiNetCr,InstiDeals
-1,TATACHEM,Tata Chemicals Limited,Chemicals,591.2,243.4,75.6,910.2,779.3,0.0,0
-2,GRANULES,Granules India Limited,Healthcare,262.8,432.2,176.0,871.0,870.4,1250.07,13
-3,TATAINVEST,Tata Investment Corporation Limited,Financial Services,351.4,407.3,71.1,829.8,719.3,0.0,0
-4,AFCONS,Afcons Infrastructure Limited,Construction,96.5,380.3,52.1,528.9,267.3,0.0,0
-5,PINELABS,Pine Labs Limited,Financial Services,198.7,194.4,47.4,440.5,184.48,602.22,20
-6,SOLARINDS,Solar Industries India Limited,Chemicals,170.1,149.0,46.8,365.9,18815.0,0.0,0
-7,UBL,United Breweries Limited,Fast Moving Consumer Goods,50.2,229.5,70.8,350.5,1216.8,0.0,0
-8,AEGISVOPAK,Aegis Vopak Terminals Limited,Oil Gas & Consumable Fuels,164.1,130.8,29.1,324.0,310.7,0.0,0
-9,FIRSTCRY,Brainbees Solutions Limited,Consumer Services,285.2,18.1,3.4,306.7,169.25,0.0,0
-10,INDUSINDBK,IndusInd Bank Limited,Financial Services,122.6,68.1,26.8,217.5,958.2,0.0,0
-11,LICHSGFIN,LIC Housing Finance Limited,Financial Services,92.7,39.8,3.8,136.3,545.9,0.0,0
-12,IDBI,IDBI Bank Limited,Financial Services,1.6,19.2,18.1,38.9,81.89,0.0,0
+1,TATACHEM,Tata Chemicals Limited,Chemicals,1115.8,398.3,146.0,1660.1,693.25,0.0,0
+2,TATAINVEST,Tata Investment Corporation Limited,Financial Services,350.5,456.9,90.6,898.0,702.35,0.0,0
+3,EMCURE,Emcure Pharmaceuticals Limited,Healthcare,416.1,181.5,31.8,629.4,2003.8,0.0,0
+4,AFCONS,Afcons Infrastructure Limited,Construction,82.1,351.6,64.2,497.9,263.4,0.0,0
+5,GRANULES,Granules India Limited,Healthcare,9.1,284.0,186.0,479.1,875.5,1250.07,13
+6,FIRSTCRY,Brainbees Solutions Limited,Consumer Services,395.9,3.7,18.2,417.8,172.15,0.0,0
+7,STARHEALTH,Star Health and Allied Insurance Company Limited,Financial Services,154.4,228.4,22.4,405.2,547.05,0.0,0
+8,PINELABS,Pine Labs Limited,Financial Services,55.4,210.6,66.8,332.8,192.04,923.91,22
+9,INDUSINDBK,IndusInd Bank Limited,Financial Services,162.6,97.2,70.5,330.3,966.3,0.0,0
+10,JSWINFRA,JSW Infrastructure Limited,Services,147.2,165.4,16.0,328.6,348.25,0.0,0
+11,SOLARINDS,Solar Industries India Limited,Chemicals,167.5,89.5,57.1,314.1,18555.0,0.0,0
+12,CENTRALBK,Central Bank of India,Financial Services,261.4,40.1,0.2,301.7,31.73,0.0,0
+13,JSL,Jindal Stainless Limited,Metals & Mining,0.2,187.4,111.7,299.3,750.95,0.0,0
+14,AEGISVOPAK,Aegis Vopak Terminals Limited,Oil Gas & Consumable Fuels,115.7,107.2,41.3,264.2,314.95,0.0,0
+15,COCHINSHIP,Cochin Shipyard Limited,Capital Goods,18.4,186.8,8.7,213.9,1398.0,0.0,0
+16,ANTHEM,Anthem Biosciences Limited,Healthcare,129.6,59.3,20.5,209.4,928.5,0.0,0
+17,MEESHO,Meesho Limited,Consumer Services,86.0,78.8,33.6,198.4,214.44,1380.21,34
+18,USHAMART,Usha Martin Limited,Capital Goods,70.2,2.8,117.1,190.1,507.2,0.0,0
+19,ALKEM,Alkem Laboratories Limited,Healthcare,115.9,59.4,12.2,187.5,5466.5,0.0,0
+20,BANDHANBNK,Bandhan Bank Limited,Financial Services,6.8,160.3,12.0,179.1,175.0,0.0,0
+21,LODHA,Lodha Developers Limited,Realty,71.0,56.8,23.2,151.0,1144.7,0.0,0
+22,YESBANK,Yes Bank Limited,Financial Services,64.6,43.5,0.9,109.0,22.72,0.0,0
+23,IDFCFIRSTB,IDFC First Bank Limited,Financial Services,42.0,5.7,8.1,55.8,85.92,0.0,0
+24,LICHSGFIN,LIC Housing Finance Limited,Financial Services,28.1,9.2,8.6,45.9,548.15,0.0,0
+25,GODREJPROP,Godrej Properties Limited,Realty,11.6,27.0,0.4,39.0,1691.1,0.0,0
