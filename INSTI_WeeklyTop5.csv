@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,TATACHEM,Tata Chemicals Limited,Chemicals,10572692,869626,1115.8,45783826,1591738,2776.3,18.8,35.3,693.25,0.0,0,2026-09-11,FINAL WEEKLY ✅ (Friday close)
-2,GODIGIT,Go Digit General Insurance Limited,Financial Services,2373748,369914,541.7,1753739,396153,342.7,57.5,48.3,239.0,0.0,0,2026-09-11,FINAL WEEKLY ✅ (Friday close)
-3,FSL,Firstsource Solutions Limited,Services,5335364,917309,481.6,36050231,1451218,2384.1,12.9,38.7,273.45,0.0,0,2026-09-11,FINAL WEEKLY ✅ (Friday close)
-4,EMCURE,Emcure Pharmaceuticals Limited,Healthcare,1542277,298847,416.1,948953,359362,164.1,61.9,45.4,2003.8,0.0,0,2026-09-11,FINAL WEEKLY ✅ (Friday close)
-5,FIRSTCRY,Brainbees Solutions Limited,Consumer Services,6612608,1333324,395.9,61894244,2009930,2979.4,9.7,39.9,172.15,0.0,0,2026-09-11,FINAL WEEKLY ✅ (Friday close)
+1,TATACHEM,Tata Chemicals Limited,Chemicals,11025302,896300,1130.1,47942330,1705902,2710.4,18.7,34.4,694.7,0.0,0,2026-09-14,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+2,FSL,Firstsource Solutions Limited,Services,5306697,732758,624.2,35852485,1372624,2512.0,12.9,34.8,269.45,0.0,0,2026-09-14,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+3,ANURAS,Anupam Rasayan India Limited,Chemicals,4438027,636704,597.0,3264500,576032,466.7,57.6,52.5,1160.8,0.0,0,2026-09-14,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+4,GODIGIT,Go Digit General Insurance Limited,Financial Services,2737286,401569,581.6,2166864,469835,361.2,55.8,46.1,241.45,0.0,0,2026-09-14,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+5,SHYAMMETL,Shyam Metalics and Energy Limited,Capital Goods,3028021,463013,554.0,1872137,497557,276.3,61.8,48.2,1097.5,0.0,0,2026-09-14,"WEEK IN PROGRESS — daily refresh, Friday ko final"
