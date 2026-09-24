@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,GRANULES,Granules India Limited,Healthcare,19304385,6488392,197.5,16189868,5607209,188.7,54.4,53.6,860.25,1250.07,13,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-2,SWIGGY,Swiggy Limited,Consumer Services,319760906,109376359,192.3,185972851,188153945,-1.2,63.2,36.8,278.5,1041.01,2,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-3,USHAMART,Usha Martin Limited,Capital Goods,14124488,4904727,188.0,11661679,3822075,205.1,54.8,56.2,535.05,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-4,TATACHEM,Tata Chemicals Limited,Chemicals,14035779,5036506,178.7,53041324,9841609,438.9,20.9,33.9,669.9,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-5,NIACL,The New India Assurance Company Limited,Financial Services,29883539,11146673,168.1,226145277,72428364,212.2,11.7,13.3,191.16,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+1,STARHEALTH,Star Health and Allied Insurance Company Limited,Financial Services,14504658,4008849,261.8,4633830,3081104,50.4,75.8,56.5,550.4,0.01,2,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+2,GRANULES,Granules India Limited,Healthcare,19464381,6488392,200.0,16357306,5607209,191.7,54.3,53.6,853.0,1250.07,13,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+3,SWIGGY,Swiggy Limited,Consumer Services,327035004,109376359,199.0,194362838,188153945,3.3,62.7,36.8,267.45,1041.01,2,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+4,USHAMART,Usha Martin Limited,Capital Goods,14366570,4904727,192.9,12026740,3822075,214.7,54.4,56.2,523.2,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+5,TATACHEM,Tata Chemicals Limited,Chemicals,14327875,5036506,184.5,53514759,9841609,443.8,21.1,33.9,652.2,0.0,0,2026-08-31,"MONTH IN PROGRESS — daily refresh, month-end ko final"
