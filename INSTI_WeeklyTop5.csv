@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,GODIGIT,Go Digit General Insurance Limited,Financial Services,5526246,398641,1286.3,4746599,521054,811.0,53.8,43.3,250.3,0.0,0,2026-09-17,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-2,RHIM,RHI MAGNESITA INDIA LIMITED,Capital Goods,2484744,290265,756.0,15025070,281260,5242.1,14.2,50.8,383.8,1579.76,6,2026-09-17,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-3,STARHEALTH,Star Health and Allied Insurance Company Limited,Financial Services,11376189,1613324,605.1,2034188,1145558,77.6,84.8,58.5,550.4,0.01,2,2026-09-17,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-4,SHYAMMETL,Shyam Metalics and Energy Limited,Capital Goods,3767102,555743,577.8,2486377,720060,245.3,60.2,43.6,1097.9,0.0,0,2026-09-17,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-5,WHIRLPOOL,Whirlpool of India Limited,Consumer Durables,3451375,639585,439.6,16904097,685338,2366.5,17.0,48.3,853.45,0.0,0,2026-09-17,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+1,RHIM,RHI MAGNESITA INDIA LIMITED,Capital Goods,2501027,330292,657.2,15135383,283011,5248.0,14.2,53.9,386.45,1579.76,6,2026-09-18,FINAL WEEKLY ✅ (Friday close)
+2,POLICYBZR,PB Fintech Limited,Financial Services,32441836,5010553,547.5,40583497,6368236,537.3,44.4,44.0,1166.0,318.48,3,2026-09-18,FINAL WEEKLY ✅ (Friday close)
+3,ELECON,Elecon Engineering Company Limited,Capital Goods,2210040,410021,439.0,31751570,661367,4700.9,6.5,38.3,458.25,-0.05,2,2026-09-18,FINAL WEEKLY ✅ (Friday close)
+4,ANURAS,Anupam Rasayan India Limited,Chemicals,4443734,1117266,297.7,3501836,973304,259.8,55.9,53.4,1192.4,0.0,0,2026-09-18,FINAL WEEKLY ✅ (Friday close)
+5,ENGINERSIN,Engineers India Limited,Construction,15538118,3922410,296.1,54112602,5640078,859.4,22.3,41.0,315.65,0.0,0,2026-09-18,FINAL WEEKLY ✅ (Friday close)
