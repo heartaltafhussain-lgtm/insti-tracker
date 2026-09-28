@@ -1,37 +1,36 @@
 Rank,Symbol,Company,Sector,WeeklyBuyPct,FortnightlyBuyPct,MonthlyBuyPct,CombinedScore,Close,InstiNetCr,InstiDeals
-1,POLICYBZR,PB Fintech Limited,Financial Services,547.5,521.0,191.0,1259.5,1166.0,318.48,3
-2,STARHEALTH,Star Health and Allied Insurance Company Limited,Financial Services,216.7,602.1,270.2,1089.0,558.15,0.01,2
-3,ANURAS,Anupam Rasayan India Limited,Chemicals,297.7,419.3,69.6,786.6,1192.4,0.0,0
-4,GODIGIT,Go Digit General Insurance Limited,Financial Services,52.7,572.5,76.9,702.1,253.7,0.0,0
-5,FIRSTCRY,Brainbees Solutions Limited,Consumer Services,165.8,221.1,194.7,581.6,180.83,-83.05,2
-6,ABDL,Allied Blenders and Distillers Limited,Fast Moving Consumer Goods,154.7,320.9,89.2,564.8,715.05,0.0,0
-7,MFSL,Max Financial Services Limited,Financial Services,283.1,194.7,63.0,540.8,1458.0,0.0,0
-8,ELECON,Elecon Engineering Company Limited,Capital Goods,439.0,46.2,7.9,493.1,458.25,-0.05,2
-9,WHIRLPOOL,Whirlpool of India Limited,Consumer Durables,208.0,179.9,76.3,464.2,918.9,5.11,10
-10,CARBORUNIV,Carborundum Universal Limited,Capital Goods,176.7,163.8,15.9,356.4,1278.5,0.0,0
-11,OLAELEC,Ola Electric Mobility Limited,Automobile and Auto Components,193.2,54.6,53.0,300.8,38.48,-0.27,4
-12,BANDHANBNK,Bandhan Bank Limited,Financial Services,27.5,166.3,77.9,271.7,187.7,0.0,0
-13,AIAENG,AIA Engineering Limited,Capital Goods,99.4,69.9,59.8,229.1,3919.4,0.0,0
-14,USHAMART,Usha Martin Limited,Capital Goods,6.4,25.2,195.8,227.4,518.8,0.0,0
-15,JSWCEMENT,JSW Cement Limited,Construction Materials,111.8,86.7,24.0,222.5,115.47,0.0,0
-16,SUNTV,Sun TV Network Limited,Media Entertainment & Publication,76.4,85.6,53.1,215.1,513.2,0.0,0
-17,LTF,L&T Finance Limited,Financial Services,173.4,31.0,6.0,210.4,284.0,0.0,0
-18,BAYERCROP,Bayer Cropscience Limited,Chemicals,59.4,134.6,14.9,208.9,3717.6,0.0,0
-19,NTPCGREEN,NTPC Green Energy Limited,Power,129.5,58.9,19.3,207.7,93.47,0.0,0
-20,TEGA,Tega Industries Limited,Capital Goods,24.7,45.5,110.9,181.1,2091.6,0.0,0
-21,EMMVEE,Emmvee Photovoltaic Power Limited,Capital Goods,77.7,74.1,23.5,175.3,321.9,0.0,0
-22,SHYAMMETL,Shyam Metalics and Energy Limited,Capital Goods,144.6,20.3,6.8,171.7,1085.6,0.0,0
-23,APTUS,Aptus Value Housing Finance India Limited,Financial Services,27.4,111.0,19.2,157.6,244.6,0.0,0
-24,IKS,Inventurus Knowledge Solutions Limited,Information Technology,53.4,97.9,4.7,156.0,1815.8,0.0,0
-25,FIVESTAR,Five-Star Business Finance Limited,Financial Services,61.2,47.7,35.8,144.7,520.95,0.0,0
-26,IDFCFIRSTB,IDFC First Bank Limited,Financial Services,37.3,35.7,65.6,138.6,83.8,0.0,0
-27,GILLETTE,Gillette India Limited,Fast Moving Consumer Goods,20.9,64.3,36.2,121.4,7072.0,0.0,0
-28,JSWDULUX,JSW Dulux Limited,Consumer Durables,34.2,11.8,55.1,101.1,3199.6,0.0,0
-29,SUZLON,Suzlon Energy Limited,Capital Goods,39.9,40.5,13.7,94.1,40.8,0.0,0
-30,CHOLAFIN,Cholamandalam Investment and Finance Company Limited,Financial Services,21.4,47.7,22.9,92.0,1662.7,0.0,0
-31,HBLENGINE,HBL Engineering Limited,Capital Goods,7.9,9.5,54.1,71.5,806.0,0.0,0
-32,SIGNATURE,Signatureglobal (India) Limited,Realty,14.0,49.4,5.0,68.4,788.85,0.0,0
-33,NATCOPHARM,Natco Pharma Limited,Healthcare,11.3,33.2,6.9,51.4,839.3,0.0,0
-34,UPL,UPL Limited,Chemicals,3.4,35.5,4.5,43.4,550.05,0.0,0
-35,ANANDRATHI,Anand Rathi Wealth Limited,Financial Services,6.5,29.3,2.6,38.4,2126.8,0.0,0
-36,SJVN,SJVN Limited,Power,3.8,7.7,15.4,26.9,61.76,0.0,0
+1,POLICYBZR,PB Fintech Limited,Financial Services,574.6,733.4,215.2,1523.2,1151.3,318.48,3
+2,STARHEALTH,Star Health and Allied Insurance Company Limited,Financial Services,229.5,573.4,274.3,1077.2,552.5,0.01,2
+3,GODIGIT,Go Digit General Insurance Limited,Financial Services,75.2,879.6,120.3,1075.1,263.25,0.0,0
+4,ELECON,Elecon Engineering Company Limited,Capital Goods,642.7,88.8,26.7,758.2,480.75,-0.05,2
+5,WHIRLPOOL,Whirlpool of India Limited,Consumer Durables,234.4,428.0,87.0,749.4,917.1,5.11,10
+6,FIRSTCRY,Brainbees Solutions Limited,Consumer Services,214.5,286.4,231.2,732.1,184.72,-83.05,2
+7,ABDL,Allied Blenders and Distillers Limited,Fast Moving Consumer Goods,188.8,309.6,104.1,602.5,723.45,0.0,0
+8,MFSL,Max Financial Services Limited,Financial Services,259.1,237.3,65.5,561.9,1444.0,0.0,0
+9,OLAELEC,Ola Electric Mobility Limited,Automobile and Auto Components,208.8,75.0,60.0,343.8,37.86,-0.27,4
+10,SUNTV,Sun TV Network Limited,Media Entertainment & Publication,150.4,88.3,61.9,300.6,519.9,0.0,0
+11,SIGNATURE,Signatureglobal (India) Limited,Realty,113.9,118.0,39.4,271.3,780.35,0.0,0
+12,LTF,L&T Finance Limited,Financial Services,195.4,48.8,12.4,256.6,280.85,0.0,0
+13,RAINBOW,Rainbow Childrens Medicare Limited,Healthcare,176.0,69.6,8.3,253.9,1372.6,0.0,0
+14,CARBORUNIV,Carborundum Universal Limited,Capital Goods,18.3,197.6,20.4,236.3,1247.8,0.0,0
+15,BAYERCROP,Bayer Cropscience Limited,Chemicals,16.2,174.2,25.9,216.3,3671.8,0.0,0
+16,BANDHANBNK,Bandhan Bank Limited,Financial Services,44.3,85.5,82.9,212.7,181.0,0.0,0
+17,ENGINERSIN,Engineers India Limited,Construction,150.2,0.6,56.5,207.3,313.9,-0.06,2
+18,AIAENG,AIA Engineering Limited,Capital Goods,55.9,85.5,63.3,204.7,3841.4,0.0,0
+19,IKS,Inventurus Knowledge Solutions Limited,Information Technology,35.6,148.9,8.3,192.8,1768.4,0.0,0
+20,NTPCGREEN,NTPC Green Energy Limited,Power,67.6,67.1,22.0,156.7,92.21,0.0,0
+21,APTUS,Aptus Value Housing Finance India Limited,Financial Services,15.0,116.6,22.0,153.6,237.47,0.0,0
+22,JSWCEMENT,JSW Cement Limited,Construction Materials,21.8,96.9,31.5,150.2,112.49,0.0,0
+23,IDFCFIRSTB,IDFC First Bank Limited,Financial Services,28.6,41.6,73.8,144.0,80.55,0.0,0
+24,FIVESTAR,Five-Star Business Finance Limited,Financial Services,51.6,50.4,39.2,141.2,518.35,0.0,0
+25,SUZLON,Suzlon Energy Limited,Capital Goods,69.2,50.0,22.0,141.2,39.66,0.0,0
+26,JSWDULUX,JSW Dulux Limited,Consumer Durables,69.7,9.7,60.5,139.9,3169.8,0.0,0
+27,360ONE,360 ONE WAM LIMITED,Financial Services,98.4,36.3,0.7,135.4,1045.0,0.0,0
+28,HBLENGINE,HBL Engineering Limited,Capital Goods,29.8,27.3,66.7,123.8,785.65,0.0,0
+29,CHOLAFIN,Cholamandalam Investment and Finance Company Limited,Financial Services,26.1,54.2,28.1,108.4,1634.2,0.0,0
+30,GLENMARK,Glenmark Pharmaceuticals Limited,Healthcare,65.0,35.5,0.2,100.7,2325.7,0.0,0
+31,TTML,Tata Teleservices (Maharashtra) Limited,Telecommunication,61.6,34.3,3.1,99.0,36.19,0.0,0
+32,ANANDRATHI,Anand Rathi Wealth Limited,Financial Services,16.2,60.0,9.2,85.4,2146.2,0.0,0
+33,NATCOPHARM,Natco Pharma Limited,Healthcare,9.7,42.1,13.9,65.7,828.55,0.0,0
+34,SBILIFE,SBI Life Insurance Company Limited,Financial Services,7.2,44.3,1.6,53.1,1728.1,0.0,0
+35,BAJFINANCE,Bajaj Finance Limited,Financial Services,24.6,22.3,1.4,48.3,985.0,0.0,0
