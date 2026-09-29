@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,STARHEALTH,Star Health and Allied Insurance Company Limited,Financial Services,15004237,4008849,274.3,5784270,3081104,87.7,72.2,56.5,552.5,0.01,2,2026-08-31,FINAL MONTHLY ✅ (month-end close)
-2,FIRSTCRY,Brainbees Solutions Limited,Consumer Services,32973718,9955754,231.2,147987956,14359784,930.6,18.2,40.9,184.72,-83.05,2,2026-08-31,FINAL MONTHLY ✅ (month-end close)
-3,POLICYBZR,PB Fintech Limited,Financial Services,44929522,14252625,215.2,58413654,13185011,343.0,43.5,51.9,1151.3,318.48,3,2026-08-31,FINAL MONTHLY ✅ (month-end close)
-4,GRANULES,Granules India Limited,Healthcare,20012238,6488392,208.4,16864451,5607209,200.8,54.3,53.6,851.4,1250.07,13,2026-08-31,FINAL MONTHLY ✅ (month-end close)
-5,SWIGGY,Swiggy Limited,Consumer Services,335723933,109376359,206.9,206735847,188153945,9.9,61.9,36.8,256.0,1041.01,2,2026-08-31,FINAL MONTHLY ✅ (month-end close)
+1,POLICYBZR,PB Fintech Limited,Financial Services,55628186,14252625,290.3,67061043,13185011,408.6,45.3,51.9,1081.0,318.48,3,2026-08-31,FINAL MONTHLY ✅ (month-end close)
+2,STARHEALTH,Star Health and Allied Insurance Company Limited,Financial Services,15365277,4008849,283.3,6054854,3081104,96.5,71.7,56.5,538.1,0.01,2,2026-08-31,FINAL MONTHLY ✅ (month-end close)
+3,FIRSTCRY,Brainbees Solutions Limited,Consumer Services,34469592,9955754,246.2,154725602,14359784,977.5,18.2,40.9,184.37,-83.05,2,2026-08-31,FINAL MONTHLY ✅ (month-end close)
+4,SPLPETRO,Supreme Petrochem Limited,Chemicals,2952729,922763,220.0,5545705,1950691,184.3,34.7,32.1,831.85,0.0,0,2026-08-31,FINAL MONTHLY ✅ (month-end close)
+5,GRANULES,Granules India Limited,Healthcare,20599787,6488392,217.5,17409359,5607209,210.5,54.2,53.6,866.75,1250.07,13,2026-08-31,FINAL MONTHLY ✅ (month-end close)
