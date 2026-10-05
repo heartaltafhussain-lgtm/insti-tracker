@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,HONASA,Honasa Consumer Limited,Fast Moving Consumer Goods,17160176,1311752,1208.2,10629661,1490611,613.1,61.7,46.8,427.9,-366.83,4,2026-09-25,FINAL WEEKLY ✅ (Friday close)
-2,KAJARIACER,Kajaria Ceramics Limited,Consumer Durables,5384846,561664,858.7,1832770,358005,411.9,74.6,61.1,1225.1,0.0,0,2026-09-25,FINAL WEEKLY ✅ (Friday close)
-3,WIPRO,Wipro Limited,Information Technology,177368613,24983980,609.9,50403924,26615614,89.4,77.9,48.4,159.35,0.0,0,2026-09-25,FINAL WEEKLY ✅ (Friday close)
-4,JKCEMENT,JK Cement Limited,Construction Materials,659730,94931,595.0,161278,74885,115.4,80.4,55.9,4952.0,0.0,0,2026-09-25,FINAL WEEKLY ✅ (Friday close)
-5,UNITDSPR,United Spirits Limited,Fast Moving Consumer Goods,8923821,1317074,577.5,3159736,1192879,164.9,73.9,52.5,1335.1,0.0,0,2026-09-25,FINAL WEEKLY ✅ (Friday close)
+1,DCMSHRIRAM,DCM Shriram Limited,Diversified,916464,89582,923.0,816359,74836,990.9,52.9,54.5,1044.55,0.0,0,2026-09-28,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+2,KAJARIACER,Kajaria Ceramics Limited,Consumer Durables,5677428,563107,908.2,2056403,373769,450.2,73.4,60.1,1214.4,0.0,0,2026-09-28,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+3,HONASA,Honasa Consumer Limited,Fast Moving Consumer Goods,16978702,1738210,876.8,10097321,2084986,384.3,62.7,45.5,442.1,-366.83,4,2026-09-28,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+4,UNITDSPR,United Spirits Limited,Fast Moving Consumer Goods,9447849,1064012,787.9,3569682,1010861,253.1,72.6,51.3,1369.0,0.0,0,2026-09-28,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+5,JKCEMENT,JK Cement Limited,Construction Materials,657702,86598,659.5,159209,74587,113.5,80.5,53.7,4981.5,0.0,0,2026-09-28,"WEEK IN PROGRESS — daily refresh, Friday ko final"
