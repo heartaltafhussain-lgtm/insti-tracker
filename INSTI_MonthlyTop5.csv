@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,JKCEMENT,JK Cement Limited,Construction Materials,576406,566175,1.8,114169,484692,-76.4,83.5,53.9,4960.0,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-2,TARIL,Transformers And Rectifiers (India) Limited,Capital Goods,9169248,9014431,1.7,121103943,10622537,1040.1,7.0,45.9,283.65,0.63,8,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-3,ADANIGREEN,Adani Green Energy Limited,Power,10172798,11707449,-13.1,6122390,19030476,-67.8,62.4,38.1,1313.0,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-4,DCMSHRIRAM,DCM Shriram Limited,Diversified,679192,910992,-25.4,977097,627182,55.8,41.0,59.2,988.85,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-5,BHARTIHEXA,Bharti Hexacom Limited,Telecommunication,779620,1160029,-32.8,290295,810046,-64.2,72.9,58.9,1386.8,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+1,BHARTIHEXA,Bharti Hexacom Limited,Telecommunication,1550969,1160029,33.7,1031536,810046,27.3,60.1,58.9,1477.9,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+2,TARIL,Transformers And Rectifiers (India) Limited,Capital Goods,9946337,9014431,10.3,123368030,10622537,1061.4,7.5,45.9,289.15,0.63,8,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+3,ADANIGREEN,Adani Green Energy Limited,Power,12763337,11707449,9.0,9952274,19030476,-47.7,56.2,38.1,1341.4,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+4,JKCEMENT,JK Cement Limited,Construction Materials,595226,566175,5.1,134709,484692,-72.2,81.5,53.9,5047.0,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+5,KOTAKBANK,Kotak Mahindra Bank Limited,Financial Services,155656818,198946753,-21.8,97579347,87022310,12.1,61.5,69.6,440.0,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
