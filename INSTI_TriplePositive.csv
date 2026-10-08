@@ -1,5 +1,6 @@
 Rank,Symbol,Company,Sector,WeeklyBuyPct,FortnightlyBuyPct,MonthlyBuyPct,CombinedScore,Close,InstiNetCr,InstiDeals
-1,BHARTIHEXA,Bharti Hexacom Limited,Telecommunication,405.1,188.4,33.7,627.2,1477.9,0.0,0
-2,TARIL,Transformers And Rectifiers (India) Limited,Capital Goods,439.5,159.8,10.3,609.6,289.15,0.63,8
-3,JKCEMENT,JK Cement Limited,Construction Materials,394.9,167.9,5.1,567.9,5047.0,0.0,0
-4,ADANIGREEN,Adani Green Energy Limited,Power,222.5,289.6,9.0,521.1,1341.4,0.0,0
+1,BHARTIHEXA,Bharti Hexacom Limited,Telecommunication,360.0,200.7,45.4,606.1,1500.7,0.0,0
+2,ABLBL,Aditya Birla Lifestyle Brands Limited,Consumer Services,81.5,451.3,12.2,545.0,71.95,0.0,0
+3,INDIACEM,The India Cements Limited,Construction Materials,166.3,319.0,27.8,513.1,294.6,0.0,0
+4,ADANIGREEN,Adani Green Energy Limited,Power,60.9,346.8,30.3,438.0,1235.7,0.0,0
+5,TARIL,Transformers And Rectifiers (India) Limited,Capital Goods,47.5,146.9,16.5,210.9,282.75,0.63,8
