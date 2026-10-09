@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,BHARTIHEXA,Bharti Hexacom Limited,Telecommunication,1626109,353527,360.0,1213340,199138,509.3,57.3,64.0,1500.7,0.0,0,2026-10-01,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-2,SCI,Shipping Corporation Of India Limited,Services,6346428,2132506,197.6,30521033,4072228,649.5,17.2,34.4,280.75,0.0,0,2026-10-01,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-3,ITC,ITC Limited,Fast Moving Consumer Goods,104946659,37283339,181.5,86359674,21766498,296.8,54.9,63.1,255.0,0.0,0,2026-10-01,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-4,SOBHA,Sobha Limited,Realty,448570,167026,168.6,320240,252249,27.0,58.3,39.8,1183.9,0.0,0,2026-10-01,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-5,INDIACEM,The India Cements Limited,Construction Materials,1276404,479358,166.3,629119,619456,1.6,67.0,43.6,294.6,0.0,0,2026-10-01,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+1,HEXT,Hexaware Technologies Limited,Information Technology,2341688,439787,432.5,28890460,538048,5269.5,7.5,45.0,538.5,0.0,0,2026-10-02,FINAL WEEKLY ✅ (Friday close)
+2,BHARTIHEXA,Bharti Hexacom Limited,Telecommunication,1605762,362905,342.5,1218049,230377,428.7,56.9,61.2,1531.9,0.0,0,2026-10-02,FINAL WEEKLY ✅ (Friday close)
+3,GMRAIRPORT,GMR AIRPORTS LIMITED,Services,129067495,35777023,260.8,40975229,28267071,45.0,75.9,55.9,92.31,0.0,0,2026-10-02,FINAL WEEKLY ✅ (Friday close)
+4,SOBHA,Sobha Limited,Realty,531337,178050,198.4,328064,270167,21.4,61.8,39.7,1161.7,0.0,0,2026-10-02,FINAL WEEKLY ✅ (Friday close)
+5,FSL,Firstsource Solutions Limited,Services,3410903,1295784,163.2,20258928,7461601,171.5,14.4,14.8,268.1,0.0,0,2026-10-02,FINAL WEEKLY ✅ (Friday close)

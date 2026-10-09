@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,BHARTIHEXA,Bharti Hexacom Limited,Telecommunication,1686898,1160029,45.4,1269217,810046,56.7,57.1,58.9,1500.7,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-2,ADANIGREEN,Adani Green Energy Limited,Power,15251081,11707449,30.3,14953963,19030476,-21.4,50.5,38.1,1235.7,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-3,INDIACEM,The India Cements Limited,Construction Materials,1380300,1079662,27.8,757158,2766060,-72.6,64.6,28.1,294.6,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-4,TARIL,Transformers And Rectifiers (India) Limited,Capital Goods,10499588,9014431,16.5,124212070,10622537,1069.3,7.8,45.9,282.75,0.63,8,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-5,JKCEMENT,JK Cement Limited,Construction Materials,642280,566175,13.4,156204,484692,-67.8,80.4,53.9,4966.5,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+1,BHARTIHEXA,Bharti Hexacom Limited,Telecommunication,1727340,1160029,48.9,1329803,810046,64.2,56.5,58.9,1531.9,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+2,ADANIGREEN,Adani Green Energy Limited,Power,15973669,11707449,36.4,16966405,19030476,-10.8,48.5,38.1,1255.8,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+3,INDIACEM,The India Cements Limited,Construction Materials,1442888,1079662,33.6,834737,2766060,-69.8,63.4,28.1,297.45,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+4,TARIL,Transformers And Rectifiers (India) Limited,Capital Goods,11300797,9014431,25.4,125766240,10622537,1084.0,8.2,45.9,290.65,0.63,8,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+5,JKCEMENT,JK Cement Limited,Construction Materials,664862,566175,17.4,173325,484692,-64.2,79.3,53.9,4874.0,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
