@@ -1,5 +1,8 @@
 Rank,Symbol,Company,Sector,WeeklyBuyPct,FortnightlyBuyPct,MonthlyBuyPct,CombinedScore,Close,InstiNetCr,InstiDeals
-1,BHARTIHEXA,Bharti Hexacom Limited,Telecommunication,342.5,213.9,48.9,605.3,1531.9,0.0,0
-2,ABLBL,Aditya Birla Lifestyle Brands Limited,Consumer Services,64.7,418.2,16.5,499.4,72.46,0.0,0
-3,INDIACEM,The India Cements Limited,Construction Materials,143.9,269.7,33.6,447.2,297.45,0.0,0
-4,GMRAIRPORT,GMR AIRPORTS LIMITED,Services,260.8,131.4,7.7,399.9,92.31,0.0,0
+1,GALLANTT,Gallantt Ispat Limited,Capital Goods,1134.7,299.4,89.2,1523.3,595.6,0.0,0
+2,SOBHA,Sobha Limited,Realty,382.1,287.8,35.7,705.6,1156.4,0.0,0
+3,ABLBL,Aditya Birla Lifestyle Brands Limited,Consumer Services,55.0,440.1,20.5,515.6,72.14,0.0,0
+4,INDIACEM,The India Cements Limited,Construction Materials,150.4,242.3,40.8,433.5,297.75,0.0,0
+5,BHARTIHEXA,Bharti Hexacom Limited,Telecommunication,55.5,261.9,57.7,375.1,1521.3,0.0,0
+6,TIINDIA,Tube Investments of India Limited,Automobile and Auto Components,6.7,358.4,4.1,369.2,2214.0,0.0,0
+7,GMRAIRPORT,GMR AIRPORTS LIMITED,Services,200.3,144.6,13.6,358.5,89.5,0.0,0

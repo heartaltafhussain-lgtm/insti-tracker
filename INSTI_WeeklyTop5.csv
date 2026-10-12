@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,HEXT,Hexaware Technologies Limited,Information Technology,2341688,439787,432.5,28890460,538048,5269.5,7.5,45.0,538.5,0.0,0,2026-10-02,FINAL WEEKLY ✅ (Friday close)
-2,BHARTIHEXA,Bharti Hexacom Limited,Telecommunication,1605762,362905,342.5,1218049,230377,428.7,56.9,61.2,1531.9,0.0,0,2026-10-02,FINAL WEEKLY ✅ (Friday close)
-3,GMRAIRPORT,GMR AIRPORTS LIMITED,Services,129067495,35777023,260.8,40975229,28267071,45.0,75.9,55.9,92.31,0.0,0,2026-10-02,FINAL WEEKLY ✅ (Friday close)
-4,SOBHA,Sobha Limited,Realty,531337,178050,198.4,328064,270167,21.4,61.8,39.7,1161.7,0.0,0,2026-10-02,FINAL WEEKLY ✅ (Friday close)
-5,FSL,Firstsource Solutions Limited,Services,3410903,1295784,163.2,20258928,7461601,171.5,14.4,14.8,268.1,0.0,0,2026-10-02,FINAL WEEKLY ✅ (Friday close)
+1,GALLANTT,Gallantt Ispat Limited,Capital Goods,1347002,109099,1134.7,22239613,123278,17940.2,5.7,46.9,595.6,0.0,0,2026-10-05,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+2,HEXT,Hexaware Technologies Limited,Information Technology,2677004,418516,539.6,30093353,597327,4938.0,8.2,41.2,549.85,0.0,0,2026-10-05,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+3,SOBHA,Sobha Limited,Realty,1018631,211283,382.1,397803,321408,23.8,71.9,39.7,1156.4,0.0,0,2026-10-05,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+4,UBL,United Breweries Limited,Fast Moving Consumer Goods,1695856,414364,309.3,261152,367827,-29.0,86.7,53.0,1164.8,0.0,0,2026-10-05,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+5,TATACOMM,Tata Communications Limited,Telecommunication,1167654,372713,213.3,621857,349980,77.7,65.2,51.6,1662.7,0.0,0,2026-10-05,"WEEK IN PROGRESS — daily refresh, Friday ko final"
