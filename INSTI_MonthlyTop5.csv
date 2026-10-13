@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,GALLANTT,Gallantt Ispat Limited,Capital Goods,1414171,747510,89.2,22300528,1311916,1599.8,6.0,36.3,595.6,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-2,BHARTIHEXA,Bharti Hexacom Limited,Telecommunication,1829740,1160029,57.7,1378166,810046,70.1,57.0,58.9,1521.3,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-3,INDIACEM,The India Cements Limited,Construction Materials,1520185,1079662,40.8,953512,2766060,-65.5,61.5,28.1,297.75,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-4,ADANIGREEN,Adani Green Energy Limited,Power,16436688,11707449,40.4,18033204,19030476,-5.2,47.7,38.1,1274.0,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-5,SOBHA,Sobha Limited,Realty,1134867,836541,35.7,591129,991206,-40.4,65.8,45.8,1156.4,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+1,GALLANTT,Gallantt Ispat Limited,Capital Goods,1743245,747510,133.2,27183206,1311916,1972.0,6.0,36.3,588.05,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+2,BHARTIHEXA,Bharti Hexacom Limited,Telecommunication,1915410,1160029,65.1,1434419,810046,77.1,57.2,58.9,1548.7,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+3,TARIL,Transformers And Rectifiers (India) Limited,Capital Goods,14029819,9014431,55.6,132392743,10622537,1146.3,9.6,45.9,304.0,0.63,8,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+4,INDIACEM,The India Cements Limited,Construction Materials,1570884,1079662,45.5,1032991,2766060,-62.7,60.3,28.1,299.4,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+5,ADANIGREEN,Adani Green Energy Limited,Power,16918089,11707449,44.5,19047539,19030476,0.1,47.0,38.1,1287.0,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"

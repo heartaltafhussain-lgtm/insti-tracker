@@ -1,8 +1,10 @@
 Rank,Symbol,Company,Sector,WeeklyBuyPct,FortnightlyBuyPct,MonthlyBuyPct,CombinedScore,Close,InstiNetCr,InstiDeals
-1,GALLANTT,Gallantt Ispat Limited,Capital Goods,1134.7,299.4,89.2,1523.3,595.6,0.0,0
-2,SOBHA,Sobha Limited,Realty,382.1,287.8,35.7,705.6,1156.4,0.0,0
-3,ABLBL,Aditya Birla Lifestyle Brands Limited,Consumer Services,55.0,440.1,20.5,515.6,72.14,0.0,0
-4,INDIACEM,The India Cements Limited,Construction Materials,150.4,242.3,40.8,433.5,297.75,0.0,0
-5,BHARTIHEXA,Bharti Hexacom Limited,Telecommunication,55.5,261.9,57.7,375.1,1521.3,0.0,0
-6,TIINDIA,Tube Investments of India Limited,Automobile and Auto Components,6.7,358.4,4.1,369.2,2214.0,0.0,0
-7,GMRAIRPORT,GMR AIRPORTS LIMITED,Services,200.3,144.6,13.6,358.5,89.5,0.0,0
+1,GALLANTT,Gallantt Ispat Limited,Capital Goods,1405.0,366.7,133.2,1904.9,588.05,0.0,0
+2,ABLBL,Aditya Birla Lifestyle Brands Limited,Consumer Services,158.3,426.1,27.4,611.8,73.18,0.0,0
+3,ADANIPORTS,Adani Ports and Special Economic Zone Limited,Services,240.4,212.3,0.5,453.2,1763.0,0.0,0
+4,TIINDIA,Tube Investments of India Limited,Automobile and Auto Components,18.5,356.4,32.5,407.4,2194.9,0.0,0
+5,SOBHA,Sobha Limited,Realty,67.7,288.4,43.9,400.0,1184.8,0.0,0
+6,INDIACEM,The India Cements Limited,Construction Materials,144.6,204.9,45.5,395.0,299.4,0.0,0
+7,GMRAIRPORT,GMR AIRPORTS LIMITED,Services,181.0,137.3,19.4,337.7,90.34,0.0,0
+8,BHARTIHEXA,Bharti Hexacom Limited,Telecommunication,34.1,235.5,65.1,334.7,1548.7,0.0,0
+9,SIGNATURE,Signatureglobal (India) Limited,Realty,24.1,100.5,0.9,125.5,711.75,0.0,0
