@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,GALLANTT,Gallantt Ispat Limited,Capital Goods,1743245,747510,133.2,27183206,1311916,1972.0,6.0,36.3,588.05,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-2,BHARTIHEXA,Bharti Hexacom Limited,Telecommunication,1915410,1160029,65.1,1434419,810046,77.1,57.2,58.9,1548.7,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-3,TARIL,Transformers And Rectifiers (India) Limited,Capital Goods,14029819,9014431,55.6,132392743,10622537,1146.3,9.6,45.9,304.0,0.63,8,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-4,INDIACEM,The India Cements Limited,Construction Materials,1570884,1079662,45.5,1032991,2766060,-62.7,60.3,28.1,299.4,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-5,ADANIGREEN,Adani Green Energy Limited,Power,16918089,11707449,44.5,19047539,19030476,0.1,47.0,38.1,1287.0,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+1,TARIL,Transformers And Rectifiers (India) Limited,Capital Goods,25048629,9014431,177.9,190381355,10622537,1692.2,11.6,45.9,349.5,26.93,18,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+2,GALLANTT,Gallantt Ispat Limited,Capital Goods,1899012,747510,154.0,27923121,1311916,2028.4,6.4,36.3,567.7,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+3,BHARTIHEXA,Bharti Hexacom Limited,Telecommunication,1987560,1160029,71.3,1476699,810046,82.3,57.4,58.9,1570.3,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+4,TIINDIA,Tube Investments of India Limited,Automobile and Auto Components,4169140,2542662,64.0,3505958,2202049,59.2,54.3,53.6,2220.5,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+5,INDIACEM,The India Cements Limited,Construction Materials,1619014,1079662,50.0,1089135,2766060,-60.6,59.8,28.1,295.65,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
