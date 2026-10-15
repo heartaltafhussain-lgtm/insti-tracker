@@ -1,10 +1,8 @@
 Rank,Symbol,Company,Sector,WeeklyBuyPct,FortnightlyBuyPct,MonthlyBuyPct,CombinedScore,Close,InstiNetCr,InstiDeals
-1,GALLANTT,Gallantt Ispat Limited,Capital Goods,1130.2,396.8,154.0,1681.0,567.7,0.0,0
-2,HEXT,Hexaware Technologies Limited,Information Technology,707.6,281.8,3.9,993.3,570.35,0.0,0
-3,TARIL,Transformers And Rectifiers (India) Limited,Capital Goods,51.8,435.2,177.9,664.9,349.5,26.93,18
-4,TIINDIA,Tube Investments of India Limited,Automobile and Auto Components,81.5,347.9,64.0,493.4,2220.5,0.0,0
-5,ADANIPORTS,Adani Ports and Special Economic Zone Limited,Services,338.5,145.3,3.9,487.7,1748.7,0.0,0
-6,SOBHA,Sobha Limited,Realty,82.3,266.9,48.7,397.9,1205.1,0.0,0
-7,INDIACEM,The India Cements Limited,Construction Materials,161.2,180.9,50.0,392.1,295.65,0.0,0
-8,GMRAIRPORT,GMR AIRPORTS LIMITED,Services,148.7,125.3,22.9,296.9,90.22,0.0,0
-9,SIGNATURE,Signatureglobal (India) Limited,Realty,62.6,88.0,7.8,158.4,705.4,0.0,0
+1,GALLANTT,Gallantt Ispat Limited,Capital Goods,1602.9,743.7,306.9,2653.5,628.15,-0.06,2
+2,HEXT,Hexaware Technologies Limited,Information Technology,585.9,321.0,9.0,915.9,575.8,0.0,0
+3,TARIL,Transformers And Rectifiers (India) Limited,Capital Goods,137.4,516.6,204.7,858.7,333.45,26.93,18
+4,SOBHA,Sobha Limited,Realty,92.1,282.3,60.8,435.2,1190.8,0.0,0
+5,ADANIPORTS,Adani Ports and Special Economic Zone Limited,Services,294.4,120.9,8.9,424.2,1743.2,0.0,0
+6,TIINDIA,Tube Investments of India Limited,Automobile and Auto Components,50.9,223.7,73.8,348.4,2184.6,0.0,0
+7,BHEL,Bharat Heavy Electricals Limited,Capital Goods,17.8,89.5,3.4,110.7,434.25,0.0,0
