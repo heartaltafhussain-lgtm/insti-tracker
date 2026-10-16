@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,GALLANTT,Gallantt Ispat Limited,Capital Goods,2849038,167301,1602.9,55000932,162454,33756.3,4.9,50.7,628.15,-0.06,2,2026-10-08,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-2,UBL,United Breweries Limited,Fast Moving Consumer Goods,1838693,221691,729.4,383881,213699,79.6,82.7,50.9,1203.6,0.0,0,2026-10-08,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-3,HEXT,Hexaware Technologies Limited,Information Technology,3257354,474884,585.9,31211525,596668,5131.0,9.5,44.3,575.8,0.0,0,2026-10-08,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-4,GODIGIT,Go Digit General Insurance Limited,Financial Services,4002948,790649,406.3,2388310,965501,147.4,62.6,45.0,283.35,0.0,0,2026-10-08,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-5,RBLBANK,RBL Bank Limited,Financial Services,24055430,5772424,316.7,38969664,10588539,268.0,38.2,35.3,374.15,0.0,0,2026-10-08,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+1,GALLANTT,Gallantt Ispat Limited,Capital Goods,3034516,165198,1736.9,57130184,189776,30004.0,5.0,46.5,609.4,-0.06,2,2026-10-09,FINAL WEEKLY ✅ (Friday close)
+2,UBL,United Breweries Limited,Fast Moving Consumer Goods,1819015,213635,751.5,365005,188264,93.9,83.3,53.2,1201.6,0.0,0,2026-10-09,FINAL WEEKLY ✅ (Friday close)
+3,IDBI,IDBI Bank Limited,Financial Services,70776098,13173083,437.3,192239404,20079078,857.4,26.9,39.6,84.12,0.0,0,2026-10-09,FINAL WEEKLY ✅ (Friday close)
+4,CEATLTD,CEAT Limited,Automobile and Auto Components,285699,55872,411.3,604970,89114,578.9,32.1,38.5,3294.9,0.0,0,2026-10-09,FINAL WEEKLY ✅ (Friday close)
+5,ELECON,Elecon Engineering Company Limited,Capital Goods,3942729,838425,370.3,29367694,1259343,2232.0,11.8,40.0,480.35,0.0,0,2026-10-09,FINAL WEEKLY ✅ (Friday close)

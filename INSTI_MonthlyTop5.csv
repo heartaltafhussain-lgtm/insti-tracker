@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,GALLANTT,Gallantt Ispat Limited,Capital Goods,3041552,747510,306.9,55186452,1311916,4106.6,5.2,36.3,628.15,-0.06,2,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-2,TARIL,Transformers And Rectifiers (India) Limited,Capital Goods,27464471,9014431,204.7,199304144,10622537,1776.2,12.1,45.9,333.45,26.93,18,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-3,BHARTIHEXA,Bharti Hexacom Limited,Telecommunication,2121099,1160029,82.8,1823016,810046,125.1,53.8,58.9,1650.5,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-4,TIINDIA,Tube Investments of India Limited,Automobile and Auto Components,4418154,2542662,73.8,3732941,2202049,69.5,54.2,53.6,2184.6,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-5,SOBHA,Sobha Limited,Realty,1345065,836541,60.8,813163,991206,-18.0,62.3,45.8,1190.8,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+1,GALLANTT,Gallantt Ispat Limited,Capital Goods,3250140,747510,334.8,57366092,1311916,4272.7,5.4,36.3,609.4,-0.06,2,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+2,TARIL,Transformers And Rectifiers (India) Limited,Capital Goods,28808660,9014431,219.6,203762369,10622537,1818.2,12.4,45.9,329.1,26.93,18,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+3,TIINDIA,Tube Investments of India Limited,Automobile and Auto Components,4779764,2542662,88.0,4026652,2202049,82.9,54.3,53.6,2197.3,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+4,BHARTIHEXA,Bharti Hexacom Limited,Telecommunication,2166895,1160029,86.8,1878499,810046,131.9,53.6,58.9,1621.9,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+5,SOBHA,Sobha Limited,Realty,1557375,836541,86.2,870758,991206,-12.2,64.1,45.8,1188.4,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"

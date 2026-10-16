@@ -1,8 +1,16 @@
 Rank,Symbol,Company,Sector,WeeklyBuyPct,FortnightlyBuyPct,MonthlyBuyPct,CombinedScore,Close,InstiNetCr,InstiDeals
-1,GALLANTT,Gallantt Ispat Limited,Capital Goods,1602.9,743.7,306.9,2653.5,628.15,-0.06,2
-2,HEXT,Hexaware Technologies Limited,Information Technology,585.9,321.0,9.0,915.9,575.8,0.0,0
-3,TARIL,Transformers And Rectifiers (India) Limited,Capital Goods,137.4,516.6,204.7,858.7,333.45,26.93,18
-4,SOBHA,Sobha Limited,Realty,92.1,282.3,60.8,435.2,1190.8,0.0,0
-5,ADANIPORTS,Adani Ports and Special Economic Zone Limited,Services,294.4,120.9,8.9,424.2,1743.2,0.0,0
-6,TIINDIA,Tube Investments of India Limited,Automobile and Auto Components,50.9,223.7,73.8,348.4,2184.6,0.0,0
-7,BHEL,Bharat Heavy Electricals Limited,Capital Goods,17.8,89.5,3.4,110.7,434.25,0.0,0
+1,GALLANTT,Gallantt Ispat Limited,Capital Goods,1736.9,961.6,334.8,3033.3,609.4,-0.06,2
+2,TARIL,Transformers And Rectifiers (India) Limited,Capital Goods,281.1,243.4,219.6,744.1,329.1,26.93,18
+3,HDBFS,HDB Financial Services Limited,Financial Services,323.6,257.3,44.8,625.7,512.6,0.0,0
+4,SOBHA,Sobha Limited,Realty,80.1,335.0,86.2,501.3,1188.4,0.0,0
+5,ELECON,Elecon Engineering Company Limited,Capital Goods,370.3,29.0,4.4,403.7,480.35,0.0,0
+6,POONAWALLA,Poonawalla Fincorp Limited,Financial Services,305.4,67.4,5.4,378.2,448.95,0.0,0
+7,HCLTECH,HCL Technologies Limited,Information Technology,248.1,62.6,1.0,311.7,1380.0,0.0,0
+8,TIINDIA,Tube Investments of India Limited,Automobile and Auto Components,24.6,194.8,88.0,307.4,2197.3,0.0,0
+9,TCS,Tata Consultancy Services Limited,Information Technology,177.6,90.5,14.3,282.4,2465.0,0.0,0
+10,TECHM,Tech Mahindra Limited,Information Technology,172.9,80.1,8.9,261.9,1790.0,0.0,0
+11,TATAELXSI,Tata Elxsi Limited,Information Technology,164.8,44.3,1.4,210.5,3850.1,-0.42,2
+12,ADANIPORTS,Adani Ports and Special Economic Zone Limited,Services,19.4,108.9,11.4,139.7,1750.8,0.0,0
+13,KARURVYSYA,Karur Vysya Bank Limited,Financial Services,67.1,44.0,4.8,115.9,355.65,0.0,0
+14,BHEL,Bharat Heavy Electricals Limited,Capital Goods,21.2,82.7,10.4,114.3,434.6,0.0,0
+15,BAJAJFINSV,Bajaj Finserv Limited,Financial Services,14.6,17.5,4.4,36.5,1729.0,0.0,0
