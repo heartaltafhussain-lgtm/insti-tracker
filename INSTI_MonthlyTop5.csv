@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,GALLANTT,Gallantt Ispat Limited,Capital Goods,3250140,747510,334.8,57366092,1311916,4272.7,5.4,36.3,609.4,-0.06,2,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-2,TARIL,Transformers And Rectifiers (India) Limited,Capital Goods,28808660,9014431,219.6,203762369,10622537,1818.2,12.4,45.9,329.1,26.93,18,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-3,TIINDIA,Tube Investments of India Limited,Automobile and Auto Components,4779764,2542662,88.0,4026652,2202049,82.9,54.3,53.6,2197.3,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-4,BHARTIHEXA,Bharti Hexacom Limited,Telecommunication,2166895,1160029,86.8,1878499,810046,131.9,53.6,58.9,1621.9,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-5,SOBHA,Sobha Limited,Realty,1557375,836541,86.2,870758,991206,-12.2,64.1,45.8,1188.4,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+1,GALLANTT,Gallantt Ispat Limited,Capital Goods,4208593,747510,463.0,73735541,1311916,5520.4,5.4,36.3,626.2,-0.06,2,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+2,TARIL,Transformers And Rectifiers (India) Limited,Capital Goods,29745456,9014431,230.0,206370333,10622537,1842.8,12.6,45.9,326.1,26.93,18,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+3,INDIACEM,The India Cements Limited,Construction Materials,2304454,1079662,113.4,2821203,2766060,2.0,45.0,28.1,294.35,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+4,SOBHA,Sobha Limited,Realty,1679589,836541,100.8,913259,991206,-7.9,64.8,45.8,1176.0,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+5,BHARTIHEXA,Bharti Hexacom Limited,Telecommunication,2262083,1160029,95.0,1947643,810046,140.4,53.7,58.9,1632.6,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
