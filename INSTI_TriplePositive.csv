@@ -1,20 +1,24 @@
 Rank,Symbol,Company,Sector,WeeklyBuyPct,FortnightlyBuyPct,MonthlyBuyPct,CombinedScore,Close,InstiNetCr,InstiDeals
-1,GALLANTT,Gallantt Ispat Limited,Capital Goods,107.5,1388.8,463.0,1959.3,626.2,-0.06,2
-2,TARIL,Transformers And Rectifiers (India) Limited,Capital Goods,395.2,135.6,230.0,760.8,326.1,26.93,18
-3,HDBFS,HDB Financial Services Limited,Financial Services,339.2,355.9,54.5,749.6,509.05,0.0,0
-4,TCS,Tata Consultancy Services Limited,Information Technology,251.7,148.6,28.9,429.2,2460.9,0.0,0
-5,PERSISTENT,Persistent Systems Limited,Information Technology,262.1,141.1,13.5,416.7,5690.0,0.0,0
-6,HCLTECH,HCL Technologies Limited,Information Technology,310.8,69.4,7.6,387.8,1379.9,0.0,0
-7,DCMSHRIRAM,DCM Shriram Limited,Diversified,205.5,85.2,34.9,325.6,1002.05,0.0,0
-8,CROMPTON,Crompton Greaves Consumer Electricals Limited,Consumer Durables,240.4,67.0,9.1,316.5,208.45,0.0,0
-9,TIINDIA,Tube Investments of India Limited,Automobile and Auto Components,30.9,187.9,91.3,310.1,2170.0,0.0,0
-10,TECHM,Tech Mahindra Limited,Information Technology,163.6,125.6,16.6,305.8,1779.1,0.0,0
-11,CANBK,Canara Bank,Financial Services,187.7,86.2,0.1,274.0,122.0,0.0,0
-12,SJVN,SJVN Limited,Power,198.1,59.6,13.7,271.4,51.11,0.0,0
-13,CEMPRO,Cemindia Projects Limited,Construction,93.7,163.5,2.4,259.6,1168.8,0.0,0
-14,TATAELXSI,Tata Elxsi Limited,Information Technology,158.5,64.9,11.0,234.4,3790.0,-0.42,2
-15,ELECON,Elecon Engineering Company Limited,Capital Goods,209.1,13.8,7.5,230.4,460.7,0.0,0
-16,BSOFT,BIRLASOFT LIMITED,Information Technology,46.1,159.5,0.3,205.9,312.6,0.0,0
-17,MPHASIS,MphasiS Limited,Information Technology,91.4,105.5,2.3,199.2,2500.0,0.0,0
-18,KARURVYSYA,Karur Vysya Bank Limited,Financial Services,107.9,64.6,23.6,196.1,370.05,0.0,0
-19,BHEL,Bharat Heavy Electricals Limited,Capital Goods,23.5,90.0,16.1,129.6,427.35,0.0,0
+1,GALLANTT,Gallantt Ispat Limited,Capital Goods,107.1,1622.7,591.2,2321.0,626.2,-0.06,2
+2,HDBFS,HDB Financial Services Limited,Financial Services,309.5,343.5,64.1,717.1,509.05,0.0,0
+3,TARIL,Transformers And Rectifiers (India) Limited,Capital Goods,242.6,90.8,240.4,573.8,326.1,26.93,18
+4,INDIACEM,The India Cements Limited,Construction Materials,4.2,207.0,164.8,376.0,294.35,0.0,0
+5,PERSISTENT,Persistent Systems Limited,Information Technology,183.9,124.7,32.0,340.6,5690.0,0.0,0
+6,SJVN,SJVN Limited,Power,239.4,69.9,29.3,338.6,51.11,0.0,0
+7,TCS,Tata Consultancy Services Limited,Information Technology,144.8,129.0,43.5,317.3,2460.9,0.0,0
+8,TECHM,Tech Mahindra Limited,Information Technology,181.3,86.4,24.2,291.9,1779.1,0.0,0
+9,UNIONBANK,Union Bank of India,Financial Services,212.6,75.6,1.7,289.9,180.7,0.0,0
+10,TATACOMM,Tata Communications Limited,Telecommunication,36.6,238.3,0.1,275.0,1718.5,0.0,0
+11,CANBK,Canara Bank,Financial Services,208.7,54.2,10.7,273.6,122.0,0.0,0
+12,CEMPRO,Cemindia Projects Limited,Construction,80.8,138.4,9.6,228.8,1168.8,0.0,0
+13,TATAELXSI,Tata Elxsi Limited,Information Technology,120.0,63.5,20.6,204.1,3790.0,-0.42,2
+14,KARURVYSYA,Karur Vysya Bank Limited,Financial Services,82.1,71.0,42.4,195.5,370.05,0.0,0
+15,ELECON,Elecon Engineering Company Limited,Capital Goods,151.5,13.1,10.7,175.3,460.7,0.0,0
+16,CROMPTON,Crompton Greaves Consumer Electricals Limited,Consumer Durables,56.3,64.6,19.0,139.9,208.45,0.0,0
+17,MPHASIS,MphasiS Limited,Information Technology,64.7,53.7,12.1,130.5,2500.0,0.0,0
+18,HCLTECH,HCL Technologies Limited,Information Technology,50.9,58.1,14.3,123.3,1379.9,0.0,0
+19,FEDERALBNK,The Federal Bank  Limited,Financial Services,92.4,20.5,3.5,116.4,348.85,0.0,0
+20,BHEL,Bharat Heavy Electricals Limited,Capital Goods,8.5,72.1,21.8,102.4,427.35,0.0,0
+21,AXISBANK,Axis Bank Limited,Financial Services,55.1,40.1,2.8,98.0,1236.0,0.0,0
+22,JSWSTEEL,JSW Steel Limited,Metals & Mining,59.4,27.2,2.2,88.8,1241.3,0.0,0
+23,NESTLEIND,Nestle India Limited,Fast Moving Consumer Goods,18.1,59.1,0.8,78.0,1242.7,0.0,0
