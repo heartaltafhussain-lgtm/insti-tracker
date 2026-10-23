@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,GALLANTT,Gallantt Ispat Limited,Capital Goods,5601133,747510,649.3,94775797,1311916,7124.2,5.6,36.3,550.7,-0.06,2,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-2,INDIACEM,The India Cements Limited,Construction Materials,5505999,1079662,410.0,86071810,2766060,3011.7,6.0,28.1,331.75,1.29,6,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-3,TARIL,Transformers And Rectifiers (India) Limited,Capital Goods,32881780,9014431,264.8,214681907,10622537,1921.0,13.3,45.9,314.5,26.93,18,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-4,SOBHA,Sobha Limited,Realty,2181365,836541,160.8,1832299,991206,84.9,54.3,45.8,1196.1,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-5,LTTS,L&T Technology Services Limited,Information Technology,1306679,558547,133.9,9552509,642890,1385.9,12.0,46.5,3954.8,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+1,GALLANTT,Gallantt Ispat Limited,Capital Goods,5681069,747510,660.0,95558938,1311916,7183.9,5.6,36.3,541.85,-0.06,2,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+2,INDIACEM,The India Cements Limited,Construction Materials,6003232,1079662,456.0,95480901,2766060,3351.9,5.9,28.1,315.8,1.29,6,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+3,TARIL,Transformers And Rectifiers (India) Limited,Capital Goods,33969882,9014431,276.8,216968322,10622537,1942.5,13.5,45.9,303.9,26.93,18,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+4,LTTS,L&T Technology Services Limited,Information Technology,1483642,558547,165.6,9974586,642890,1451.5,12.9,46.5,3910.3,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+5,SOBHA,Sobha Limited,Realty,2214512,836541,164.7,1896028,991206,91.3,53.9,45.8,1173.4,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"

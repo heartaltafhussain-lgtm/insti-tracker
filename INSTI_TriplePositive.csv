@@ -1,33 +1,27 @@
 Rank,Symbol,Company,Sector,WeeklyBuyPct,FortnightlyBuyPct,MonthlyBuyPct,CombinedScore,Close,InstiNetCr,InstiDeals
-1,INDIACEM,The India Cements Limited,Construction Materials,1315.9,432.4,410.0,2158.3,331.75,1.29,6
-2,LTTS,L&T Technology Services Limited,Information Technology,324.1,286.1,133.9,744.1,3954.8,0.0,0
-3,TTML,Tata Teleservices (Maharashtra) Limited,Telecommunication,599.0,69.3,29.0,697.3,38.01,-0.03,2
-4,SJVN,SJVN Limited,Power,336.9,95.3,49.1,481.3,48.25,0.0,0
-5,IGIL,International Gemological Institute Limited,Services,290.0,173.8,12.1,475.9,353.2,0.0,0
-6,SIGNATURE,Signatureglobal (India) Limited,Realty,256.0,91.3,119.9,467.2,713.25,0.0,0
-7,HDBFS,HDB Financial Services Limited,Financial Services,32.0,263.9,78.7,374.6,510.05,0.0,0
-8,PERSISTENT,Persistent Systems Limited,Information Technology,55.2,156.0,52.0,263.2,5740.5,0.0,0
-9,SRF,SRF Limited,Chemicals,188.6,44.9,14.7,248.2,2330.6,0.0,0
-10,KARURVYSYA,Karur Vysya Bank Limited,Financial Services,88.4,86.8,68.8,244.0,356.05,0.0,0
-11,FEDERALBNK,The Federal Bank  Limited,Financial Services,178.9,13.4,13.9,206.2,347.8,0.0,0
-12,VIJAYA,Vijaya Diagnostic Centre Limited,Healthcare,153.6,25.5,7.2,186.3,1390.8,0.0,0
-13,UNIONBANK,Union Bank of India,Financial Services,77.3,80.1,23.7,181.1,182.85,0.0,0
-14,MPHASIS,MphasiS Limited,Information Technology,63.1,83.8,31.5,178.4,2499.5,0.0,0
-15,TECHM,Tech Mahindra Limited,Information Technology,35.6,95.1,46.5,177.2,1829.1,0.0,0
-16,ABB,ABB India Limited,Capital Goods,80.4,86.4,3.6,170.4,6464.5,0.0,0
-17,SONATSOFTW,Sonata Software Limited,Information Technology,32.5,123.7,7.2,163.4,239.75,0.0,0
-18,YESBANK,Yes Bank Limited,Financial Services,66.5,83.1,13.4,163.0,16.05,0.0,0
-19,CROMPTON,Crompton Greaves Consumer Electricals Limited,Consumer Durables,13.9,108.9,39.1,161.9,201.41,0.0,0
-20,DEEPAKFERT,Deepak Fertilizers and Petrochemicals Corporation Limited,Chemicals,125.3,25.9,9.6,160.8,1178.8,0.0,0
-21,BHARTIARTL,Bharti Airtel Limited,Telecommunication,117.1,32.0,4.2,153.3,1895.0,0.0,0
-22,TATACOMM,Tata Communications Limited,Telecommunication,23.4,107.3,13.2,143.9,1682.4,0.0,0
-23,TATAELXSI,Tata Elxsi Limited,Information Technology,2.0,94.0,35.6,131.6,3846.8,-0.42,2
-24,CANBK,Canara Bank,Financial Services,24.1,53.1,27.5,104.7,120.94,0.0,0
-25,JSWSTEEL,JSW Steel Limited,Metals & Mining,82.7,9.4,9.3,101.4,1220.0,0.0,0
-26,INFY,Infosys Limited,Information Technology,2.7,58.8,10.8,72.3,1153.35,0.0,0
-27,BANKINDIA,Bank of India,Financial Services,19.2,39.9,5.3,64.4,136.2,0.0,0
-28,ANGELONE,Angel One Limited,Financial Services,37.7,17.7,1.2,56.6,291.25,0.0,0
-29,AXISBANK,Axis Bank Limited,Financial Services,11.6,24.8,18.3,54.7,1212.0,0.0,0
-30,JINDALSTEL,JINDAL STEEL LIMITED,Metals & Mining,13.5,3.0,26.1,42.6,1037.0,0.0,0
-31,JWL,Jupiter Wagons Limited,Capital Goods,14.9,20.0,7.3,42.2,182.54,0.0,0
-32,RPOWER,Reliance Power Limited,Power,8.2,4.2,13.0,25.4,17.05,0.0,0
+1,INDIACEM,The India Cements Limited,Construction Materials,1285.2,152.4,456.0,1893.6,315.8,1.29,6
+2,TTML,Tata Teleservices (Maharashtra) Limited,Telecommunication,1014.7,130.7,74.6,1220.0,37.68,-0.03,2
+3,IGIL,International Gemological Institute Limited,Services,553.3,350.7,77.4,981.4,381.15,0.0,0
+4,LTTS,L&T Technology Services Limited,Information Technology,395.9,345.6,165.6,907.1,3910.3,0.0,0
+5,CREDITACC,CREDITACCESS GRAMEEN LIMITED,Financial Services,380.3,52.6,30.4,463.3,1027.4,0.0,0
+6,SIGNATURE,Signatureglobal (India) Limited,Realty,189.3,2.9,141.5,333.7,710.75,0.0,0
+7,CGCL,Capri Global Capital Limited,Financial Services,218.0,100.4,9.3,327.7,235.84,0.0,0
+8,PNB,Punjab National Bank,Financial Services,217.5,76.0,6.1,299.6,120.37,0.0,0
+9,CYIENT,Cyient Limited,Information Technology,169.1,85.3,34.7,289.1,1233.0,4.98,6
+10,PERSISTENT,Persistent Systems Limited,Information Technology,21.6,189.1,67.5,278.2,5727.5,0.0,0
+11,J&KBANK,The Jammu & Kashmir Bank Limited,Financial Services,182.9,32.5,25.1,240.5,113.09,0.0,0
+12,SRF,SRF Limited,Chemicals,148.2,42.7,21.8,212.7,2310.0,0.0,0
+13,KARURVYSYA,Karur Vysya Bank Limited,Financial Services,38.3,86.9,78.9,204.1,336.3,0.0,0
+14,M&MFIN,Mahindra & Mahindra Financial Services Limited,Financial Services,173.8,6.8,5.5,186.1,276.9,0.0,0
+15,DEEPAKFERT,Deepak Fertilizers and Petrochemicals Corporation Limited,Chemicals,131.7,27.9,14.8,174.4,1136.5,0.0,0
+16,ABB,ABB India Limited,Capital Goods,63.0,83.8,9.6,156.4,6140.0,0.0,0
+17,UNIONBANK,Union Bank of India,Financial Services,33.3,85.7,30.7,149.7,178.9,0.0,0
+18,SAMMAANCAP,Sammaan Capital Limited,Financial Services,59.0,78.0,6.6,143.6,114.99,0.0,0
+19,MPHASIS,MphasiS Limited,Information Technology,16.6,78.0,43.4,138.0,2480.0,0.0,0
+20,FEDERALBNK,The Federal Bank  Limited,Financial Services,85.5,10.2,23.1,118.8,340.9,0.0,0
+21,BANKINDIA,Bank of India,Financial Services,37.4,43.7,12.2,93.3,131.0,0.0,0
+22,JWL,Jupiter Wagons Limited,Capital Goods,31.5,31.3,20.2,83.0,173.39,0.0,0
+23,CGPOWER,CG Power and Industrial Solutions Limited,Capital Goods,2.8,69.9,0.5,73.2,813.35,0.0,0
+24,ZENSARTECH,Zensar Technologies Limited,Information Technology,3.2,60.4,4.9,68.5,493.7,0.0,0
+25,ICICIBANK,ICICI Bank Limited,Financial Services,40.3,12.7,5.2,58.2,1394.2,258.07,1
+26,RPOWER,Reliance Power Limited,Power,19.4,12.1,22.9,54.4,16.43,0.0,0
