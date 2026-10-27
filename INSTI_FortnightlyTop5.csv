@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,GALLANTT,Gallantt Ispat Limited,Capital Goods,5488555,286159,1818.0,95373418,327999,28977.4,5.4,46.6,541.85,-0.06,2,2026-10-08,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
-2,HEXT,Hexaware Technologies Limited,Information Technology,4430585,904094,390.1,34866950,1079243,3130.7,11.3,45.6,590.8,0.0,0,2026-10-08,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
-3,IGIL,International Gemological Institute Limited,Services,10567910,2344675,350.7,22599314,2327322,871.0,31.9,50.2,381.15,0.0,0,2026-10-08,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
-4,LTTS,L&T Technology Services Limited,Information Technology,1343722,301522,345.6,9751608,408977,2284.4,12.1,42.4,3910.3,0.0,0,2026-10-08,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
-5,UBL,United Breweries Limited,Fast Moving Consumer Goods,3119885,755011,313.2,715536,606753,17.9,81.3,55.4,1142.6,0.0,0,2026-10-08,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+1,IGIL,International Gemological Institute Limited,Services,14098291,2245733,527.8,29586125,2212202,1237.4,32.3,50.4,392.55,0.0,0,2026-10-12,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+2,LTTS,L&T Technology Services Limited,Information Technology,1510384,321661,369.6,10305008,446353,2208.7,12.8,41.9,4174.2,0.0,0,2026-10-12,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+3,HDBFS,HDB Financial Services Limited,Financial Services,13639960,3218081,323.9,11434841,1930143,492.4,54.4,62.5,504.3,0.0,0,2026-10-12,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+4,TTML,Tata Teleservices (Maharashtra) Limited,Telecommunication,35962209,10703980,236.0,552880938,111501434,395.9,6.1,8.8,41.86,-0.03,2,2026-10-12,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+5,GALLANTT,Gallantt Ispat Limited,Capital Goods,4398564,1470466,199.1,74003488,22381530,230.6,5.6,6.2,541.75,-0.06,2,2026-10-12,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"

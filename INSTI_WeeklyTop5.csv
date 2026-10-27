@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,INDIACEM,The India Cements Limited,Construction Materials,4253283,307061,1285.2,94212549,433615,21627.2,4.3,41.5,315.8,1.29,6,2026-10-16,FINAL WEEKLY ✅ (Friday close)
-2,TTML,Tata Teleservices (Maharashtra) Limited,Telecommunication,22640907,2031193,1014.7,356041079,4174497,8429.0,6.0,32.7,37.68,-0.03,2,2026-10-16,FINAL WEEKLY ✅ (Friday close)
-3,IGIL,International Gemological Institute Limited,Services,8999099,1377514,553.3,21341845,1068480,1897.4,29.7,56.3,381.15,0.0,0,2026-10-16,FINAL WEEKLY ✅ (Friday close)
-4,SWIGGY,Swiggy Limited,Consumer Services,54754914,10029559,445.9,130119686,19260703,575.6,29.6,34.2,176.0,-3.61,2,2026-10-16,FINAL WEEKLY ✅ (Friday close)
-5,LTTS,L&T Technology Services Limited,Information Technology,1096347,221062,395.9,9353793,363539,2473.0,10.5,37.8,3910.3,0.0,0,2026-10-16,FINAL WEEKLY ✅ (Friday close)
+1,TTML,Tata Teleservices (Maharashtra) Limited,Telecommunication,33478876,2024084,1554.0,549261484,2426701,22534.1,5.7,45.5,41.86,-0.03,2,2026-10-20,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+2,CREDITACC,CREDITACCESS GRAMEEN LIMITED,Financial Services,2022388,218977,823.6,3667070,158594,2212.2,35.5,58.0,1010.2,0.0,0,2026-10-20,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+3,JSWDULUX,JSW Dulux Limited,Consumer Durables,443779,58199,662.5,466504,59951,678.1,48.8,49.3,280.4,0.0,0,2026-10-20,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+4,SWIGGY,Swiggy Limited,Consumer Services,76531287,10249633,646.7,180589555,17026561,960.6,29.8,37.6,188.95,-3.61,2,2026-10-20,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+5,IGIL,International Gemological Institute Limited,Services,12219226,1652389,639.5,28134001,1145120,2356.9,30.3,59.1,392.55,0.0,0,2026-10-20,"WEEK IN PROGRESS — daily refresh, Friday ko final"
