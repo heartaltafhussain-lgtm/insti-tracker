@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,GALLANTT,Gallantt Ispat Limited,Capital Goods,5812735,747510,677.6,96304016,1311916,7240.7,5.7,36.3,541.75,-0.06,2,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-2,INDIACEM,The India Cements Limited,Construction Materials,6322531,1079662,485.6,98043693,2766060,3444.5,6.1,28.1,308.85,1.29,6,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-3,TARIL,Transformers And Rectifiers (India) Limited,Capital Goods,35864517,9014431,297.9,222012151,10622537,1990.0,13.9,45.9,314.3,26.93,18,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-4,LTTS,L&T Technology Services Limited,Information Technology,1691889,558547,202.9,10594747,642890,1548.0,13.8,46.5,4174.2,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-5,SOBHA,Sobha Limited,Realty,2406845,836541,187.7,2195373,991206,121.5,52.3,45.8,1195.6,0.0,0,2026-09-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+1,GALLANTT,Gallantt Ispat Limited,Capital Goods,5865335,747510,684.6,96465545,1311916,7253.0,5.7,36.3,537.2,-0.06,2,2026-09-30,FINAL MONTHLY ✅ (month-end close)
+2,INDIACEM,The India Cements Limited,Construction Materials,6399647,1079662,492.7,98323010,2766060,3454.6,6.1,28.1,302.9,1.29,6,2026-09-30,FINAL MONTHLY ✅ (month-end close)
+3,TARIL,Transformers And Rectifiers (India) Limited,Capital Goods,36464869,9014431,304.5,223515866,10622537,2004.2,14.0,45.9,314.7,26.93,18,2026-09-30,FINAL MONTHLY ✅ (month-end close)
+4,JSWDULUX,JSW Dulux Limited,Consumer Durables,1691986,428489,294.9,715515,358593,99.5,70.3,54.4,276.5,0.0,0,2026-09-30,FINAL MONTHLY ✅ (month-end close)
+5,LTTS,L&T Technology Services Limited,Information Technology,1753773,558547,214.0,10747958,642890,1571.8,14.0,46.5,4088.1,0.0,0,2026-09-30,FINAL MONTHLY ✅ (month-end close)
