@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,ONESOURCE,Onesource Specialty Pharma Limited,Healthcare,3045314,311250,878.4,9741899,301851,3127.4,23.8,50.8,1569.6,0.0,0,2026-10-22,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-2,JSWDULUX,JSW Dulux Limited,Consumer Durables,1757866,185759,846.3,1533233,143350,969.6,53.4,56.4,276.2,0.0,0,2026-10-22,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-3,DALBHARAT,Dalmia Bharat Limited,Construction Materials,1333585,168668,690.7,982055,338562,190.1,57.6,33.3,1407.9,0.0,0,2026-10-22,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-4,PPLPHARMA,Piramal Pharma Limited,Healthcare,27134989,4112075,559.9,124123901,6575072,1787.8,17.9,38.5,230.78,0.0,0,2026-10-22,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-5,JUBLINGREA,Jubilant Ingrevia Limited,Chemicals,2192592,382173,473.7,4125017,400045,931.1,34.7,48.9,567.85,0.0,0,2026-10-22,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+1,DALBHARAT,Dalmia Bharat Limited,Construction Materials,1720294,96843,1676.4,1327219,127866,938.0,56.4,43.1,1326.2,0.0,0,2026-10-23,FINAL WEEKLY ✅ (Friday close)
+2,SAGILITY,SAGILITY LIMITED,Information Technology,629291321,50027138,1157.9,233167912,125995684,85.1,73.0,28.4,42.08,848.81,5,2026-10-23,FINAL WEEKLY ✅ (Friday close)
+3,ONESOURCE,Onesource Specialty Pharma Limited,Healthcare,3428206,395675,766.4,10107141,320392,3054.6,25.3,55.3,1563.0,0.0,0,2026-10-23,FINAL WEEKLY ✅ (Friday close)
+4,PPLPHARMA,Piramal Pharma Limited,Healthcare,32475422,4249337,664.2,143173769,6854271,1988.8,18.5,38.3,238.91,0.0,0,2026-10-23,FINAL WEEKLY ✅ (Friday close)
+5,JSWDULUX,JSW Dulux Limited,Consumer Durables,2026848,302571,569.9,1634332,259752,529.2,55.4,53.8,264.4,0.0,0,2026-10-23,FINAL WEEKLY ✅ (Friday close)

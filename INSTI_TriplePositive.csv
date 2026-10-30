@@ -1,61 +1,61 @@
 Rank,Symbol,Company,Sector,WeeklyBuyPct,FortnightlyBuyPct,MonthlyBuyPct,CombinedScore,Close,InstiNetCr,InstiDeals
-1,JSWDULUX,JSW Dulux Limited,Consumer Durables,846.3,1490.5,382.8,2719.6,276.2,0.0,0
-2,DALBHARAT,Dalmia Bharat Limited,Construction Materials,690.7,411.2,69.4,1171.3,1407.9,0.0,0
-3,ONESOURCE,Onesource Specialty Pharma Limited,Healthcare,878.4,130.9,15.5,1024.8,1569.6,0.0,0
-4,PPLPHARMA,Piramal Pharma Limited,Healthcare,559.9,249.0,23.8,832.7,230.78,0.0,0
-5,IGIL,International Gemological Institute Limited,Services,82.3,570.7,152.9,805.9,406.8,0.0,0
-6,TTML,Tata Teleservices (Maharashtra) Limited,Telecommunication,66.2,457.3,178.7,702.2,35.97,-0.03,2
-7,JUBLINGREA,Jubilant Ingrevia Limited,Chemicals,473.7,108.8,5.0,587.5,567.85,0.0,0
-8,AMBUJACEM,Ambuja Cements Limited,Construction Materials,285.2,75.5,158.8,519.5,354.7,0.0,0
-9,ITCHOTELS,ITC Hotels Limited,Consumer Services,256.8,201.7,58.2,516.7,169.32,0.0,0
-10,SUMICHEM,Sumitomo Chemical India Limited,Chemicals,368.3,51.6,74.2,494.1,331.9,0.0,0
-11,ACUTAAS,Acutaas Chemicals Limited,Healthcare,269.2,149.5,61.4,480.1,3976.7,0.0,0
-12,SYNGENE,Syngene International Limited,Healthcare,207.8,182.0,76.5,466.3,398.6,0.0,0
-13,CARTRADE,Cartrade Tech Limited,Consumer Services,275.7,94.5,71.8,442.0,2325.0,-19.9,2
-14,CYIENT,Cyient Limited,Information Technology,299.7,46.8,66.9,413.4,1144.6,4.98,6
-15,TATACAP,Tata Capital Limited,Financial Services,194.4,123.8,86.4,404.6,326.35,0.0,0
-16,RADICO,Radico Khaitan Limited,Fast Moving Consumer Goods,300.6,27.9,63.9,392.4,4235.0,0.0,0
-17,BATAINDIA,Bata India Limited,Consumer Durables,143.5,182.5,22.2,348.2,649.15,0.0,0
-18,CREDITACC,CREDITACCESS GRAMEEN LIMITED,Financial Services,124.5,127.8,80.8,333.1,1038.4,0.0,0
-19,CEATLTD,CEAT Limited,Automobile and Auto Components,82.9,164.3,31.1,278.3,3144.9,0.0,0
-20,SAGILITY,SAGILITY LIMITED,Information Technology,168.0,84.4,15.9,268.3,44.66,0.0,0
-21,TECHNOE,Techno Electric & Engineering Company Limited,Construction,177.5,62.3,6.0,245.8,850.0,0.0,0
-22,ATUL,Atul Limited,Chemicals,205.7,7.6,26.7,240.0,5146.0,0.0,0
-23,KFINTECH,Kfin Technologies Limited,Financial Services,160.0,23.1,46.3,229.4,859.8,0.0,0
-24,AUBANK,AU Small Finance Bank Limited,Financial Services,111.0,47.7,58.1,216.8,880.7,0.0,0
-25,SONACOMS,Sona BLW Precision Forgings Limited,Automobile and Auto Components,173.6,22.2,16.8,212.6,873.6,0.0,0
-26,J&KBANK,The Jammu & Kashmir Bank Limited,Financial Services,121.6,32.4,50.5,204.5,122.25,0.0,0
-27,PGEL,PG Electroplast Limited,Consumer Durables,148.2,20.7,34.1,203.0,538.15,0.36,2
-28,INDHOTEL,The Indian Hotels Company Limited,Consumer Services,9.3,140.9,50.3,200.5,810.0,0.0,0
-29,MRPL,Mangalore Refinery and Petrochemicals Limited,Oil Gas & Consumable Fuels,132.1,18.9,41.4,192.4,173.24,0.0,0
-30,VOLTAS,Voltas Limited,Consumer Durables,178.3,6.7,5.9,190.9,1041.0,0.0,0
-31,BSOFT,BIRLASOFT LIMITED,Information Technology,80.4,35.5,72.4,188.3,342.5,53.08,7
-32,MAZDOCK,Mazagon Dock Shipbuilders Limited,Capital Goods,143.3,31.9,11.5,186.7,1762.7,0.0,0
-33,CHOICEIN,Choice International Limited,Financial Services,46.4,24.1,113.2,183.7,729.2,0.0,0
-34,JUBLFOOD,Jubilant Foodworks Limited,Consumer Services,120.9,19.5,42.4,182.8,421.35,0.0,0
-35,NETWEB,Netweb Technologies India Limited,Information Technology,109.4,53.8,16.3,179.5,4387.0,0.0,0
-36,CHOLAFIN,Cholamandalam Investment and Finance Company Limited,Financial Services,142.6,17.2,14.4,174.2,1604.2,0.0,0
-37,SCHAEFFLER,Schaeffler India Limited,Automobile and Auto Components,108.3,38.2,21.8,168.3,3538.2,0.0,0
-38,PATANJALI,Patanjali Foods Limited,Fast Moving Consumer Goods,86.3,51.4,8.9,146.6,378.8,0.0,0
-39,THELEELA,Leela Palaces Hotels & Resorts Limited,Consumer Services,16.4,88.7,34.9,140.0,639.9,0.0,0
-40,JWL,Jupiter Wagons Limited,Capital Goods,29.6,47.2,60.9,137.7,193.11,0.0,0
-41,GVT&D,GE Vernova T&D India Limited,Capital Goods,93.2,42.6,1.4,137.2,4091.0,0.0,0
-42,JBMA,JBM Auto Limited,Automobile and Auto Components,112.8,18.1,4.2,135.1,487.95,0.0,0
-43,INFY,Infosys Limited,Information Technology,31.9,38.1,62.7,132.7,1146.5,0.0,0
-44,BANKINDIA,Bank of India,Financial Services,16.6,58.0,52.8,127.4,135.7,0.0,0
-45,RPOWER,Reliance Power Limited,Power,28.2,37.9,59.8,125.9,18.98,0.0,0
-46,APARINDS,Apar Industries Limited,Capital Goods,1.6,103.4,14.2,119.2,15846.0,0.0,0
-47,ECLERX,eClerx Services Limited,Services,80.1,18.7,19.1,117.9,1660.6,0.0,0
-48,MANKIND,Mankind Pharma Limited,Healthcare,2.4,79.5,29.9,111.8,2469.3,0.0,0
-49,BALKRISIND,Balkrishna Industries Limited,Automobile and Auto Components,29.7,69.1,4.3,103.1,2099.3,0.0,0
-50,M&MFIN,Mahindra & Mahindra Financial Services Limited,Financial Services,7.4,52.9,42.5,102.8,264.8,0.0,0
-51,CIPLA,Cipla Limited,Healthcare,15.6,73.4,8.6,97.6,1358.0,0.0,0
-52,KPITTECH,KPIT Technologies Limited,Information Technology,39.2,41.8,16.4,97.4,543.7,0.0,0
-53,SUPREMEIND,Supreme Industries Limited,Capital Goods,29.2,26.9,41.3,97.4,3210.0,0.0,0
-54,SUZLON,Suzlon Energy Limited,Capital Goods,44.0,31.8,20.2,96.0,36.79,0.0,0
-55,INDUSTOWER,Indus Towers Limited,Telecommunication,53.7,6.2,9.4,69.3,384.0,0.0,0
-56,TRIDENT,Trident Limited,Textiles,26.9,24.9,14.7,66.5,21.42,0.0,0
-57,ASIANPAINT,Asian Paints Limited,Consumer Durables,32.0,8.3,20.7,61.0,2302.0,0.0,0
-58,JSWSTEEL,JSW Steel Limited,Metals & Mining,0.1,9.5,47.0,56.6,1255.4,0.0,0
-59,PVRINOX,PVR INOX Limited,Media Entertainment & Publication,35.0,5.8,13.9,54.7,1490.3,0.0,0
-60,PIIND,PI Industries Limited,Chemicals,11.5,16.7,15.0,43.2,2110.0,0.0,0
+1,JSWDULUX,JSW Dulux Limited,Consumer Durables,569.9,1769.1,475.8,2814.8,264.4,0.0,0
+2,SAGILITY,SAGILITY LIMITED,Information Technology,1157.9,1149.6,456.2,2763.7,42.08,848.81,5
+3,DALBHARAT,Dalmia Bharat Limited,Construction Materials,1676.4,644.3,108.1,2428.8,1326.2,0.0,0
+4,ONESOURCE,Onesource Specialty Pharma Limited,Healthcare,766.4,175.7,28.0,970.1,1563.0,0.0,0
+5,PPLPHARMA,Piramal Pharma Limited,Healthcare,664.2,249.8,42.6,956.6,238.91,0.0,0
+6,CARTRADE,Cartrade Tech Limited,Consumer Services,383.0,132.1,101.2,616.3,2189.8,-19.9,2
+7,AMBUJACEM,Ambuja Cements Limited,Construction Materials,367.0,72.6,169.8,609.4,348.05,0.0,0
+8,ACUTAAS,Acutaas Chemicals Limited,Healthcare,324.3,187.9,77.2,589.4,4003.6,0.0,0
+9,JUBLINGREA,Jubilant Ingrevia Limited,Chemicals,371.2,164.9,15.4,551.5,558.4,0.0,0
+10,ITCHOTELS,ITC Hotels Limited,Consumer Services,277.4,163.9,71.8,513.1,167.17,0.0,0
+11,SYNGENE,Syngene International Limited,Healthcare,216.3,169.6,85.0,470.9,402.7,0.0,0
+12,SUMICHEM,Sumitomo Chemical India Limited,Chemicals,297.8,57.9,85.0,440.7,315.1,0.0,0
+13,TATACAP,Tata Capital Limited,Financial Services,186.5,138.4,92.8,417.7,319.9,0.0,0
+14,BATAINDIA,Bata India Limited,Consumer Durables,154.1,183.4,24.8,362.3,628.35,0.0,0
+15,RADICO,Radico Khaitan Limited,Fast Moving Consumer Goods,208.5,31.9,74.6,315.0,4086.7,0.0,0
+16,POONAWALLA,Poonawalla Fincorp Limited,Financial Services,185.1,17.0,109.2,311.3,461.7,0.0,0
+17,BSOFT,BIRLASOFT LIMITED,Information Technology,169.6,19.4,88.9,277.9,323.0,53.08,7
+18,ECLERX,eClerx Services Limited,Services,146.9,70.1,55.8,272.8,1556.7,0.0,0
+19,VOLTAS,Voltas Limited,Consumer Durables,245.4,9.4,16.2,271.0,1028.0,0.0,0
+20,SONACOMS,Sona BLW Precision Forgings Limited,Automobile and Auto Components,194.6,36.7,23.7,255.0,890.5,0.0,0
+21,CAMS,Computer Age Management Services Limited,Financial Services,215.9,18.6,17.7,252.2,653.6,0.0,0
+22,CUB,City Union Bank Limited,Financial Services,216.6,12.4,12.1,241.1,214.2,0.0,0
+23,TECHNOE,Techno Electric & Engineering Company Limited,Construction,129.7,93.4,17.9,241.0,829.3,0.0,0
+24,AUBANK,AU Small Finance Bank Limited,Financial Services,109.1,50.2,72.1,231.4,864.0,0.0,0
+25,PARADEEP,Paradeep Phosphates Limited,Chemicals,192.3,22.4,7.9,222.6,129.1,0.0,0
+26,MAXHEALTH,Max Healthcare Institute Limited,Healthcare,124.6,38.0,53.4,216.0,860.0,0.0,0
+27,KPRMILL,K.P.R. Mill Limited,Textiles,159.4,50.1,5.9,215.4,1114.6,0.0,0
+28,KFINTECH,Kfin Technologies Limited,Financial Services,122.9,22.9,56.1,201.9,850.9,0.0,0
+29,CHOICEIN,Choice International Limited,Financial Services,55.0,27.3,116.3,198.6,721.35,0.0,0
+30,JUBLFOOD,Jubilant Foodworks Limited,Consumer Services,105.3,34.8,56.5,196.6,421.9,0.0,0
+31,PATANJALI,Patanjali Foods Limited,Fast Moving Consumer Goods,97.5,72.8,22.6,192.9,364.85,0.0,0
+32,SUZLON,Suzlon Energy Limited,Capital Goods,91.4,50.2,42.2,183.8,33.9,0.0,0
+33,MAZDOCK,Mazagon Dock Shipbuilders Limited,Capital Goods,117.1,44.3,18.4,179.8,1705.3,0.0,0
+34,HDBFS,HDB Financial Services Limited,Financial Services,8.3,42.6,127.1,178.0,498.55,0.0,0
+35,CCL,CCL Products (India) Limited,Fast Moving Consumer Goods,43.6,73.6,60.2,177.4,932.0,0.0,0
+36,ATUL,Atul Limited,Chemicals,125.5,12.1,36.7,174.3,5028.5,0.0,0
+37,TRAVELFOOD,Travel Food Services Limited,Consumer Services,111.2,54.6,0.6,166.4,1152.5,0.0,0
+38,PGEL,PG Electroplast Limited,Consumer Durables,79.8,25.3,39.6,144.7,530.05,0.36,2
+39,MANKIND,Mankind Pharma Limited,Healthcare,5.3,103.4,35.9,144.6,2492.8,0.0,0
+40,CHOLAFIN,Cholamandalam Investment and Finance Company Limited,Financial Services,87.6,28.7,26.3,142.6,1586.0,0.0,0
+41,APLAPOLLO,APL Apollo Tubes Limited,Capital Goods,97.9,34.9,5.1,137.9,2165.1,0.0,0
+42,AJANTPHARM,Ajanta Pharma Limited,Healthcare,103.5,16.4,13.6,133.5,3508.8,0.0,0
+43,JWL,Jupiter Wagons Limited,Capital Goods,1.7,58.7,70.4,130.8,181.78,0.0,0
+44,THELEELA,Leela Palaces Hotels & Resorts Limited,Consumer Services,37.6,50.2,42.7,130.5,634.25,0.0,0
+45,M&MFIN,Mahindra & Mahindra Financial Services Limited,Financial Services,9.3,64.9,53.5,127.7,261.7,0.0,0
+46,BANKINDIA,Bank of India,Financial Services,14.0,50.9,62.0,126.9,132.86,0.0,0
+47,RKFORGE,Ramkrishna Forgings Limited,Automobile and Auto Components,76.6,39.4,10.8,126.8,646.9,0.0,0
+48,CRAFTSMAN,Craftsman Automation Limited,Automobile and Auto Components,89.8,34.5,2.0,126.3,10271.0,0.0,2
+49,BHARTIARTL,Bharti Airtel Limited,Telecommunication,12.2,64.9,47.5,124.6,1973.7,0.0,0
+50,APARINDS,Apar Industries Limited,Capital Goods,7.3,94.0,21.8,123.1,15678.0,0.0,0
+51,AMBER,Amber Enterprises India Limited,Consumer Durables,85.1,25.3,4.5,114.9,5865.0,0.0,0
+52,CEATLTD,CEAT Limited,Automobile and Auto Components,47.0,31.6,34.1,112.7,3087.2,0.0,0
+53,INFY,Infosys Limited,Information Technology,2.2,37.1,69.3,108.6,1185.0,0.0,0
+54,TIMKEN,Timken India Limited,Capital Goods,5.8,62.6,37.8,106.2,2852.0,0.0,0
+55,RPOWER,Reliance Power Limited,Power,12.1,21.1,69.1,102.3,17.91,0.0,0
+56,SUPREMEIND,Supreme Industries Limited,Capital Goods,33.0,18.3,46.4,97.7,3150.0,0.0,0
+57,GODFRYPHLP,Godfrey Phillips India Limited,Fast Moving Consumer Goods,62.3,8.2,23.3,93.8,1690.2,0.0,0
+58,PVRINOX,PVR INOX Limited,Media Entertainment & Publication,57.2,17.3,18.7,93.2,1495.1,0.0,0
+59,ASIANPAINT,Asian Paints Limited,Consumer Durables,54.8,5.9,27.7,88.4,2320.0,0.0,0
+60,JBMA,JBM Auto Limited,Automobile and Auto Components,40.9,33.9,13.1,87.9,467.65,0.0,0
