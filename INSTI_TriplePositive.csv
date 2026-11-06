@@ -1,9 +1,12 @@
 Rank,Symbol,Company,Sector,WeeklyBuyPct,FortnightlyBuyPct,MonthlyBuyPct,CombinedScore,Close,InstiNetCr,InstiDeals
-1,ITI,ITI Limited,Telecommunication,1012.0,702.4,198.4,1912.8,250.29,0.0,0
-2,DOMS,DOMS Industries Limited,Fast Moving Consumer Goods,418.5,605.3,92.9,1116.7,2049.9,0.0,0
-3,AAVAS,Aavas Financiers Limited,Financial Services,668.6,378.6,12.1,1059.3,1134.2,0.0,0
-4,AIAENG,AIA Engineering Limited,Capital Goods,483.4,219.4,35.4,738.2,3202.2,0.0,0
-5,ASAHIINDIA,Asahi India Glass Limited,Automobile and Auto Components,449.9,224.8,14.0,688.7,1020.8,0.0,0
-6,PIIND,PI Industries Limited,Chemicals,392.1,236.0,29.0,657.1,1770.0,-1.27,2
-7,SAREGAMA,Saregama India Limited,Media Entertainment & Publication,267.0,374.5,13.5,655.0,632.05,-0.12,4
-8,ACC,ACC Limited,Construction Materials,298.4,215.7,7.5,521.6,1226.7,0.0,0
+1,ITI,ITI Limited,Telecommunication,1629.2,651.6,206.0,2486.8,248.85,0.0,0
+2,DOMS,DOMS Industries Limited,Fast Moving Consumer Goods,608.2,585.5,97.3,1291.0,2053.9,0.0,0
+3,ASAHIINDIA,Asahi India Glass Limited,Automobile and Auto Components,747.5,280.0,31.0,1058.5,1034.45,0.0,0
+4,JSWCEMENT,JSW Cement Limited,Construction Materials,656.1,281.1,21.3,958.5,123.41,-85.53,2
+5,AAVAS,Aavas Financiers Limited,Financial Services,475.3,371.7,15.8,862.8,1137.7,0.0,0
+6,AIAENG,AIA Engineering Limited,Capital Goods,550.8,236.7,46.6,834.1,3113.6,0.0,0
+7,PIIND,PI Industries Limited,Chemicals,398.6,262.6,38.8,700.0,1735.0,-1.27,2
+8,UNOMINDA,UNO Minda Limited,Automobile and Auto Components,365.0,253.3,4.7,623.0,1326.0,0.0,0
+9,SAREGAMA,Saregama India Limited,Media Entertainment & Publication,190.2,342.2,19.0,551.4,619.65,-0.12,4
+10,APTUS,Aptus Value Housing Finance India Limited,Financial Services,344.1,173.9,18.8,536.8,174.88,0.0,0
+11,ACC,ACC Limited,Construction Materials,299.2,211.1,14.5,524.8,1236.2,0.0,0

@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,ITI,ITI Limited,Telecommunication,3684856,331384,1012.0,42494983,581342,7209.8,8.0,36.3,250.29,0.0,0,2026-10-29,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-2,SAGILITY,SAGILITY LIMITED,Information Technology,674371383,72380618,831.7,256653024,136474954,88.1,72.4,34.7,43.8,848.81,5,2026-10-29,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-3,AAVAS,Aavas Financiers Limited,Financial Services,1630724,212157,668.6,674834,257414,162.2,70.7,45.2,1134.2,0.0,0,2026-10-29,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-4,AIAENG,AIA Engineering Limited,Capital Goods,649409,111318,483.4,664221,71225,832.6,49.4,61.0,3202.2,0.0,0,2026-10-29,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-5,ASAHIINDIA,Asahi India Glass Limited,Automobile and Auto Components,863597,157059,449.9,1713137,112501,1422.8,33.5,58.3,1020.8,0.0,0,2026-10-29,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+1,ITI,ITI Limited,Telecommunication,3744096,216517,1629.2,42782784,458759,9225.8,8.0,32.1,248.85,0.0,0,2026-10-30,FINAL WEEKLY ✅ (Friday close)
+2,SIGNATURE,Signatureglobal (India) Limited,Realty,1121838,114181,882.5,1509214,907635,66.3,42.6,11.2,747.85,0.0,0,2026-10-30,FINAL WEEKLY ✅ (Friday close)
+3,ASAHIINDIA,Asahi India Glass Limited,Automobile and Auto Components,947661,111825,747.5,1809589,125794,1338.5,34.4,47.1,1034.45,0.0,0,2026-10-30,FINAL WEEKLY ✅ (Friday close)
+4,JSWCEMENT,JSW Cement Limited,Construction Materials,23171879,3064577,656.1,24905313,3044012,718.2,48.2,50.2,123.41,-85.53,2,2026-10-30,FINAL WEEKLY ✅ (Friday close)
+5,DOMS,DOMS Industries Limited,Fast Moving Consumer Goods,417587,58963,608.2,241616,54788,341.0,63.3,51.8,2053.9,0.0,0,2026-10-30,FINAL WEEKLY ✅ (Friday close)
