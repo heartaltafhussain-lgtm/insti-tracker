@@ -1,12 +1,11 @@
 Rank,Symbol,Company,Sector,WeeklyBuyPct,FortnightlyBuyPct,MonthlyBuyPct,CombinedScore,Close,InstiNetCr,InstiDeals
-1,ITI,ITI Limited,Telecommunication,1629.2,651.6,206.0,2486.8,248.85,0.0,0
-2,DOMS,DOMS Industries Limited,Fast Moving Consumer Goods,608.2,585.5,97.3,1291.0,2053.9,0.0,0
-3,ASAHIINDIA,Asahi India Glass Limited,Automobile and Auto Components,747.5,280.0,31.0,1058.5,1034.45,0.0,0
-4,JSWCEMENT,JSW Cement Limited,Construction Materials,656.1,281.1,21.3,958.5,123.41,-85.53,2
-5,AAVAS,Aavas Financiers Limited,Financial Services,475.3,371.7,15.8,862.8,1137.7,0.0,0
-6,AIAENG,AIA Engineering Limited,Capital Goods,550.8,236.7,46.6,834.1,3113.6,0.0,0
-7,PIIND,PI Industries Limited,Chemicals,398.6,262.6,38.8,700.0,1735.0,-1.27,2
-8,UNOMINDA,UNO Minda Limited,Automobile and Auto Components,365.0,253.3,4.7,623.0,1326.0,0.0,0
-9,SAREGAMA,Saregama India Limited,Media Entertainment & Publication,190.2,342.2,19.0,551.4,619.65,-0.12,4
-10,APTUS,Aptus Value Housing Finance India Limited,Financial Services,344.1,173.9,18.8,536.8,174.88,0.0,0
-11,ACC,ACC Limited,Construction Materials,299.2,211.1,14.5,524.8,1236.2,0.0,0
+1,DOMS,DOMS Industries Limited,Fast Moving Consumer Goods,638.4,380.5,99.8,1118.7,2040.8,0.0,0
+2,ASAHIINDIA,Asahi India Glass Limited,Automobile and Auto Components,709.7,253.2,47.9,1010.8,1055.8,0.0,0
+3,AIAENG,AIA Engineering Limited,Capital Goods,413.6,293.9,73.4,780.9,3136.4,0.0,0
+4,JSWCEMENT,JSW Cement Limited,Construction Materials,534.0,209.6,24.5,768.1,121.35,-85.53,2
+5,PIIND,PI Industries Limited,Chemicals,374.6,311.4,59.0,745.0,1712.9,-1.27,2
+6,AAVAS,Aavas Financiers Limited,Financial Services,314.8,341.0,19.6,675.4,1137.0,0.0,0
+7,APTUS,Aptus Value Housing Finance India Limited,Financial Services,330.5,220.1,29.3,579.9,176.03,0.0,0
+8,SAREGAMA,Saregama India Limited,Media Entertainment & Publication,198.2,343.9,30.2,572.3,647.8,-0.12,4
+9,ACC,ACC Limited,Construction Materials,220.9,263.5,20.5,504.9,1234.9,0.0,0
+10,UNOMINDA,UNO Minda Limited,Automobile and Auto Components,155.9,302.9,15.6,474.4,1353.8,0.0,0
