@@ -1,11 +1,15 @@
 Rank,Symbol,Company,Sector,WeeklyBuyPct,FortnightlyBuyPct,MonthlyBuyPct,CombinedScore,Close,InstiNetCr,InstiDeals
-1,DOMS,DOMS Industries Limited,Fast Moving Consumer Goods,638.4,380.5,99.8,1118.7,2040.8,0.0,0
-2,ASAHIINDIA,Asahi India Glass Limited,Automobile and Auto Components,709.7,253.2,47.9,1010.8,1055.8,0.0,0
-3,AIAENG,AIA Engineering Limited,Capital Goods,413.6,293.9,73.4,780.9,3136.4,0.0,0
-4,JSWCEMENT,JSW Cement Limited,Construction Materials,534.0,209.6,24.5,768.1,121.35,-85.53,2
-5,PIIND,PI Industries Limited,Chemicals,374.6,311.4,59.0,745.0,1712.9,-1.27,2
-6,AAVAS,Aavas Financiers Limited,Financial Services,314.8,341.0,19.6,675.4,1137.0,0.0,0
-7,APTUS,Aptus Value Housing Finance India Limited,Financial Services,330.5,220.1,29.3,579.9,176.03,0.0,0
-8,SAREGAMA,Saregama India Limited,Media Entertainment & Publication,198.2,343.9,30.2,572.3,647.8,-0.12,4
-9,ACC,ACC Limited,Construction Materials,220.9,263.5,20.5,504.9,1234.9,0.0,0
-10,UNOMINDA,UNO Minda Limited,Automobile and Auto Components,155.9,302.9,15.6,474.4,1353.8,0.0,0
+1,PIIND,PI Industries Limited,Chemicals,644.7,276.6,79.1,1000.4,1712.9,-1.27,2
+2,DOMS,DOMS Industries Limited,Fast Moving Consumer Goods,515.4,283.5,102.3,901.2,2040.8,0.0,0
+3,BLUEJET,Blue Jet Healthcare Limited,Healthcare,569.2,192.9,32.1,794.2,543.55,0.0,0
+4,GLAXO,GlaxoSmithKline Pharmaceuticals Limited,Healthcare,290.2,336.1,30.9,657.2,2710.0,0.0,0
+5,JSWCEMENT,JSW Cement Limited,Construction Materials,432.0,194.6,27.7,654.3,121.35,-85.53,2
+6,AIAENG,AIA Engineering Limited,Capital Goods,180.2,304.5,100.2,584.9,3136.4,0.0,0
+7,APTUS,Aptus Value Housing Finance India Limited,Financial Services,318.5,206.1,39.8,564.4,176.03,0.0,0
+8,SAREGAMA,Saregama India Limited,Media Entertainment & Publication,125.2,342.4,41.5,509.1,647.8,-0.12,4
+9,UNOMINDA,UNO Minda Limited,Automobile and Auto Components,141.5,323.4,26.5,491.4,1353.8,0.0,0
+10,ASAHIINDIA,Asahi India Glass Limited,Automobile and Auto Components,162.2,253.4,64.8,480.4,1055.8,0.0,0
+11,AAVAS,Aavas Financiers Limited,Financial Services,54.9,323.3,23.3,401.5,1137.0,0.0,0
+12,SAILIFE,Sai Life Sciences Limited,Healthcare,244.2,150.4,0.4,395.0,1836.8,0.0,0
+13,ACC,ACC Limited,Construction Materials,152.5,208.0,26.5,387.0,1234.9,0.0,0
+14,EMCURE,Emcure Pharmaceuticals Limited,Healthcare,172.3,150.0,5.9,328.2,2216.2,0.0,0
