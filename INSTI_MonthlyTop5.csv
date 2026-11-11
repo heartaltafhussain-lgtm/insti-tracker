@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,ITI,ITI Limited,Telecommunication,3868328,1223689,216.1,43080146,2400288,1694.8,8.2,33.8,248.25,0.0,0,2026-10-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-2,DOMS,DOMS Industries Limited,Fast Moving Consumer Goods,428133,211676,102.3,252924,222162,13.8,62.9,48.8,2040.8,0.0,0,2026-10-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-3,AIAENG,AIA Engineering Limited,Capital Goods,932489,465890,100.2,841512,339301,148.0,52.6,57.9,3136.4,0.0,0,2026-10-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-4,PIIND,PI Industries Limited,Chemicals,5742534,3206151,79.1,10922893,2992192,265.0,34.5,51.7,1712.9,-1.27,2,2026-10-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-5,ASAHIINDIA,Asahi India Glass Limited,Automobile and Auto Components,1191901,723256,64.8,2013655,760860,164.7,37.2,48.7,1055.8,0.0,0,2026-10-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+1,ITI,ITI Limited,Telecommunication,3980394,1223689,225.3,43272368,2400288,1702.8,8.4,33.8,250.26,0.0,0,2026-10-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+2,DOMS,DOMS Industries Limited,Fast Moving Consumer Goods,490507,211676,131.7,270730,222162,21.9,64.4,48.8,2019.4,0.0,0,2026-10-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+3,AIAENG,AIA Engineering Limited,Capital Goods,984544,465890,111.3,886523,339301,161.3,52.6,57.9,3167.2,0.0,0,2026-10-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+4,PIIND,PI Industries Limited,Chemicals,6361223,3206151,98.4,11833669,2992192,295.5,35.0,51.7,1761.0,-1.27,2,2026-10-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+5,ASAHIINDIA,Asahi India Glass Limited,Automobile and Auto Components,1341130,723256,85.4,2171655,760860,185.4,38.2,48.7,1088.05,0.0,0,2026-10-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
