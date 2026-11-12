@@ -1,17 +1,18 @@
 Rank,Symbol,Company,Sector,WeeklyBuyPct,FortnightlyBuyPct,MonthlyBuyPct,CombinedScore,Close,InstiNetCr,InstiDeals
-1,BLUEJET,Blue Jet Healthcare Limited,Healthcare,620.6,207.1,45.6,873.3,535.75,0.0,0
-2,JSWDULUX,JSW Dulux Limited,Consumer Durables,4.2,760.6,1.8,766.6,294.6,0.0,0
-3,JSWCEMENT,JSW Cement Limited,Construction Materials,475.3,198.9,36.1,710.3,124.09,-85.53,2
-4,APTUS,Aptus Value Housing Finance India Limited,Financial Services,381.3,237.1,60.9,679.3,175.62,0.0,0
-5,PIIND,PI Industries Limited,Chemicals,336.6,229.5,98.4,664.5,1761.0,-1.27,2
-6,SIGNATURE,Signatureglobal (India) Limited,Realty,537.8,96.2,9.9,643.9,738.65,0.0,0
-7,THERMAX,Thermax Limited,Capital Goods,323.5,188.9,7.7,520.1,2725.4,0.0,0
-8,SAILIFE,Sai Life Sciences Limited,Healthcare,303.5,194.3,17.8,515.6,1918.6,0.0,0
-9,CUMMINSIND,Cummins India Limited,Capital Goods,299.5,195.2,1.4,496.1,4229.8,0.0,0
-10,ASAHIINDIA,Asahi India Glass Limited,Automobile and Auto Components,112.5,289.4,85.4,487.3,1088.05,0.0,0
-11,UNOMINDA,UNO Minda Limited,Automobile and Auto Components,112.2,254.5,47.8,414.5,1373.0,0.0,0
-12,GLAXO,GlaxoSmithKline Pharmaceuticals Limited,Healthcare,127.2,239.3,43.8,410.3,2727.7,0.0,0
-13,AIAENG,AIA Engineering Limited,Capital Goods,6.6,258.7,111.3,376.6,3167.2,0.0,0
-14,GRANULES,Granules India Limited,Healthcare,108.9,124.7,1.6,235.2,799.25,0.0,0
-15,FACT,Fertilizers and Chemicals Travancore Limited,Chemicals,23.4,173.3,18.0,214.7,813.25,0.0,0
-16,LINDEINDIA,Linde India Limited,Chemicals,43.5,127.4,2.1,173.0,6822.5,0.0,0
+1,JSWCEMENT,JSW Cement Limited,Construction Materials,526.6,217.6,40.3,784.5,125.63,-85.53,2
+2,KALYANKJIL,Kalyan Jewellers India Limited,Consumer Durables,483.4,185.3,10.4,679.1,710.9,0.97,4
+3,THERMAX,Thermax Limited,Capital Goods,348.4,210.2,17.4,576.0,2722.4,0.0,0
+4,SAILIFE,Sai Life Sciences Limited,Healthcare,265.3,231.0,24.5,520.8,1905.2,0.0,0
+5,APTUS,Aptus Value Housing Finance India Limited,Financial Services,82.4,294.8,73.0,450.2,176.15,0.0,0
+6,SIGNATURE,Signatureglobal (India) Limited,Realty,254.7,120.0,24.5,399.2,777.6,0.0,0
+7,GLAXO,GlaxoSmithKline Pharmaceuticals Limited,Healthcare,93.2,246.5,50.1,389.8,2655.6,0.0,0
+8,BLUEJET,Blue Jet Healthcare Limited,Healthcare,90.7,208.4,53.9,353.0,539.3,0.0,0
+9,GRANULES,Granules India Limited,Healthcare,130.0,192.6,27.5,350.1,840.5,0.0,0
+10,RVNL,Rail Vikas Nigam Limited,Construction,103.1,194.1,12.2,309.4,205.4,0.0,0
+11,EMCURE,Emcure Pharmaceuticals Limited,Healthcare,8.2,224.5,59.9,292.6,2314.4,0.0,0
+12,FACT,Fertilizers and Chemicals Travancore Limited,Chemicals,31.4,203.5,34.6,269.5,801.9,0.0,0
+13,CDSL,Central Depository Services (India) Limited,Financial Services,45.6,192.8,5.5,243.9,1455.0,0.0,0
+14,ZEEL,Zee Entertainment Enterprises Limited,Media Entertainment & Publication,32.9,175.4,6.9,215.2,73.5,16.4,2
+15,CONCORDBIO,Concord Biotech Limited,Healthcare,31.4,135.6,4.3,171.3,601.8,0.0,0
+16,LINDEINDIA,Linde India Limited,Chemicals,25.5,140.1,5.7,171.3,6804.5,0.0,0
+17,BAYERCROP,Bayer Cropscience Limited,Chemicals,10.5,114.9,2.7,128.1,3473.7,0.0,0
