@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,JSWCEMENT,JSW Cement Limited,Construction Materials,23591491,3765189,526.6,25510921,3400979,650.1,48.0,52.5,125.63,-85.53,2,2026-11-05,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-2,KALYANKJIL,Kalyan Jewellers India Limited,Consumer Durables,34681462,5944832,483.4,134021763,14687403,812.5,20.6,28.8,710.9,0.97,4,2026-11-05,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-3,THERMAX,Thermax Limited,Capital Goods,2031022,452927,348.4,2581180,381963,575.8,44.0,54.2,2722.4,0.0,0,2026-11-05,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-4,FINCABLES,Finolex Cables Limited,Capital Goods,3678220,971316,278.7,16488718,1065501,1447.5,18.2,47.7,1252.7,0.0,0,2026-11-05,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-5,GABRIEL,Gabriel India Limited,Automobile and Auto Components,1292463,352293,266.9,7279334,535044,1260.5,15.1,39.7,1641.2,0.0,0,2026-11-05,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+1,GABRIEL,Gabriel India Limited,Automobile and Auto Components,1424068,343779,314.2,8234267,514997,1498.9,14.7,40.0,1552.7,0.0,0,2026-11-06,FINAL WEEKLY ✅ (Friday close)
+2,COCHINSHIP,Cochin Shipyard Limited,Capital Goods,5047140,1290135,291.2,10565636,2890126,265.6,32.3,30.9,1178.0,0.0,0,2026-11-06,FINAL WEEKLY ✅ (Friday close)
+3,ALKEM,Alkem Laboratories Limited,Healthcare,582059,190541,205.5,1313724,246417,433.1,30.7,43.6,5114.0,0.0,0,2026-11-06,FINAL WEEKLY ✅ (Friday close)
+4,ANURAS,Anupam Rasayan India Limited,Chemicals,2526887,918130,175.2,2758660,459347,500.6,47.8,66.7,1300.6,0.0,0,2026-11-06,FINAL WEEKLY ✅ (Friday close)
+5,BANKINDIA,Bank of India,Financial Services,32991928,12244933,169.4,47330775,16497277,186.9,41.1,42.6,154.1,0.0,0,2026-11-06,FINAL WEEKLY ✅ (Friday close)
