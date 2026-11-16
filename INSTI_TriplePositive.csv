@@ -1,19 +1,19 @@
 Rank,Symbol,Company,Sector,WeeklyBuyPct,FortnightlyBuyPct,MonthlyBuyPct,CombinedScore,Close,InstiNetCr,InstiDeals
-1,GODREJIND,Godrej Industries Limited,Diversified,47.0,343.9,129.7,520.6,1117.15,0.0,0
-2,FACT,Fertilizers and Chemicals Travancore Limited,Chemicals,85.6,296.3,68.6,450.5,808.2,0.0,0
-3,KALYANKJIL,Kalyan Jewellers India Limited,Consumer Durables,154.7,203.2,19.4,377.3,697.0,0.97,4
-4,SAILIFE,Sai Life Sciences Limited,Healthcare,70.3,263.0,33.8,367.1,1928.8,0.0,0
-5,GLAXO,GlaxoSmithKline Pharmaceuticals Limited,Healthcare,56.3,241.6,57.9,355.8,2672.6,0.0,0
-6,BLUEJET,Blue Jet Healthcare Limited,Healthcare,65.9,220.1,58.9,344.9,539.35,0.0,0
-7,RVNL,Rail Vikas Nigam Limited,Construction,94.8,211.9,23.4,330.1,199.46,0.0,0
-8,GRANULES,Granules India Limited,Healthcare,51.3,190.6,35.9,277.8,813.2,0.0,0
-9,CDSL,Central Depository Services (India) Limited,Financial Services,69.6,170.3,19.4,259.3,1447.0,0.0,0
-10,ZEEL,Zee Entertainment Enterprises Limited,Media Entertainment & Publication,29.8,188.0,22.4,240.2,72.15,16.4,2
-11,GRASIM,Grasim Industries Limited,Construction Materials,10.6,210.3,9.4,230.3,3034.0,0.0,0
-12,TENNIND,Tenneco Clean Air India Limited,Automobile and Auto Components,63.9,115.8,1.2,180.9,447.7,0.0,0
-13,AUROPHARMA,Aurobindo Pharma Limited,Healthcare,40.7,123.6,1.4,165.7,1823.2,0.0,0
-14,SIGNATURE,Signatureglobal (India) Limited,Realty,2.2,133.6,28.6,164.4,766.6,0.0,0
-15,SBIN,State Bank of India,Financial Services,50.1,106.7,2.9,159.7,1080.0,0.0,0
-16,INDGN,Indegene Limited,Healthcare,17.8,128.1,11.6,157.5,666.2,0.0,0
-17,CONCORDBIO,Concord Biotech Limited,Healthcare,16.8,108.9,11.5,137.2,594.0,0.0,0
-18,BAYERCROP,Bayer Cropscience Limited,Chemicals,4.5,110.1,11.1,125.7,3447.0,0.0,0
+1,GODREJIND,Godrej Industries Limited,Diversified,87.3,625.3,158.3,870.9,1091.0,0.0,0
+2,FACT,Fertilizers and Chemicals Travancore Limited,Chemicals,117.0,339.7,77.2,533.9,793.95,0.0,0
+3,KALYANKJIL,Kalyan Jewellers India Limited,Consumer Durables,84.2,229.6,28.9,342.7,708.15,0.97,4
+4,AMBER,Amber Enterprises India Limited,Consumer Durables,192.7,128.0,18.3,339.0,6252.0,-2.51,2
+5,SAILIFE,Sai Life Sciences Limited,Healthcare,0.1,293.6,43.8,337.5,1800.2,0.0,0
+6,CDSL,Central Depository Services (India) Limited,Financial Services,93.9,195.2,27.7,316.8,1433.9,0.0,0
+7,RVNL,Rail Vikas Nigam Limited,Construction,78.5,206.5,30.4,315.4,194.36,0.0,0
+8,GRANULES,Granules India Limited,Healthcare,25.5,227.6,42.7,295.8,798.95,0.0,0
+9,ZEEL,Zee Entertainment Enterprises Limited,Media Entertainment & Publication,18.0,191.8,28.2,238.0,71.66,16.4,2
+10,INDGN,Indegene Limited,Healthcare,91.8,111.1,23.8,226.7,662.4,0.0,0
+11,IIFL,IIFL Finance Limited,Financial Services,97.7,113.3,2.2,213.2,652.35,0.0,0
+12,PETRONET,Petronet LNG Limited,Oil Gas & Consumable Fuels,68.0,143.0,1.9,212.9,326.0,0.0,0
+13,CONCORDBIO,Concord Biotech Limited,Healthcare,24.2,140.1,32.2,196.5,581.0,0.0,0
+14,SBIN,State Bank of India,Financial Services,30.2,134.0,13.1,177.3,1090.5,0.0,0
+15,RKFORGE,Ramkrishna Forgings Limited,Automobile and Auto Components,24.2,117.1,19.6,160.9,791.85,0.0,0
+16,AUROPHARMA,Aurobindo Pharma Limited,Healthcare,0.5,142.6,8.7,151.8,1794.0,0.0,0
+17,PNB,Punjab National Bank,Financial Services,93.3,49.8,1.6,144.7,144.59,0.0,0
+18,IREDA,Indian Renewable Energy Development Agency Limited,Financial Services,18.2,110.6,0.9,129.7,115.95,0.0,0

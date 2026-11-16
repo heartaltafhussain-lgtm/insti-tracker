@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,ITI,ITI Limited,Telecommunication,4968687,662826,649.6,65908715,1090364,5944.7,7.0,37.8,268.07,0.0,0,2026-10-29,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
-2,SAGILITY,SAGILITY LIMITED,Information Technology,766425706,102947920,644.5,333278474,184543287,80.6,69.7,35.8,43.87,848.81,5,2026-10-29,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
-3,AAVAS,Aavas Financiers Limited,Financial Services,2461596,467912,426.1,1106053,402591,174.7,69.0,53.8,1123.5,0.0,0,2026-10-29,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
-4,AIAENG,AIA Engineering Limited,Capital Goods,1227702,260295,371.7,994466,176487,463.5,55.2,59.6,3186.0,0.0,0,2026-10-29,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
-5,GODREJIND,Godrej Industries Limited,Diversified,1528456,344310,343.9,11115692,1328635,736.6,12.1,20.6,1117.15,0.0,0,2026-10-29,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+1,ITI,ITI Limited,Telecommunication,5132362,623944,722.6,66898341,962324,6851.7,7.1,39.3,255.32,0.0,0,2026-10-30,FINAL FORTNIGHTLY ✅ (16th of month)
+2,GODREJIND,Godrej Industries Limited,Diversified,1704328,234980,625.3,12042001,285094,4123.9,12.4,45.2,1091.0,0.0,0,2026-10-30,FINAL FORTNIGHTLY ✅ (16th of month)
+3,AIAENG,AIA Engineering Limited,Capital Goods,1256840,216932,479.4,1027959,146915,599.7,55.0,59.6,3205.3,0.0,0,2026-10-30,FINAL FORTNIGHTLY ✅ (16th of month)
+4,ASAHIINDIA,Asahi India Glass Limited,Automobile and Auto Components,1646171,314226,423.9,2693721,276992,872.5,37.9,53.1,1165.05,0.0,0,2026-10-30,FINAL FORTNIGHTLY ✅ (16th of month)
+5,AAVAS,Aavas Financiers Limited,Financial Services,2420242,466018,419.3,1064907,443519,140.1,69.4,51.2,1114.9,0.0,0,2026-10-30,FINAL FORTNIGHTLY ✅ (16th of month)
