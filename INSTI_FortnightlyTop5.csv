@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,ITI,ITI Limited,Telecommunication,5132362,623944,722.6,66898341,962324,6851.7,7.1,39.3,255.32,0.0,0,2026-10-30,FINAL FORTNIGHTLY ✅ (16th of month)
-2,GODREJIND,Godrej Industries Limited,Diversified,1704328,234980,625.3,12042001,285094,4123.9,12.4,45.2,1091.0,0.0,0,2026-10-30,FINAL FORTNIGHTLY ✅ (16th of month)
-3,AIAENG,AIA Engineering Limited,Capital Goods,1256840,216932,479.4,1027959,146915,599.7,55.0,59.6,3205.3,0.0,0,2026-10-30,FINAL FORTNIGHTLY ✅ (16th of month)
-4,ASAHIINDIA,Asahi India Glass Limited,Automobile and Auto Components,1646171,314226,423.9,2693721,276992,872.5,37.9,53.1,1165.05,0.0,0,2026-10-30,FINAL FORTNIGHTLY ✅ (16th of month)
-5,AAVAS,Aavas Financiers Limited,Financial Services,2420242,466018,419.3,1064907,443519,140.1,69.4,51.2,1114.9,0.0,0,2026-10-30,FINAL FORTNIGHTLY ✅ (16th of month)
+1,GODREJIND,Godrej Industries Limited,Diversified,1741015,322681,439.5,12477395,317011,3836.0,12.2,50.4,1095.45,0.0,0,2026-11-02,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+2,PAGEIND,Page Industries Limited,Textiles,292417,54936,432.3,423200,78048,442.2,40.9,41.3,31105.0,0.0,0,2026-11-02,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+3,ASAHIINDIA,Asahi India Glass Limited,Automobile and Auto Components,1675607,356097,370.5,2785493,315263,783.5,37.6,53.0,1166.5,0.0,0,2026-11-02,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+4,AIAENG,AIA Engineering Limited,Capital Goods,1260816,277369,354.6,1058307,165761,538.5,54.4,62.6,3241.7,0.0,0,2026-11-02,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
+5,AAVAS,Aavas Financiers Limited,Financial Services,2438885,580045,320.5,1064176,541637,96.5,69.6,51.7,1125.8,0.0,0,2026-11-02,"FORTNIGHT IN PROGRESS — daily refresh, har month ki 16th ko final"
