@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,ITI,ITI Limited,Telecommunication,5279972,1223689,331.5,67441776,2400288,2709.7,7.3,33.8,249.66,0.0,0,2026-10-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-2,AIAENG,AIA Engineering Limited,Capital Goods,1469582,465890,215.4,1130605,339301,233.2,56.5,57.9,3327.2,0.0,0,2026-10-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-3,GODREJIND,Godrej Industries Limited,Diversified,1867844,659772,183.1,12733437,1725928,637.8,12.8,27.7,1101.5,0.0,0,2026-10-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-4,DOMS,DOMS Industries Limited,Fast Moving Consumer Goods,557319,211676,163.3,302290,222162,36.1,64.8,48.8,2041.0,0.0,0,2026-10-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
-5,ASAHIINDIA,Asahi India Glass Limited,Automobile and Auto Components,1813909,723256,150.8,2921575,760860,284.0,38.3,48.7,1157.3,0.0,0,2026-10-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+1,ITI,ITI Limited,Telecommunication,5325278,1223689,335.2,67572375,2400288,2715.2,7.3,33.8,248.76,0.0,0,2026-10-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+2,AIAENG,AIA Engineering Limited,Capital Goods,1518473,465890,225.9,1163524,339301,242.9,56.6,57.9,3328.0,0.0,0,2026-10-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+3,GODREJIND,Godrej Industries Limited,Diversified,1972201,659772,198.9,12894713,1725928,647.1,13.3,27.7,1100.2,0.0,0,2026-10-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+4,DOMS,DOMS Industries Limited,Fast Moving Consumer Goods,628175,211676,196.8,370140,222162,66.6,62.9,48.8,2104.2,0.0,0,2026-10-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
+5,ASAHIINDIA,Asahi India Glass Limited,Automobile and Auto Components,1942852,723256,168.6,3107873,760860,308.5,38.5,48.7,1192.05,0.0,0,2026-10-30,"MONTH IN PROGRESS — daily refresh, month-end ko final"
