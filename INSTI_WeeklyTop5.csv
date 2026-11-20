@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,URBANCO,Urban Company Limited,Consumer Services,39151903,6795968,476.1,74820064,8241663,807.8,34.4,45.2,176.05,0.0,0,2026-11-12,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-2,KAYNES,Kaynes Technology India Limited,Capital Goods,3132221,720624,334.7,14744778,1656962,789.9,17.5,30.3,2890.0,5.46,6,2026-11-12,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-3,ITI,ITI Limited,Telecommunication,1297598,375717,245.4,24199889,920628,2528.6,5.1,29.0,248.76,0.0,0,2026-11-12,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-4,PWL,Physicswallah Limited,Consumer Services,20629583,6661563,209.7,76232600,12676649,501.4,21.3,34.4,136.21,0.0,0,2026-11-12,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-5,TMPV,Tata Motors Passenger Vehicles Limited,Automobile and Auto Components,46625227,15690015,197.2,64475027,20373382,216.5,42.0,43.5,263.5,0.0,0,2026-11-12,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+1,INDIACEM,The India Cements Limited,Construction Materials,1270543,252271,403.6,3383538,630276,436.8,27.3,28.6,326.9,0.0,0,2026-11-13,FINAL WEEKLY ✅ (Friday close)
+2,URBANCO,Urban Company Limited,Consumer Services,40418603,8469283,377.2,77302345,10863210,611.6,34.3,43.8,168.95,0.0,0,2026-11-13,FINAL WEEKLY ✅ (Friday close)
+3,KAYNES,Kaynes Technology India Limited,Capital Goods,3203019,774388,313.6,14837118,1812474,718.6,17.8,29.9,2910.0,5.46,6,2026-11-13,FINAL WEEKLY ✅ (Friday close)
+4,NUVOCO,Nuvoco Vistas Corporation Limited,Construction Materials,1168662,301672,287.4,9413477,374214,2415.5,11.0,44.6,358.5,0.0,0,2026-11-13,FINAL WEEKLY ✅ (Friday close)
+5,JAINREC,Jain Resource Recycling Limited,Metals & Mining,2493236,670137,272.0,3341922,1065288,213.7,42.7,38.6,288.1,0.0,0,2026-11-13,FINAL WEEKLY ✅ (Friday close)
