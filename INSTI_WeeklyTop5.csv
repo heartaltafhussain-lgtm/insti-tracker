@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,INDIACEM,The India Cements Limited,Construction Materials,1270543,252271,403.6,3383538,630276,436.8,27.3,28.6,326.9,0.0,0,2026-11-13,FINAL WEEKLY ✅ (Friday close)
-2,URBANCO,Urban Company Limited,Consumer Services,40418603,8469283,377.2,77302345,10863210,611.6,34.3,43.8,168.95,0.0,0,2026-11-13,FINAL WEEKLY ✅ (Friday close)
-3,KAYNES,Kaynes Technology India Limited,Capital Goods,3203019,774388,313.6,14837118,1812474,718.6,17.8,29.9,2910.0,5.46,6,2026-11-13,FINAL WEEKLY ✅ (Friday close)
-4,NUVOCO,Nuvoco Vistas Corporation Limited,Construction Materials,1168662,301672,287.4,9413477,374214,2415.5,11.0,44.6,358.5,0.0,0,2026-11-13,FINAL WEEKLY ✅ (Friday close)
-5,JAINREC,Jain Resource Recycling Limited,Metals & Mining,2493236,670137,272.0,3341922,1065288,213.7,42.7,38.6,288.1,0.0,0,2026-11-13,FINAL WEEKLY ✅ (Friday close)
+1,INDIACEM,The India Cements Limited,Construction Materials,1309346,239317,447.1,3481550,527078,560.5,27.3,31.2,320.65,0.0,0,2026-11-16,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+2,URBANCO,Urban Company Limited,Consumer Services,43559258,8894285,389.7,81072816,10910759,643.1,35.0,44.9,168.68,0.0,0,2026-11-16,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+3,APLAPOLLO,APL Apollo Tubes Limited,Capital Goods,9777658,2174600,349.6,20668212,2567022,705.1,32.1,45.9,1670.0,-3.46,2,2026-11-16,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+4,NUVOCO,Nuvoco Vistas Corporation Limited,Construction Materials,1205835,310055,288.9,9565896,391634,2342.6,11.2,44.2,356.15,0.0,0,2026-11-16,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+5,PWL,Physicswallah Limited,Consumer Services,26537537,7804399,240.0,86999818,21204922,310.3,23.4,26.9,139.76,0.0,0,2026-11-16,"WEEK IN PROGRESS — daily refresh, Friday ko final"
