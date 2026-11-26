@@ -1,61 +1,52 @@
 Rank,Symbol,Company,Sector,WeeklyBuyPct,FortnightlyBuyPct,MonthlyBuyPct,CombinedScore,Close,InstiNetCr,InstiDeals
-1,APLAPOLLO,APL Apollo Tubes Limited,Capital Goods,1479.3,632.4,315.1,2426.8,1476.0,-437.07,5
-2,ITI,ITI Limited,Telecommunication,174.0,23.9,622.5,820.4,257.6,0.0,0
-3,DABUR,Dabur India Limited,Fast Moving Consumer Goods,533.8,89.3,55.5,678.6,430.0,0.0,0
-4,EIHOTEL,EIH Limited,Consumer Services,283.8,271.0,99.4,654.2,340.25,0.0,0
-5,TATASTEEL,Tata Steel Limited,Metals & Mining,419.1,127.1,40.9,587.1,159.3,0.0,0
-6,LGEINDIA,LG Electronics India Limited,Consumer Durables,293.9,110.5,98.6,503.0,1818.4,0.0,0
-7,JWL,Jupiter Wagons Limited,Capital Goods,382.0,76.6,13.2,471.8,222.46,-0.39,2
-8,IREDA,Indian Renewable Energy Development Agency Limited,Financial Services,225.7,91.3,133.9,450.9,124.75,0.0,0
-9,APOLLOTYRE,Apollo Tyres Limited,Automobile and Auto Components,216.4,103.3,106.1,425.8,437.35,0.0,0
-10,KPRMILL,K.P.R. Mill Limited,Textiles,175.3,135.1,111.7,422.1,1173.0,0.0,0
-11,PRESTIGE,Prestige Estates Projects Limited,Realty,254.7,113.1,40.9,408.7,1685.1,0.0,0
-12,IIFL,IIFL Finance Limited,Financial Services,10.5,257.4,140.1,408.0,610.5,0.0,0
-13,ENDURANCE,Endurance Technologies Limited,Automobile and Auto Components,371.0,7.2,18.2,396.4,2642.2,0.0,0
-14,CENTRALBK,Central Bank of India,Financial Services,117.4,198.1,78.8,394.3,33.31,0.0,0
-15,CREDITACC,CREDITACCESS GRAMEEN LIMITED,Financial Services,278.8,57.9,7.4,344.1,1019.8,0.0,0
-16,IOB,Indian Overseas Bank,Financial Services,16.9,197.1,81.9,295.9,31.06,0.0,0
-17,PWL,Physicswallah Limited,Consumer Services,166.7,109.6,10.4,286.7,135.66,0.0,0
-18,TATAPOWER,Tata Power Company Limited,Power,51.0,155.1,78.4,284.5,323.0,0.0,0
-19,COCHINSHIP,Cochin Shipyard Limited,Capital Goods,58.3,160.6,60.2,279.1,1082.0,0.0,0
-20,AADHARHFC,Aadhar Housing Finance Limited,Financial Services,134.0,61.4,71.6,267.0,425.0,0.0,0
-21,MANAPPURAM,Manappuram Finance Limited,Financial Services,1.6,171.4,56.2,229.2,267.5,0.0,0
-22,IEX,Indian Energy Exchange Limited,Financial Services,37.9,123.2,49.6,210.7,111.0,0.0,0
-23,NATIONALUM,National Aluminium Company Limited,Metals & Mining,116.8,51.4,19.4,187.6,287.8,0.0,0
-24,RVNL,Rail Vikas Nigam Limited,Construction,23.7,54.7,99.4,177.8,185.09,0.0,0
-25,SCHAEFFLER,Schaeffler India Limited,Automobile and Auto Components,102.5,53.8,20.4,176.7,3601.0,0.0,0
-26,IDFCFIRSTB,IDFC First Bank Limited,Financial Services,117.6,44.0,14.5,176.1,87.47,0.0,0
-27,MARUTI,Maruti Suzuki India Limited,Automobile and Auto Components,83.0,54.8,36.4,174.2,14200.0,0.0,0
-28,HINDALCO,Hindalco Industries Limited,Metals & Mining,1.6,100.8,68.7,171.1,889.9,0.0,0
-29,GRANULES,Granules India Limited,Healthcare,4.6,45.2,117.4,167.2,840.8,0.0,0
-30,MUTHOOTFIN,Muthoot Finance Limited,Financial Services,72.1,38.0,57.1,167.2,2549.6,0.0,0
-31,INDUSINDBK,IndusInd Bank Limited,Financial Services,111.5,27.1,27.2,165.8,973.7,0.0,0
-32,BANKBARODA,Bank of Baroda,Financial Services,25.7,74.3,57.8,157.8,276.43,0.0,0
-33,BLUESTARCO,Blue Star Limited,Consumer Durables,111.5,36.6,6.3,154.4,1821.5,0.0,0
-34,CUB,City Union Bank Limited,Financial Services,99.6,25.9,28.0,153.5,247.0,0.0,0
-35,ABFRL,Aditya Birla Fashion and Retail Limited,Consumer Services,52.6,29.6,63.0,145.2,39.88,0.0,0
-36,PIDILITIND,Pidilite Industries Limited,Chemicals,97.4,27.2,18.5,143.1,1616.9,0.0,0
-37,PAYTM,One 97 Communications Limited,Financial Services,35.2,104.2,0.1,139.5,1719.0,0.0,0
-38,HYUNDAI,Hyundai Motor India Limited,Automobile and Auto Components,116.9,19.9,0.9,137.7,2112.0,0.0,0
-39,INOXWIND,Inox Wind Limited,Capital Goods,7.2,110.6,18.2,136.0,52.36,-0.16,2
-40,FLUOROCHEM,Gujarat Fluorochemicals Limited,Chemicals,67.2,62.1,6.1,135.4,4731.8,0.0,0
-41,LICI,Life Insurance Corporation Of India,Financial Services,7.2,92.1,33.0,132.3,408.35,0.0,0
-42,COROMANDEL,Coromandel International Limited,Chemicals,102.5,13.6,12.1,128.2,1940.0,0.0,0
-43,DELHIVERY,Delhivery Limited,Services,49.1,23.9,52.0,125.0,462.0,0.0,0
-44,NH,Narayana Hrudayalaya Ltd.,Healthcare,88.7,17.0,15.1,120.8,2003.7,0.0,0
-45,UCOBANK,UCO Bank,Financial Services,42.6,62.7,15.0,120.3,24.65,0.0,0
-46,TATACHEM,Tata Chemicals Limited,Chemicals,26.1,90.0,3.7,119.8,663.1,0.0,0
-47,MAHABANK,Bank of Maharashtra,Financial Services,42.5,28.4,39.4,110.3,98.71,0.0,0
-48,JAINREC,Jain Resource Recycling Limited,Metals & Mining,3.1,75.8,21.3,100.2,279.85,0.0,0
-49,EICHERMOT,Eicher Motors Limited,Automobile and Auto Components,13.0,53.1,29.2,95.3,8336.0,0.0,0
-50,ITCHOTELS,ITC Hotels Limited,Consumer Services,37.1,19.1,36.6,92.8,186.5,0.0,0
-51,HEROMOTOCO,Hero MotoCorp Limited,Automobile and Auto Components,66.4,17.9,5.7,90.0,5751.5,0.0,0
-52,INDIGO,InterGlobe Aviation Limited,Services,37.9,29.2,21.0,88.1,5720.0,0.0,0
-53,ASTERDM,Aster DM Quality Care Limited,Healthcare,63.9,17.1,6.0,87.0,774.7,0.0,0
-54,PIRAMALFIN,Piramal Finance Limited,Financial Services,48.7,7.5,27.8,84.0,1982.8,0.0,0
-55,ESCORTS,Escorts Kubota Limited,Capital Goods,35.6,7.8,29.4,72.8,2437.2,0.0,0
-56,CANBK,Canara Bank,Financial Services,2.7,46.9,22.6,72.2,133.46,0.0,0
-57,ELGIEQUIP,Elgi Equipments Limited,Capital Goods,32.2,5.8,20.6,58.6,549.45,0.0,0
-58,NMDC,NMDC Limited,Metals & Mining,50.7,3.1,0.2,54.0,66.69,0.0,0
-59,VTL,Vardhman Textiles Limited,Textiles,19.6,15.2,18.9,53.7,512.55,0.0,0
-60,IRFC,Indian Railway Finance Corporation Limited,Financial Services,4.0,33.4,13.1,50.5,81.05,0.0,0
+1,APLAPOLLO,APL Apollo Tubes Limited,Capital Goods,1833.8,818.6,365.2,3017.6,1481.5,-437.07,5
+2,LGEINDIA,LG Electronics India Limited,Consumer Durables,956.2,472.8,381.9,1810.9,1758.1,0.0,0
+3,ITI,ITI Limited,Telecommunication,183.9,23.2,636.3,843.4,255.44,0.0,0
+4,JWL,Jupiter Wagons Limited,Capital Goods,620.5,108.8,51.6,780.9,238.69,0.53,14
+5,PRESTIGE,Prestige Estates Projects Limited,Realty,520.7,153.8,80.9,755.4,1832.1,0.0,0
+6,TATASTEEL,Tata Steel Limited,Metals & Mining,494.2,126.5,47.1,667.8,163.54,0.0,0
+7,DABUR,Dabur India Limited,Fast Moving Consumer Goods,352.2,85.1,63.4,500.7,418.5,0.0,0
+8,KPRMILL,K.P.R. Mill Limited,Textiles,197.8,130.9,131.6,460.3,1190.5,0.0,0
+9,EIHOTEL,EIH Limited,Consumer Services,124.7,210.2,104.7,439.6,332.7,0.0,0
+10,APOLLOTYRE,Apollo Tyres Limited,Automobile and Auto Components,189.3,90.0,115.1,394.4,426.15,0.0,0
+11,CHALET,Chalet Hotels Limited,Consumer Services,295.1,51.6,4.5,351.2,865.1,0.0,0
+12,IIFL,IIFL Finance Limited,Financial Services,6.2,115.9,175.6,297.7,593.95,-77.83,2
+13,MANAPPURAM,Manappuram Finance Limited,Financial Services,9.6,149.0,62.2,220.8,270.0,0.0,0
+14,CENTRALBK,Central Bank of India,Financial Services,30.1,105.9,84.3,220.3,33.02,0.0,0
+15,IOB,Indian Overseas Bank,Financial Services,12.4,119.3,86.4,218.1,30.88,0.0,0
+16,SCHAEFFLER,Schaeffler India Limited,Automobile and Auto Components,128.4,48.8,29.5,206.7,3701.7,3703.55,85
+17,NATIONALUM,National Aluminium Company Limited,Metals & Mining,97.5,77.1,26.4,201.0,294.95,0.0,0
+18,TORNTPHARM,Torrent Pharmaceuticals Limited,Healthcare,150.8,20.3,25.1,196.2,5019.1,0.0,0
+19,COFORGE,Coforge Limited,Information Technology,106.5,81.1,6.2,193.8,2000.0,0.0,0
+20,AADHARHFC,Aadhar Housing Finance Limited,Financial Services,46.7,63.0,74.4,184.1,426.9,0.0,0
+21,ENDURANCE,Endurance Technologies Limited,Automobile and Auto Components,135.6,15.7,27.1,178.4,2696.8,0.0,0
+22,CONCOR,Container Corporation of India Limited,Services,153.7,4.4,19.5,177.6,421.0,0.0,0
+23,HINDALCO,Hindalco Industries Limited,Metals & Mining,13.2,80.3,79.7,173.2,915.5,0.0,0
+24,GRANULES,Granules India Limited,Healthcare,34.8,7.0,121.4,163.2,833.15,0.0,0
+25,CREDITACC,CREDITACCESS GRAMEEN LIMITED,Financial Services,97.2,52.7,10.8,160.7,1018.1,0.0,0
+26,LICI,Life Insurance Corporation Of India,Financial Services,23.3,88.7,42.5,154.5,410.0,0.0,0
+27,CUB,City Union Bank Limited,Financial Services,98.6,19.3,32.7,150.6,239.0,0.0,0
+28,BRITANNIA,Britannia Industries Limited,Fast Moving Consumer Goods,103.8,19.2,25.8,148.8,5185.0,0.0,0
+29,NH,Narayana Hrudayalaya Ltd.,Healthcare,101.5,18.8,20.6,140.9,1982.2,0.0,0
+30,ABFRL,Aditya Birla Fashion and Retail Limited,Consumer Services,53.0,12.8,69.3,135.1,38.91,0.0,0
+31,INDGN,Indegene Limited,Healthcare,9.0,40.4,77.8,127.2,657.6,0.0,0
+32,MARUTI,Maruti Suzuki India Limited,Automobile and Auto Components,58.7,25.5,39.8,124.0,14015.0,0.0,0
+33,COCHINSHIP,Cochin Shipyard Limited,Capital Goods,44.1,14.5,63.6,122.2,1103.0,0.0,0
+34,MUTHOOTFIN,Muthoot Finance Limited,Financial Services,26.2,26.0,66.2,118.4,2558.0,0.0,0
+35,MAHABANK,Bank of Maharashtra,Financial Services,40.7,27.8,45.7,114.2,94.2,0.0,0
+36,POLICYBZR,PB Fintech Limited,Financial Services,65.0,45.0,1.0,111.0,1170.0,0.0,0
+37,PIDILITIND,Pidilite Industries Limited,Chemicals,78.9,8.8,21.5,109.2,1604.9,0.0,0
+38,TATACHEM,Tata Chemicals Limited,Chemicals,9.8,88.4,8.8,107.0,664.95,0.0,0
+39,IDFCFIRSTB,IDFC First Bank Limited,Financial Services,55.0,26.9,19.6,101.5,86.71,0.0,0
+40,ASTERDM,Aster DM Quality Care Limited,Healthcare,87.7,4.7,8.4,100.8,768.3,0.0,0
+41,HDFCLIFE,HDFC Life Insurance Company Limited,Financial Services,36.7,34.6,11.8,83.1,594.4,0.0,0
+42,EICHERMOT,Eicher Motors Limited,Automobile and Auto Components,6.8,38.3,33.9,79.0,8180.0,0.0,0
+43,UCOBANK,UCO Bank,Financial Services,33.7,18.9,18.3,70.9,24.38,0.0,0
+44,HYUNDAI,Hyundai Motor India Limited,Automobile and Auto Components,37.3,26.9,5.7,69.9,2104.2,0.0,0
+45,ENRIN,Siemens Energy India Limited,Capital Goods,15.7,50.0,0.6,66.3,3058.0,0.0,0
+46,TORNTPOWER,Torrent Power Limited,Power,7.0,45.6,9.3,61.9,1151.4,0.0,0
+47,ACE,Action Construction Equipment Limited,Capital Goods,40.9,19.9,0.4,61.2,1295.0,0.0,0
+48,HEROMOTOCO,Hero MotoCorp Limited,Automobile and Auto Components,26.4,19.4,12.4,58.2,5789.0,0.0,0
+49,VTL,Vardhman Textiles Limited,Textiles,19.8,11.3,22.6,53.7,513.55,0.0,0
+50,CESC,CESC Limited,Power,33.3,5.3,13.2,51.8,125.7,0.0,0
+51,CIPLA,Cipla Limited,Healthcare,14.5,1.7,24.0,40.2,1450.0,0.0,0
