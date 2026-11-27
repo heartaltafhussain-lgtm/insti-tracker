@@ -1,6 +1,6 @@
 Rank,Symbol,Company,Sector,BuyQtyCur,BuyQtyPrev,BuyPctChg,SellQtyCur,SellQtyPrev,SellPctChg,DelivPerCur,DelivPerPrev,Close,InstiNetCr,InstiDeals,RefDate,Status
-1,APLAPOLLO,APL Apollo Tubes Limited,Capital Goods,32740660,1693108,1833.8,76794435,2245943,3319.3,29.9,43.0,1481.5,-437.07,5,2026-11-19,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-2,LGEINDIA,LG Electronics India Limited,Consumer Durables,18508889,1752334,956.2,4982011,1133019,339.7,78.8,60.7,1758.1,0.0,0,2026-11-19,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-3,JWL,Jupiter Wagons Limited,Capital Goods,10919651,1515516,620.5,155246603,2989854,5092.4,6.6,33.6,238.69,0.53,14,2026-11-19,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-4,PRESTIGE,Prestige Estates Projects Limited,Realty,6452685,1039599,520.7,5407781,1233446,338.4,54.4,45.7,1832.1,0.0,0,2026-11-19,"WEEK IN PROGRESS — daily refresh, Friday ko final"
-5,TATASTEEL,Tata Steel Limited,Metals & Mining,228317467,38422979,494.2,339223345,45064072,652.8,40.2,46.0,163.54,0.0,0,2026-11-19,"WEEK IN PROGRESS — daily refresh, Friday ko final"
+1,APLAPOLLO,APL Apollo Tubes Limited,Capital Goods,36815877,2690876,1268.2,81121570,3488266,2225.6,31.2,43.5,1509.5,-437.07,5,2026-11-20,FINAL WEEKLY ✅ (Friday close)
+2,ITI,ITI Limited,Telecommunication,3815825,439727,767.8,104039094,1793279,5701.6,3.5,19.7,256.92,0.0,0,2026-11-20,FINAL WEEKLY ✅ (Friday close)
+3,LGEINDIA,LG Electronics India Limited,Consumer Durables,18016382,2460983,632.1,4702483,1430858,228.6,79.3,63.2,1770.9,0.0,0,2026-11-20,FINAL WEEKLY ✅ (Friday close)
+4,JWL,Jupiter Wagons Limited,Capital Goods,12399178,1743862,611.0,177626204,3772058,4609.0,6.5,31.6,224.84,0.53,14,2026-11-20,FINAL WEEKLY ✅ (Friday close)
+5,COHANCE,Cohance Lifesciences Limited,Healthcare,3671416,615401,496.6,15170024,794929,1808.3,19.5,43.6,497.55,0.0,0,2026-11-20,FINAL WEEKLY ✅ (Friday close)
